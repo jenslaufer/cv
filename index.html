@@ -44,7 +44,7 @@
   .wrap{
     max-width:var(--maxw);
     margin:0 auto;
-    padding:0 28px;
+    padding:0 clamp(28px, 5vw, 56px);
   }
 
   /* ---------- Print button ---------- */
@@ -72,7 +72,7 @@
     background:var(--paper);
     border-bottom:1px solid var(--line);
   }
-  .masthead-inner{padding:64px 0 40px}
+  .masthead-inner{padding-top:64px;padding-bottom:40px}
 
   .eyebrow{
     font-size:12px;
@@ -113,7 +113,7 @@
   /* ---------- Facts strip ---------- */
   .facts{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    grid-template-columns:repeat(3,1fr);
     gap:1px;
     background:var(--line);
     border:1px solid var(--line);
@@ -133,6 +133,7 @@
   }
   .fact .v small{display:block;font-weight:400;color:var(--ink-faint);font-size:12.5px;margin-top:2px}
   .fact.rate .v{color:var(--accent-ink)}
+  @media (min-width:1000px){.facts{grid-template-columns:repeat(6,1fr)}}
 
   /* ---------- Sections ---------- */
   section{padding:54px 0}
@@ -257,8 +258,8 @@
 
   /* ---------- Responsive ---------- */
   @media (max-width:640px){
-    .wrap{padding:0 20px}
-    .masthead-inner{padding:48px 0 32px}
+    .masthead-inner{padding-top:48px;padding-bottom:32px}
+    .facts{grid-template-columns:repeat(2,1fr)}
     section{padding:40px 0}
     .entry{grid-template-columns:1fr;gap:0}
     .entry .when{padding:0 0 12px;display:flex;align-items:baseline;gap:12px}

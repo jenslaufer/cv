@@ -48,14 +48,18 @@
   }
 
   /* ---------- Print button ---------- */
-  .print-btn{
+  .doc-actions{
     position:fixed;
     top:20px;right:20px;
     z-index:50;
+    display:flex;align-items:center;gap:10px;
+  }
+  .print-btn{
     display:inline-flex;align-items:center;gap:8px;
     font-family:var(--sans);
     font-size:13px;font-weight:600;
     letter-spacing:.04em;
+    text-decoration:none;
     color:#fff;background:var(--accent);
     border:none;border-radius:999px;
     padding:11px 18px;
@@ -66,6 +70,12 @@
   .print-btn:hover{background:var(--accent-ink);transform:translateY(-1px)}
   .print-btn:active{transform:translateY(0)}
   .print-btn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2}
+  .print-btn--ghost{
+    color:var(--accent);background:#fff;
+    box-shadow:0 4px 14px rgba(0,0,0,.10);
+    border:1px solid #d7dedc;
+  }
+  .print-btn--ghost:hover{color:var(--accent-ink);background:#f6f7f6}
 
   /* ---------- Header ---------- */
   header.masthead{
@@ -265,7 +275,7 @@
     .entry .when{padding:0 0 12px;display:flex;align-items:baseline;gap:12px}
     .entry .dur{margin-top:0}
     .contact-grid{grid-template-columns:1fr;gap:32px}
-    .print-btn{top:auto;bottom:18px;right:18px}
+    .doc-actions{top:auto;bottom:18px;right:18px}
   }
 
   /* ============= PRINT ============= */
@@ -273,7 +283,7 @@
     :root{--maxw:100%}
     @page{size:A4;margin:14mm 13mm}
     html,body{background:#fff;color:#000;font-size:10.2pt;line-height:1.42}
-    .print-btn{display:none !important}
+    .doc-actions{display:none !important}
     .wrap{max-width:100%;padding:0}
     a{color:#000;text-decoration:none}
 
@@ -343,10 +353,16 @@
 </head>
 <body>
 
-<button class="print-btn" onclick="window.print()" aria-label="Als PDF speichern oder drucken">
-  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4v-7h16v7h-2M6 14h12v6H6z"/></svg>
-  PDF / Drucken
-</button>
+<div class="doc-actions">
+  <a class="print-btn" href="cv.pdf" download="Jens-Laufer-CV.pdf" aria-label="CV als PDF-Datei herunterladen">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+    PDF herunterladen
+  </a>
+  <button class="print-btn print-btn--ghost" onclick="window.print()" aria-label="Lebenslauf drucken">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4v-7h16v7h-2M6 14h12v6H6z"/></svg>
+    Drucken
+  </button>
+</div>
 
 <header class="masthead">
   <div class="wrap masthead-inner">

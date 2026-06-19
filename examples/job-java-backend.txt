@@ -1,0 +1,13 @@
+Senior Java / Spring Boot Backend Engineer (m/w/d) — Versicherung
+
+Für ein Versicherungsunternehmen suchen wir einen erfahrenen Backend-Entwickler.
+
+Aufgaben:
+- Entwicklung und Betrieb von Microservices mit Java und Spring Boot
+- REST-APIs, OpenAPI/Swagger, Anbindung über Feign
+- Absicherung mit Spring Security, OAuth2 und Keycloak
+- Containerisierung mit Docker und Kubernetes, CI über GitLab CI
+- Persistenz mit PostgreSQL und MongoDB
+- Testgetriebene Entwicklung (JUnit, Mockito, TDD)
+
+Wir bieten Remote-Arbeit. Branche: Versicherung, Finanz.

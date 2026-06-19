@@ -1,0 +1,120 @@
+tech_id,tech,category
+1,Claude / Anthropic API,Machine Learning
+2,LLM-Agenten,Machine Learning
+3,Agent Harness,Machine Learning
+4,Multi-Agent-Orchestration,Machine Learning
+5,Tool Use / MCP,Machine Learning
+6,RAG,Machine Learning
+7,Prompt Engineering,Machine Learning
+8,Python,Sprachen
+9,FastAPI,Microservices / Backend
+10,Vue 3,Frontend
+11,Go,Sprachen
+12,Docker,DevOps / Cloud
+13,systemd,DevOps / Cloud
+14,GitHub Actions,DevOps / Cloud
+15,DigitalOcean,DevOps / Cloud
+16,SQLite,Persistenz / Datenbanken
+17,TDD,Testing
+18,Python Eve,Microservices / Backend
+19,MongoDB,Persistenz / Datenbanken
+20,Vue.js,Frontend
+21,GitLab,Tooling / Sonstiges
+22,GitLab CI,DevOps / Cloud
+23,REST,API / Integration
+24,Playwright,Testing
+25,Java,Sprachen
+26,Spring Boot,Microservices / Backend
+27,JUnit,Testing
+28,React,Frontend
+29,Spring Security,Microservices / Backend
+30,Keycloak,Security / IAM
+31,Mockito,Testing
+32,OpenAPI,API / Integration
+33,Swagger,API / Integration
+34,Microservices,Microservices / Backend
+35,Java EE,Microservices / Backend
+36,JPA,Persistenz / Datenbanken
+37,MySQL,Persistenz / Datenbanken
+38,Scrum,Tooling / Sonstiges
+39,Kubernetes,DevOps / Cloud
+40,R,Sprachen
+41,Feign,Microservices / Backend
+42,Quasar,Frontend
+43,dplyr,Data Science
+44,PostgreSQL,Persistenz / Datenbanken
+45,Python Flask,Microservices / Backend
+46,Webscraping,Data Science
+47,A/B Testing,Data Science
+48,Topic Modeling,Machine Learning
+49,AWS S3,DevOps / Cloud
+50,Spring Data,Microservices / Backend
+51,HTML,Frontend
+52,CSS,Frontend
+53,Rancher,DevOps / Cloud
+54,Kibana,Tooling / Sonstiges
+55,Sleuth,Microservices / Backend
+56,Zipkin,Microservices / Backend
+57,Reinforcement Learning,Machine Learning
+58,OpenAI Gym,Machine Learning
+59,seaborn,Data Science
+60,AWS SageMaker,DevOps / Cloud
+61,Jupyter,Data Science
+62,RMarkdown,Data Science
+63,ggplot,Data Science
+64,scikit-learn,Machine Learning
+65,pandas,Data Science
+66,numpy,Data Science
+67,k-means,Machine Learning
+68,PCA,Machine Learning
+69,t-SNE,Machine Learning
+70,Git,Tooling / Sonstiges
+71,Keras,Machine Learning
+72,ResNet50,Machine Learning
+73,Transfer Learning,Machine Learning
+74,CNN,Machine Learning
+75,DeepLearning4J,Machine Learning
+76,Kafka,API / Integration
+77,AWS,DevOps / Cloud
+78,GPU,Machine Learning
+79,Jenkins,DevOps / Cloud
+80,Amazon Mechanical Turk,Machine Learning
+81,Maven,DevOps / Cloud
+82,Jira,Tooling / Sonstiges
+83,Confluence,Tooling / Sonstiges
+84,Microsoft Azure,DevOps / Cloud
+85,Spring,Microservices / Backend
+86,OAuth2,Microservices / Backend
+87,Spring Integration,Microservices / Backend
+88,Selenium,Testing
+89,AngularJS,Frontend
+90,Grunt,DevOps / Cloud
+91,npm,DevOps / Cloud
+92,JavaScript,Sprachen
+93,Bootstrap,Frontend
+94,Neo4j,Persistenz / Datenbanken
+95,Tomcat,Tooling / Sonstiges
+96,SOAP,API / Integration
+97,Webservices,API / Integration
+98,GWT,Frontend
+99,Phonegap,Tooling / Sonstiges
+100,ZXing,API / Integration
+101,PayPal API,Tooling / Sonstiges
+102,AWS EC2,DevOps / Cloud
+103,AWS VPC,DevOps / Cloud
+104,Artifactory,DevOps / Cloud
+105,Groovy,Sprachen
+106,Subversion (SVN),Tooling / Sonstiges
+107,Hibernate,Persistenz / Datenbanken
+108,DBUnit,Testing
+109,ServiceMix,API / Integration
+110,CXF,API / Integration
+111,XFire,API / Integration
+112,SAP-Anbindung,API / Integration
+113,SAP BAPI,API / Integration
+114,JBoss,Tooling / Sonstiges
+115,Oracle,Persistenz / Datenbanken
+116,IBM MDM (WCC),API / Integration
+117,EJB,Microservices / Backend
+118,RDF,Sprachen
+119,XML,Sprachen

@@ -1,0 +1,52 @@
+project_id,role
+0,Harness Engineering
+0,Agent Engineering
+0,KI-Systemarchitektur
+0,Fullstack-Entwicklung
+0,DevOps
+1,Fullstack-Entwicklung
+1,Konzeption
+1,DevOps
+2,Fullstack-Entwicklung
+2,Konzeption
+2,DevOps
+3,Backend-Entwicklung
+4,Fullstack-Entwicklung
+4,Prototyping
+4,Konzeption
+4,Data Analysis
+5,Fullstack-Entwicklung
+5,Konzeption
+6,DevOps
+6,Build- & Konfigurationsmanagement
+6,Fullstack-Entwicklung
+7,Machine Learning
+7,Data Analysis
+8,Machine Learning
+8,Data Analysis
+9,Machine Learning
+9,Data Analysis
+10,Machine Learning
+10,Data Analysis
+11,Backend-Entwicklung
+12,Machine Learning
+12,Data Analysis
+13,Fullstack-Entwicklung
+14,Fullstack-Entwicklung
+15,Fullstack-Entwicklung
+16,Fullstack-Entwicklung
+16,Konzeption
+16,Prototyping
+16,Build- & Konfigurationsmanagement
+17,Fullstack-Entwicklung
+17,Konzeption
+17,Prototyping
+17,Build- & Konfigurationsmanagement
+18,Backend-Entwicklung
+19,Fullstack-Entwicklung
+19,Konzeption
+19,Build- & Konfigurationsmanagement
+20,Jenkins-Pluginentwicklung
+20,Maven-Pluginentwicklung
+21,Backend-Entwicklung
+22,Backend-Entwicklung

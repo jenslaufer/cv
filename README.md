@@ -10,10 +10,29 @@ sonst fehl.
 
 ## Dateien
 
-- `data/*.csv` — Quelle: Stammdaten, Konditionen, Rollen, Schwerpunkte, Kenntnisse,
-  Projekthistorie, Ausbildung, Zertifikate (hier editieren). Listen-Zellen
-  (Projekt-Rollen/Tech) sind mit `; ` getrennt; Kenntnisse sind eine Zeile pro Skill
-  (`group,skill`).
+`data/*.csv` ist die Quelle (hier editieren). Das Schema ist **relational** — keine
+Listen in Zellen, Projekt-Fakten in Join-Tabellen:
+
+- `projects.csv` — eine Zeile pro Projekt (id, period, dur, title, client, location,
+  branch, desc). Rollen und Tech stehen NICHT inline, sondern in Join-Tabellen.
+- `tech.csv` — Master-Katalog aller eingesetzten Technologien (`tech_id,tech,category`).
+- `project_tech.csv` — Verknüpfung `project_id,tech_id` (Reihenfolge = Anzeige-Reihenfolge).
+- `project_roles.csv` — Verknüpfung `project_id,role`.
+- `skills.csv` — die **kuratierte** Kenntnisse-Sektion (`group,skill`): eine Hand-
+  Auswahl, bewusst NICHT die vollständige Projekt-Tech (ein Skill darf in mehreren
+  Gruppen stehen). Getrennt von `tech.csv`, weil Highlight-Reel ≠ vollständiger Stack.
+- `roles.csv` — kuratierte Top-Rollen-Zeile. `highlights.csv` — Schwerpunkte.
+- `person.csv` / `konditionen.csv` — `field,value`. `education.csv` / `certificates.csv` — flach.
+
+Eine neue Tech zu einem Projekt: Zeile in `tech.csv` (falls neu) + Zeile in
+`project_tech.csv`. Der Test `test_project_tech_join_has_no_dangling_ids` fängt
+verwaiste `tech_id`s ab.
+
+**Datenherkunft:** Die Stammdaten stammen ursprünglich aus `busine1/cv` (GitLab,
+R/RMarkdown, normalisiert-relational, ~2021). Dieses Repo ist das vollständige
+Superset — alle Projekte von dort plus die seit 2022 dazugekommenen. `busine1/cv`
+ist damit inhaltlich absorbiert.
+
 - `index.html` — **generiert** aus `data/*.csv` (Basis-CV, druckoptimiert).
 - `cv.pdf`, `cv.docx` — **generiert** (PDF via Headless-Chromium, Word aus dem Modell).
 - `gen/` — der Generator (Parser, Renderer, Tailoring, Exporter, CLI).

@@ -17,6 +17,8 @@ DATA = ROOT / "data"
 EXPECTED_CSVS = {
     "person.csv", "konditionen.csv", "roles.csv", "highlights.csv",
     "skills.csv", "projects.csv", "education.csv", "certificates.csv",
+    # relational project facts
+    "tech.csv", "project_tech.csv", "project_roles.csv",
 }
 
 
@@ -40,9 +42,19 @@ def test_parse_reads_an_alternative_data_dir(tmp_path):
     (tmp_path / "highlights.csv").write_text("highlight\nHi\n", encoding="utf-8")
     (tmp_path / "skills.csv").write_text("group,skill\nLang,Java\nLang,Python\n", encoding="utf-8")
     (tmp_path / "projects.csv").write_text(
-        "id,period,dur,title,client,location,branch,roles,desc,tech\n"
-        '0,2025,laufend,T,C,Remote,KI,Backend; DevOps,Desc,"AWS (EC2, S3); Docker"\n',
+        "id,period,dur,title,client,location,branch,desc\n"
+        "0,2025,laufend,T,C,Remote,KI,Desc\n",
         encoding="utf-8")
+    # relational project facts: a tech master + two join tables (ordered)
+    (tmp_path / "tech.csv").write_text(
+        "tech_id,tech,category\n"
+        '1,"AWS (EC2, S3)",DevOps / Cloud\n'
+        "2,Docker,DevOps / Cloud\n",
+        encoding="utf-8")
+    (tmp_path / "project_tech.csv").write_text(
+        "project_id,tech_id\n0,1\n0,2\n", encoding="utf-8")
+    (tmp_path / "project_roles.csv").write_text(
+        "project_id,role\n0,Backend\n0,DevOps\n", encoding="utf-8")
     (tmp_path / "education.csv").write_text("date,title,org\n2000,Dipl,Uni\n", encoding="utf-8")
     (tmp_path / "certificates.csv").write_text("date,title,org,url\n2018,ML,Udacity,\n", encoding="utf-8")
 
@@ -52,7 +64,7 @@ def test_parse_reads_an_alternative_data_dir(tmp_path):
     assert d["skills"] == [{"name": "Lang", "tags": ["Java", "Python"]}]
     p0 = d["projects"][0]
     assert p0["roles"] == ["Backend", "DevOps"]
-    # comma INSIDE a tech item survives because items are joined with '; '
+    # join order is preserved; a comma inside a quoted tech cell survives intact
     assert p0["tech"] == ["AWS (EC2, S3)", "Docker"]
 
 
@@ -67,3 +79,16 @@ def test_skills_grouped_in_first_appearance_order():
     names = [g["name"] for g in d["skills"]]
     assert names[0] == "Sprachen"
     assert len(names) == len(set(names)), "groups must be merged, not duplicated"
+
+
+def test_project_tech_join_has_no_dangling_ids():
+    # Referential integrity of the normalized schema: every tech_id referenced
+    # in the join must exist in the tech master, and every project_id in either
+    # join must be a real project. A dangling id = silent data loss in render.
+    tech_ids = {int(r["tech_id"]) for r in csv.DictReader((DATA / "tech.csv").open(encoding="utf-8"))}
+    project_ids = {int(r["id"]) for r in csv.DictReader((DATA / "projects.csv").open(encoding="utf-8"))}
+    for r in csv.DictReader((DATA / "project_tech.csv").open(encoding="utf-8")):
+        assert int(r["tech_id"]) in tech_ids, f"dangling tech_id {r['tech_id']}"
+        assert int(r["project_id"]) in project_ids, f"unknown project_id {r['project_id']}"
+    for r in csv.DictReader((DATA / "project_roles.csv").open(encoding="utf-8")):
+        assert int(r["project_id"]) in project_ids, f"unknown project_id {r['project_id']}"

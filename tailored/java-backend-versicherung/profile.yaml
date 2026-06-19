@@ -1,0 +1,61 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data.md; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data.md, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: java-backend-versicherung
+title: Jens Laufer — Senior Java / Spring Boot Backend Engineer
+headline: ''
+stack_line: ''
+pitch: ''
+highlights: []
+include_projects:
+- 0
+- 1
+- 2
+- 4
+- 5
+- 6
+- 9
+- 11
+- 12
+- 13
+- 14
+- 15
+- 17
+emphasize_skills:
+- Docker
+- Feign
+- GitLab
+- GitLab CI
+- Java
+- JUnit
+- Keycloak
+- Kubernetes
+- Microservices
+- Mockito
+- MongoDB
+- OAuth2
+- OpenAPI
+- PostgreSQL
+- REST
+- Spring
+- Spring Boot
+- Spring Security
+- Swagger
+- TDD
+_scores:
+  0: 2
+  1: 6
+  2: 15
+  4: 15
+  5: 13
+  6: 13
+  9: 14
+  11: 14
+  12: 14
+  13: 9
+  14: 10
+  15: 7
+  17: 8

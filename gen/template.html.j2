@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<link rel="icon" href="{{ asset_prefix }}favicon.svg" type="image/svg+xml">
+<meta name="description" content="{{ description }}">
+{%- if noindex %}
+<meta name="robots" content="noindex">
+{%- endif %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+{{ css }}
+</style>
+</head>
+<body>
+
+<div class="doc-actions">
+  <a class="print-btn" href="{{ pdf_href }}" download="{{ pdf_download }}" aria-label="CV als PDF-Datei herunterladen">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+    PDF herunterladen
+  </a>
+  {%- if docx_href %}
+  <a class="print-btn print-btn--ghost" href="{{ docx_href }}" download="{{ docx_download }}" aria-label="CV als Word-Datei herunterladen">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+    Word herunterladen
+  </a>
+  {%- endif %}
+  <button class="print-btn print-btn--ghost" onclick="window.print()" aria-label="Lebenslauf drucken">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4v-7h16v7h-2M6 14h12v6H6z"/></svg>
+    Drucken
+  </button>
+</div>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <p class="eyebrow">{{ eyebrow }}</p>
+    <h1>{{ name }}</h1>
+    <p class="role-line">{{ role_line }}</p>
+    <p class="stack-line">{{ stack_line }}</p>
+    <p class="pitch">{{ pitch | md }}</p>
+
+    <div class="facts">
+      {%- for f in facts %}
+      <div class="fact{{ ' rate' if f.rate else '' }}">
+        <div class="k">{{ f.k }}</div>
+        <div class="v">{{ f.v }}{% if f.small %}<small>{{ f.small }}</small>{% endif %}</div>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- Schwerpunkte -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><h2>Schwerpunkte</h2><span class="rule"></span></div>
+      <ul class="highlights">
+        {%- for h in highlights %}
+        <li>{{ h | md }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Rollen -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><h2>Rollen</h2><span class="rule"></span></div>
+      <div class="chips">
+        {%- for r in roles %}
+        <span class="chip">{{ r }}</span>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Kenntnisse -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><h2>Kenntnisse</h2><span class="rule"></span></div>
+      <div class="skills-grid">
+        {%- for g in skills %}
+        <div class="skillgroup">
+          <h3>{{ g.name }}</h3>
+          <div class="tags">
+            {%- for t in g.tags %}<span class="tag">{{ t }}</span>{% endfor %}
+          </div>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Projekthistorie -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><h2>Projekthistorie</h2><span class="rule"></span></div>
+      <div class="timeline">
+        {%- for p in projects %}
+        <article class="entry">
+          <div class="when"><div class="period">{{ p.period }}</div><div class="dur">{{ p.dur }}</div></div>
+          <div class="body">
+            <h3>{{ p.title }}</h3>
+            <p class="client">{{ p.client }}{% if p.location %} · {{ p.location }}{% endif %}{% if p.branch %} <span class="branch">— {{ p.branch }}</span>{% endif %}</p>
+            {%- if p.roles %}<p class="roles">{{ p.roles | join(' · ') }}</p>{% endif %}
+            <p class="desc">{{ p.desc | md }}</p>
+            {%- if p.tech %}
+            <div class="stack">
+              {%- for t in p.tech %}<span class="tag">{{ t }}</span>{% endfor %}
+            </div>
+            {%- endif %}
+          </div>
+        </article>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt, Ausbildung, Zertifikate -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><h2>Kontakt &amp; Qualifikation</h2><span class="rule"></span></div>
+      <div class="contact-grid">
+
+        <div class="contact-block">
+          <h3>Kontakt &amp; Profile</h3>
+          <ul class="contact-list">
+            {%- for c in contact %}
+            <li><span class="lbl">{{ c.lbl }}</span>{% if c.href %}<a href="{{ c.href }}"{% if c.external %} target="_blank" rel="noopener"{% endif %}>{{ c.text }}</a>{% else %}<span>{{ c.text }}</span>{% endif %}</li>
+            {%- endfor %}
+          </ul>
+        </div>
+
+        <div class="contact-block">
+          <h3>Ausbildung</h3>
+          {%- for e in education %}
+          <div class="edu-item">
+            <div class="date">{{ e.date }}</div>
+            <div class="title">{{ e.title }}</div>
+            <div class="org">{{ e.org }}</div>
+          </div>
+          {%- endfor %}
+
+          <h3 style="margin-top:26px">Zertifikate</h3>
+          {%- for c in certificates %}
+          <div class="edu-item">
+            <div class="date">{{ c.date }}</div>
+            <div class="title">{{ c.title }}</div>
+            <div class="org">{{ c.org }}</div>
+            {%- if c.url %}<div class="verify"><a href="{{ c.url }}" target="_blank" rel="noopener">Verifizieren →</a></div>{% endif %}
+          </div>
+          {%- endfor %}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>{{ footer_left }}</span>
+    <span>{{ footer_right }}</span>
+  </div>
+</footer>
+
+</body>
+</html>

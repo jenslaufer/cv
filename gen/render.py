@@ -1,6 +1,6 @@
 """Render the model (+ optional tailoring profile) into a self-contained CV page.
 
-Everything visible is derived from data.md. A Profile only *selects*, *orders*
+Everything visible is derived from data/*.csv. A Profile only *selects*, *orders*
 and *re-frames* (headline/pitch/highlights) — it never introduces new facts, so
 tailored variants cannot drift from the source.
 """
@@ -88,7 +88,7 @@ def build_context(data: dict, profile: dict | None = None) -> dict:
     profile = profile or {}
     p = data["person"]
 
-    # --- projects: select + order (facts always from data.md by id) ---
+    # --- projects: select + order (facts always from data/*.csv by id) ---
     by_id = {pr["id"]: pr for pr in data["projects"]}
     order = profile.get("include_projects")
     if order:

@@ -1,9 +1,9 @@
 """Tailoring layer — turn a job posting into a focused CV variant.
 
 A job posting is matched against the project history and skill vocabulary in
-data.md. The result is a *profile*: which projects to keep (newest first), which
+data/*.csv. The result is a *profile*: which projects to keep (newest first), which
 skill groups to surface, and a suggested headline. The profile only selects and
-re-frames — every fact still comes from data.md, so a tailored CV can never
+re-frames — every fact still comes from data/*.csv, so a tailored CV can never
 diverge from the source.
 
 The profile is written to disk as YAML so it can be hand-tuned (headline, pitch,
@@ -71,7 +71,7 @@ def build_profile(job_text: str, data: dict, slug: str,
     by_id = dict(scored)
 
     keep = set(ALWAYS_KEEP) | {pid for pid, _ in scored[:top]}
-    # render newest first (data.md order is already reverse-chronological)
+    # render newest first (CSV row order is already reverse-chronological)
     include = [p["id"] for p in data["projects"] if p["id"] in keep]
 
     emphasize = sorted(matched, key=lambda t: t.lower())

@@ -50,7 +50,7 @@ def test_include_order_is_reverse_chronological():
     d = parse.parse()
     prof = tailor.build_profile(JAVA_JOB, d, "java-backend")
     inc = prof["include_projects"]
-    assert inc == sorted(inc)  # data.md order = newest first = ascending ids
+    assert inc == sorted(inc)  # CSV row order = newest first = ascending ids
 
 
 def test_tailored_render_only_includes_selected_projects():

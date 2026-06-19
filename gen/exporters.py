@@ -4,7 +4,7 @@ PDF: headless Chromium prints the generated HTML (same engine that produced the
 original cv.pdf), so the PDF matches the print stylesheet exactly.
 
 Word: a clean, editable .docx built from the model. It does not pixel-match the
-HTML (recruiters want editable text), but it is generated from data.md, so it
+HTML (recruiters want editable text), but it is generated from data/*.csv, so it
 stays in sync with everything else.
 """
 from __future__ import annotations

@@ -1,9 +1,9 @@
 .PHONY: build pdf check tailor test
 
-build:        ## regenerate index.html + cv.pdf + cv.docx from data.md
+build:        ## regenerate index.html + cv.pdf + cv.docx from data/*.csv
 	python -m gen build --pdf --docx
 
-check:        ## fail if index.html drifted from data.md
+check:        ## fail if index.html drifted from data/*.csv
 	python -m gen check
 
 test:         ## run the test suite

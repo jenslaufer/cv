@@ -1,8 +1,8 @@
-"""The sync guarantee: the committed index.html is exactly what data.md renders.
+"""The sync guarantee: the committed index.html is exactly what data/*.csv renders.
 
-If this fails, either index.html was hand-edited (forbidden) or data.md changed
-without rebuilding. Fix: `python -m gen build`. This is the test that enforces
-'die csv bleiben die Wahrheit, die müssen synchron sein'.
+If this fails, either index.html was hand-edited (forbidden) or the CSV source
+changed without rebuilding. Fix: `python -m gen build`. This is the test that
+enforces 'die csv bleiben die Wahrheit, die müssen synchron sein'.
 """
 from pathlib import Path
 
@@ -15,5 +15,5 @@ def test_index_html_matches_source():
     committed = (ROOT / "index.html").read_text(encoding="utf-8")
     regenerated = render.render(parse.parse())
     assert committed == regenerated, (
-        "index.html is out of sync with data.md — run `python -m gen build`"
+        "index.html is out of sync with data/*.csv — run `python -m gen build`"
     )

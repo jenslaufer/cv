@@ -1,0 +1,102 @@
+group,skill
+Sprachen,Java
+Sprachen,JavaScript
+Sprachen,Python
+Sprachen,R
+Sprachen,Groovy
+Microservices / Backend,Spring Boot
+Microservices / Backend,Spring
+Microservices / Backend,Spring Data
+Microservices / Backend,Spring Integration
+Microservices / Backend,Spring Security
+Microservices / Backend,OAuth2
+Microservices / Backend,Microservices
+Microservices / Backend,Feign
+Microservices / Backend,Sleuth
+Microservices / Backend,Zipkin
+Microservices / Backend,Python Eve
+Microservices / Backend,Python Flask
+Microservices / Backend,Java EE
+Microservices / Backend,EJB
+Frontend,Vue.js
+Frontend,React
+Frontend,AngularJS
+Frontend,GWT
+Frontend,Quasar
+Frontend,HTML
+Frontend,CSS
+Frontend,Bootstrap
+Persistenz / Datenbanken,MySQL
+Persistenz / Datenbanken,MongoDB
+Persistenz / Datenbanken,PostgreSQL
+Persistenz / Datenbanken,Oracle
+Persistenz / Datenbanken,Neo4j
+Persistenz / Datenbanken,JPA
+Persistenz / Datenbanken,Hibernate
+DevOps / Cloud,Docker
+DevOps / Cloud,Kubernetes
+DevOps / Cloud,Rancher
+DevOps / Cloud,GitLab CI
+DevOps / Cloud,Jenkins
+DevOps / Cloud,Maven
+DevOps / Cloud,Grunt
+DevOps / Cloud,npm
+DevOps / Cloud,Artifactory
+DevOps / Cloud,"AWS (EC2, S3, SageMaker, VPC)"
+DevOps / Cloud,Microsoft Azure
+DevOps / Cloud,DigitalOcean
+Security / IAM,Keycloak
+Security / IAM,Spring Security
+Security / IAM,OAuth2
+Testing,JUnit
+Testing,TDD
+Testing,Mockito
+Testing,Selenium
+Testing,DBUnit
+Testing,Playwright
+API / Integration,REST
+API / Integration,Swagger
+API / Integration,OpenAPI
+API / Integration,SOAP
+API / Integration,Webservices
+API / Integration,CXF
+API / Integration,XFire
+API / Integration,Kafka
+API / Integration,ServiceMix
+Machine Learning,scikit-learn
+Machine Learning,Keras
+Machine Learning,DeepLearning4J
+Machine Learning,CNN
+Machine Learning,Transfer Learning
+Machine Learning,Supervised/Unsupervised
+Machine Learning,k-means
+Machine Learning,PCA
+Machine Learning,t-SNE
+Machine Learning,Reinforcement Learning
+Machine Learning,OpenAI Gym
+Machine Learning,Topic Modeling
+Data Science,pandas
+Data Science,numpy
+Data Science,dplyr
+Data Science,Jupyter
+Data Science,RMarkdown
+Data Science,ggplot
+Data Science,seaborn
+Data Science,Vega-Lite
+Data Science,A/B Testing
+Data Science,Webscraping
+Tooling / Sonstiges,Git
+Tooling / Sonstiges,GitLab
+Tooling / Sonstiges,Subversion
+Tooling / Sonstiges,Jira
+Tooling / Sonstiges,Confluence
+Tooling / Sonstiges,Kibana
+Tooling / Sonstiges,ANTLR
+Tooling / Sonstiges,JavaCC
+Tooling / Sonstiges,ZXing (QR)
+Tooling / Sonstiges,PayPal API
+Tooling / Sonstiges,RDF/XML/JSON
+Tooling / Sonstiges,SAP (BAPI)
+Tooling / Sonstiges,Phonegap
+Tooling / Sonstiges,JBoss
+Tooling / Sonstiges,Tomcat

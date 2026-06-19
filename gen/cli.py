@@ -3,7 +3,7 @@
   python -m gen build                       # regenerate base index.html (+ --pdf --docx)
   python -m gen tailor --job posting.txt --slug acme [--title "..."]
   python -m gen tailor --profile tailored/acme/profile.yaml   # re-render after editing
-  python -m gen check                       # fail if index.html is out of sync with data.md
+  python -m gen check                       # fail if index.html is out of sync with data/*.csv
 """
 from __future__ import annotations
 
@@ -69,30 +69,30 @@ def cmd_tailor(args) -> int:
 
 
 def cmd_check(args) -> int:
-    """Sync guard: regenerating from data.md must reproduce index.html byte-for-byte."""
+    """Sync guard: regenerating from data/*.csv must reproduce index.html byte-for-byte."""
     current = (ROOT / "index.html").read_text(encoding="utf-8")
     regenerated = _render.render(_parse.parse())
     if current != regenerated:
         print("OUT OF SYNC: index.html differs from `python -m gen build`. "
-              "Edit data.md and rebuild, never edit index.html by hand.", file=sys.stderr)
+              "Edit data/*.csv and rebuild, never edit index.html by hand.", file=sys.stderr)
         return 1
-    print("in sync: index.html == generate(data.md)")
+    print("in sync: index.html == generate(data/*.csv)")
     return 0
 
 
 def _profile_yaml(profile: dict) -> str:
     header = (
         "# Tailoring profile — generated from a job posting, safe to hand-edit.\n"
-        "# Facts come from data.md; this only selects/orders/re-frames.\n"
+        "# Facts come from data/*.csv; this only selects/orders/re-frames.\n"
         "# headline/stack_line/pitch/highlights: leave blank to use the base CV.\n"
-        "# include_projects: project ids from data.md, render order = listed order.\n"
+        "# include_projects: project ids from data/*.csv, render order = listed order.\n"
         "# Re-render after editing:  python -m gen tailor --profile <this file>\n\n"
     )
     return header + yaml.safe_dump(profile, allow_unicode=True, sort_keys=False)
 
 
 def main(argv=None) -> int:
-    ap = argparse.ArgumentParser(prog="gen", description="CV generator (source: data.md)")
+    ap = argparse.ArgumentParser(prog="gen", description="CV generator (source: data/*.csv)")
     sub = ap.add_subparsers(dest="cmd", required=True)
 
     b = sub.add_parser("build", help="regenerate base index.html")
@@ -109,7 +109,7 @@ def main(argv=None) -> int:
     t.add_argument("--pdf", action="store_true", help="also export the variant PDF")
     t.set_defaults(func=cmd_tailor)
 
-    c = sub.add_parser("check", help="verify index.html is in sync with data.md")
+    c = sub.add_parser("check", help="verify index.html is in sync with data/*.csv")
     c.set_defaults(func=cmd_check)
 
     args = ap.parse_args(argv)

@@ -3,7 +3,7 @@ from gen import parse
 
 def test_counts():
     d = parse.parse()
-    assert len(d["projects"]) == 21
+    assert len(d["projects"]) == 23
     assert len(d["skills"]) == 11
     assert len(d["roles"]) == 10
     assert len(d["education"]) == 2
@@ -31,7 +31,7 @@ def test_client_location_variants():
     assert coop["client"] == "Co-operative Group (Coop)"
     assert coop["location"] == "Manchester"
     # comma form, no parens: 'Deutsche Verrechnungstelle / DVAG, Frankfurt a. Main'
-    dvag = by_id[10]
+    dvag = by_id[12]
     assert dvag["client"] == "Deutsche Verrechnungstelle / DVAG"
     assert dvag["location"] == "Frankfurt a. Main"
 

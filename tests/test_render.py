@@ -3,7 +3,7 @@ from gen import parse, render
 
 def test_base_render_has_all_projects():
     html = render.render(parse.parse())
-    assert html.count('<article class="entry">') == 21
+    assert html.count('<article class="entry">') == 23
     assert html.count('<span class="chip">') == 10
 
 

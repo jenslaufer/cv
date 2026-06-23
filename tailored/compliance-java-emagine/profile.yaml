@@ -1,0 +1,52 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: compliance-java-emagine
+title: Jens Laufer – Senior Java Entwickler (Compliance)
+headline: ''
+stack_line: ''
+pitch: ''
+highlights: []
+include_projects:
+- 0
+- 2
+- 3
+- 4
+- 5
+- 6
+- 11
+- 13
+- 14
+- 16
+- 17
+- 18
+- 19
+emphasize_skills:
+- Backend-Entwicklung
+- Docker
+- Java
+- Jenkins
+- Jira
+- JUnit
+- Kubernetes
+- Maven
+- REST
+- Scrum
+- Selenium
+_scores:
+  0: 1
+  2: 4
+  3: 4
+  4: 6
+  5: 6
+  6: 4
+  11: 8
+  13: 8
+  14: 8
+  16: 6
+  17: 5
+  18: 5
+  19: 5

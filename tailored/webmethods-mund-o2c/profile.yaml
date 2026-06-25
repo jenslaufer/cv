@@ -1,0 +1,48 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: webmethods-mund-o2c
+title: Jens Laufer — Spring Boot / Integration / CI-CD
+headline: 'Fullstack- & Integrations-Entwickler — Spring Boot · CI/CD · Cloud-native'
+stack_line: 'Java · Spring Boot · Enterprise-Integration (ESB/EAI, Kafka, REST/SOAP) · Angular/Vue · GitLab CI/CD · Kubernetes · Oracle · KI-gestützte Entwicklung'
+pitch: '~16 Jahre Fullstack-Entwicklung mit Schwerpunkt Spring-Boot-Microservices in Produktion (u. a. Volkswagen, Deutsche Telekom, Brunata, Condor) und Enterprise-Integration heterogener Systeme (ESB/EAI mit ServiceMix & Spring Integration, Kafka, REST/SOAP). Stark in GitLab CI/CD, Kubernetes/Cloud-native und Oracle. Seit Ende 2025 zusätzlich Harness- & Agentic-Engineering: produktiver Einsatz von KI-Werkzeugen in der Entwicklung. webMethods ist nicht in meinem Stack — die zugrundeliegenden Integrationsmuster sind es.'
+highlights: []
+include_projects:
+- 0
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 7
+- 11
+- 13
+- 14
+- 16
+- 21
+emphasize_skills:
+- GitLab
+- GitLab CI
+- Kubernetes
+- Oracle
+- Scrum
+- Spring
+- Spring Boot
+_scores:
+  0: 0
+  1: 2
+  2: 3
+  3: 1
+  4: 5
+  5: 5
+  6: 4
+  7: 1
+  11: 3
+  13: 3
+  14: 3
+  16: 3
+  21: 2

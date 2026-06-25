@@ -1,0 +1,21 @@
+Data Scientist / MLOps-Engineer mit Agentic AI & MCP Expertise gesucht — MVP-/Greenfield-Projekt
+
+Aufbau und Implementierung der ersten produktionsreifen "Agentic AI"-Plattform im öffentlichen Sektor. Tiefe Data-Science-Expertise verbunden mit moderner MLOps-Infrastruktur.
+
+Aufgaben:
+- Design und Implementierung des ersten produktionsreifen Use Cases auf Basis einer Agentic AI Plattform
+- Integration von MCP-Servern (Model Context Protocol) sowie Konzeption und Aufbau der Vektordatenbank-Architektur
+- Etablierung eines Kafka-basierten Event-Streamings und Aufsetzen von LLM-Inferenz-Pipelines
+- Aufbau und Strukturierung einer vollständigen MLOps-Infrastruktur
+- End-to-End-Deployment sowie Monitoring der Systeme
+- Wissenstransfer und fachliches Coaching des internen Teams
+
+Anforderungen:
+- Langjährige, fundierte Erfahrung in der Python-Entwicklung im Produktionskontext
+- Tiefgehendes Know-how im Bereich MLOps, Production ML sowie Docker und Container-Strukturen
+- Praktische Erfahrung mit Event-Streaming-Architekturen, idealerweise Kafka
+- Nachweisbare Expertise mit Large Language Models (LLMs), Embedding-Modellen und Vektordatenbanken
+- Fundierte Kenntnisse im Bereich Agentic AI und der Integration von MCP-Servern
+
+100% Remote (Einsatzort Deutschland). Freiberuflich, Vollzeit. Projektsprache Deutsch.
+Branche: öffentlicher Sektor, KI.

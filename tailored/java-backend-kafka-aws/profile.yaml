@@ -1,0 +1,49 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: java-backend-kafka-aws
+title: Jens Laufer — Senior Java Backend (Spring Boot / Kafka / AWS)
+headline: 'Senior Java Backend Developer — Spring Boot · Kafka · REST · AWS'
+stack_line: 'Java · Spring Boot · Apache Kafka · REST/JSON-APIs · GitLab CI/CD · AWS · Datenintegration (EAI/ESB) · JUnit/TDD'
+pitch: '~16 Jahre Java-Backend- und Fullstack-Erfahrung mit Schwerpunkt produktiver Spring-Boot-Microservices (u. a. Volkswagen, Deutsche Telekom, Brunata, Condor). Apache Kafka, REST/JSON-Schnittstellen und Datenintegration heterogener Systeme (EAI/ESB) gehören zum Kern meiner Arbeit; durchgängig testgetrieben (JUnit, Mockito, Integrationstests), GitLab CI/CD und Cloud (AWS, Kubernetes). Seit Ende 2025 zusätzlich produktiver Einsatz von KI-Werkzeugen in der Entwicklung.'
+highlights: []
+include_projects:
+- 0
+- 1
+- 2
+- 4
+- 5
+- 6
+- 11
+- 13
+- 14
+- 15
+- 16
+- 17
+- 19
+emphasize_skills:
+- AWS
+- Git
+- GitLab
+- Java
+- Kafka
+- REST
+- Spring
+- Spring Boot
+_scores:
+  0: 0
+  1: 2
+  2: 4
+  4: 4
+  5: 4
+  6: 3
+  11: 6
+  13: 5
+  14: 5
+  15: 4
+  16: 5
+  17: 3
+  19: 3

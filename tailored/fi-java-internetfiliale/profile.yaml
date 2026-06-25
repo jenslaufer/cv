@@ -1,0 +1,41 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: fi-java-internetfiliale
+title: Jens Laufer — Java-Entwickler (Internet-Filiale)
+headline: Senior Java-Entwickler — 16 Jahre Backend im Banken-, Finanz- & Versicherungsumfeld, mit Spezialisierung auf KI-gestützte Entwicklung
+stack_line: 'Java · Spring Boot · Microservices · REST · CI/CD (GitLab, Jenkins) · Keycloak / OAuth2 · Docker / Kubernetes · KI-Agenten & KI-gestützte Entwicklung'
+pitch: "~16 Jahre Java-Backend-Erfahrung, durchgehend testgetrieben und in regulierten Umgebungen — Commerzbank, DVAG (Versicherung/Finanz), Condor, Brunata. Seit Ende 2025 zusätzlich Harness & Agentic Engineering: das Gerüst um LLMs, das KI-gestützte Softwareentwicklung produktiv und sicher macht. Genau die Kombination, die die Internet-Filiale sucht — tiefes Java-Framework- und CI-Know-how plus fundierte Praxis in der Entwicklung mit KI-Unterstützung."
+highlights: []
+include_projects:
+- 0
+- 22
+- 13
+- 14
+- 15
+- 16
+- 3
+- 2
+- 9
+- 19
+- 11
+- 17
+emphasize_skills:
+- Java
+- Spring Boot
+- Microservices
+- REST
+- GitLab CI
+- Jenkins
+- Maven
+- JUnit
+- TDD
+- Keycloak
+- OAuth2
+- Spring Security
+- Docker
+- Oracle
+- PostgreSQL

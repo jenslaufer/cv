@@ -1,0 +1,27 @@
+Technical Consultant (m/w/d) — Backendentwicklung Java EE (Position 1)
+
+Endkunde: Sozialversicherungsträger. Langfristiger Einsatz, remote und Süddeutschland.
+
+Skills / Anforderungen:
+- Mehrschichtanwendungen, verteilte Anwendungen
+- Design Patterns und Best Practices in OO und Java EE
+- Enterprise Java Beans (Session, Entity, Message Driven)
+- Webtechnologien (HTML, XHTML, CSS, JavaScript)
+- Webservices (SOAP JAX-WS, REST JAX-RS)
+- Application Server (WebSphere)
+- XML Definition und Verarbeitung (Schema, XSLT, SAX, DOM, StAX, JAXB)
+- Relationale Datenbanken (DB2 z/OS, Derby, Oracle, Postgres)
+- Persistenztechnologien (JDBC, JPA, EJB-CMP)
+- Messaging (JMS, MQ)
+- Java-EE-Sicherheit (Authentifizierung, Autorisierung, Verschlüsselung, Digitale Signatur)
+- Qualitätssicherung (Code Review, Test, Analysewerkzeuge, Profiling, JUnit)
+- Versions-, Build- und Konfigurationsmanagement (Git, Maven)
+- Anwendungsarchitekturen (OSGi, Blueprint)
+- Datenaustausch innerhalb des Sozialversicherungsträgers, EESSI
+- Dokumentation in Confluence
+
+Aufgaben:
+- Backendentwicklung auf Basis der genannten Technologie-Umgebung
+- Vermittlung von Wissen in den genannten Technologien
+
+Projektsprache: Deutsch und Englisch.

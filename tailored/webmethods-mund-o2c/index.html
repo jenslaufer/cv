@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jens Laufer — Spring Boot / Integration / CI-CD</title>
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<meta name="description" content="~16 Jahre Fullstack-Entwicklung mit Schwerpunkt Spring-Boot-Microservices in Produktion (u. a. Volkswagen, Deutsche Telekom, Brunata, Condor) und Enterprise-Integration heterogener Systeme (ESB/EAI mit ServiceMix &amp; Spring Integration, Kafka, REST/SOAP). Stark in GitLab CI/CD, Kubernetes/Cloud-native und Oracle. Seit Ende 2025 zusätzlich Harness- &amp; Agentic-Engineering: produktiver Einsatz von KI-Werkzeugen in der Entwicklung. webMethods ist nicht in meinem Stack — die zugrundeliegenden Integrationsmuster sind es.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1a1d1c;
+    --ink-soft:#41494a;
+    --ink-faint:#6b7577;
+    --line:#e2e6e5;
+    --line-soft:#eef1f0;
+    --paper:#ffffff;
+    --canvas:#f6f7f6;
+    --accent:#0d5c54;        /* deep petrol/teal */
+    --accent-soft:#e6f0ee;
+    --accent-ink:#0a4640;
+    --sans:&#34;Space Grotesk&#34;, -apple-system, BlinkMacSystemFont, &#34;Segoe UI&#34;, Roboto, &#34;Helvetica Neue&#34;, Arial, sans-serif;
+    --mono:&#34;IBM Plex Mono&#34;, ui-monospace, SFMono-Regular, &#34;SF Mono&#34;, Menlo, Consolas, monospace;
+    --maxw:980px;
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--canvas);
+    line-height:1.6;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  a{color:var(--accent-ink);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 clamp(28px, 5vw, 56px);
+  }
+
+  /* ---------- Print button ---------- */
+  .doc-actions{
+    position:fixed;
+    top:20px;right:20px;
+    z-index:50;
+    display:flex;align-items:center;gap:10px;
+  }
+  .print-btn{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:var(--sans);
+    font-size:13px;font-weight:600;
+    letter-spacing:.04em;
+    text-decoration:none;
+    color:#fff;background:var(--accent);
+    border:none;border-radius:999px;
+    padding:11px 18px;
+    cursor:pointer;
+    box-shadow:0 6px 18px rgba(13,92,84,.28);
+    transition:transform .15s cubic-bezier(.2,.7,.3,1), background .15s ease;
+  }
+  .print-btn:hover{background:var(--accent-ink);transform:translateY(-1px)}
+  .print-btn:active{transform:translateY(0)}
+  .print-btn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2}
+  .print-btn--ghost{
+    color:var(--accent);background:#fff;
+    box-shadow:0 4px 14px rgba(0,0,0,.10);
+    border:1px solid #d7dedc;
+  }
+  .print-btn--ghost:hover{color:var(--accent-ink);background:#f6f7f6}
+
+  /* ---------- Header ---------- */
+  header.masthead{
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+  }
+  .masthead-inner{padding-top:64px;padding-bottom:40px}
+
+  .eyebrow{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    color:var(--accent-ink);
+    font-weight:600;
+    margin:0 0 14px;
+  }
+  h1{
+    font-size:clamp(38px,7vw,62px);
+    line-height:1.02;
+    letter-spacing:-.03em;
+    font-weight:700;
+    margin:0 0 10px;
+  }
+  .role-line{
+    font-size:clamp(17px,2.4vw,21px);
+    font-weight:500;
+    color:var(--ink-soft);
+    margin:0 0 4px;
+  }
+  .stack-line{
+    font-family:var(--mono);
+    font-size:13px;
+    color:var(--ink-faint);
+    letter-spacing:.01em;
+    margin:0 0 26px;
+  }
+  .pitch{
+    font-size:clamp(17px,2.1vw,19px);
+    line-height:1.55;
+    color:var(--ink-soft);
+    max-width:62ch;
+    margin:0 0 30px;
+  }
+
+  /* ---------- Facts strip ---------- */
+  .facts{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    border-radius:12px;
+    overflow:hidden;
+  }
+  .fact{
+    background:var(--paper);
+    padding:16px 18px;
+  }
+  .fact .k{
+    font-size:11px;text-transform:uppercase;letter-spacing:.1em;
+    color:var(--ink-faint);font-weight:600;margin-bottom:5px;
+  }
+  .fact .v{
+    font-size:15px;font-weight:600;color:var(--ink);line-height:1.35;
+  }
+  .fact .v small{display:block;font-weight:400;color:var(--ink-faint);font-size:12.5px;margin-top:2px}
+  .fact.rate .v{color:var(--accent-ink)}
+  @media (min-width:1000px){.facts{grid-template-columns:repeat(6,1fr)}}
+
+  /* ---------- Sections ---------- */
+  section{padding:54px 0}
+  section + section{border-top:1px solid var(--line)}
+  .sec-head{
+    display:flex;align-items:baseline;gap:14px;
+    margin:0 0 28px;
+  }
+  .sec-head h2{
+    font-size:13px;text-transform:uppercase;letter-spacing:.16em;
+    font-weight:600;color:var(--accent-ink);margin:0;white-space:nowrap;
+  }
+  .sec-head .rule{flex:1;height:1px;background:var(--line)}
+
+  /* ---------- Chips ---------- */
+  .chips{display:flex;flex-wrap:wrap;gap:9px}
+  .chip{
+    font-size:13.5px;font-weight:500;
+    padding:6px 13px;border-radius:999px;
+    background:var(--accent-soft);color:var(--accent-ink);
+    border:1px solid #d4e6e2;
+  }
+
+  /* ---------- Highlights ---------- */
+  .highlights{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+  .highlights li{
+    position:relative;padding-left:26px;
+    font-size:16px;color:var(--ink-soft);line-height:1.55;
+    max-width:74ch;
+  }
+  .highlights li::before{
+    content:&#34;&#34;;position:absolute;left:0;top:.62em;
+    width:9px;height:9px;border-radius:2px;
+    background:var(--accent);
+    transform:rotate(45deg);
+  }
+  .highlights strong{color:var(--ink);font-weight:600}
+
+  /* ---------- Skills ---------- */
+  .skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:28px 36px;
+  }
+  .skillgroup h3{
+    font-size:12px;text-transform:uppercase;letter-spacing:.08em;
+    color:var(--ink);font-weight:600;
+    margin:0 0 11px;padding-bottom:8px;border-bottom:1px solid var(--line-soft);
+  }
+  .tags{display:flex;flex-wrap:wrap;gap:7px}
+  .tag{
+    font-family:var(--mono);font-size:12px;font-weight:400;
+    padding:3px 9px;border-radius:5px;
+    background:#f1f3f2;color:var(--ink-soft);
+    border:1px solid var(--line);
+  }
+
+  /* ---------- Timeline ---------- */
+  .timeline{display:grid;gap:0}
+  .entry{
+    display:grid;
+    grid-template-columns:148px 1fr;
+    gap:0 32px;
+    padding:26px 0;
+    border-top:1px solid var(--line-soft);
+  }
+  .entry:first-child{border-top:none}
+  .entry .when{padding-top:2px}
+  .entry .period{
+    font-family:var(--mono);font-size:13px;font-weight:500;
+    color:var(--ink);line-height:1.4;
+  }
+  .entry .dur{
+    font-size:12px;color:var(--ink-faint);margin-top:3px;
+  }
+  .entry .body h3{
+    font-size:18px;font-weight:600;letter-spacing:-.01em;
+    margin:0 0 5px;line-height:1.3;
+  }
+  .entry .client{
+    font-size:14px;color:var(--ink-soft);margin:0 0 4px;font-weight:500;
+  }
+  .entry .client .branch{color:var(--ink-faint);font-weight:400}
+  .entry .roles{
+    font-size:12.5px;color:var(--accent-ink);font-weight:500;margin:0 0 10px;
+    letter-spacing:.01em;
+  }
+  .entry .desc{
+    font-size:14.5px;color:var(--ink-soft);line-height:1.55;
+    margin:0 0 12px;max-width:74ch;
+  }
+  .entry .stack{display:flex;flex-wrap:wrap;gap:6px}
+  .entry .stack .tag{font-size:11px;padding:2px 7px}
+
+  /* ---------- Contact / footer ---------- */
+  .contact-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:40px;
+  }
+  .contact-block h3{
+    font-size:12px;text-transform:uppercase;letter-spacing:.08em;
+    color:var(--ink);font-weight:600;margin:0 0 14px;
+    padding-bottom:8px;border-bottom:1px solid var(--line-soft);
+  }
+  .contact-list{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+  .contact-list li{display:grid;grid-template-columns:104px 1fr;gap:14px;font-size:14.5px;align-items:baseline}
+  .contact-list .lbl{color:var(--ink-faint);font-size:12.5px;text-transform:uppercase;letter-spacing:.06em}
+  .contact-list a{font-weight:500;word-break:break-word}
+  .edu-item{margin-bottom:14px}
+  .edu-item .date{font-family:var(--mono);font-size:12px;color:var(--ink-faint)}
+  .edu-item .title{font-size:14.5px;font-weight:600;color:var(--ink);line-height:1.4;margin:2px 0}
+  .edu-item .org{font-size:13.5px;color:var(--ink-soft)}
+  .edu-item .verify{font-size:12.5px}
+
+  footer{
+    background:var(--paper);border-top:1px solid var(--line);
+    padding:30px 0;
+  }
+  .foot-inner{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+    font-size:13px;color:var(--ink-faint);
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:640px){
+    .masthead-inner{padding-top:48px;padding-bottom:32px}
+    .facts{grid-template-columns:repeat(2,1fr)}
+    section{padding:40px 0}
+    .entry{grid-template-columns:1fr;gap:0}
+    .entry .when{padding:0 0 12px;display:flex;align-items:baseline;gap:12px}
+    .entry .dur{margin-top:0}
+    .contact-grid{grid-template-columns:1fr;gap:32px}
+    .doc-actions{top:auto;bottom:18px;right:18px}
+  }
+
+  /* ============= PRINT ============= */
+  @media print{
+    :root{--maxw:100%}
+    @page{size:A4;margin:14mm 13mm}
+    html,body{background:#fff;color:#000;font-size:10.2pt;line-height:1.42}
+    .doc-actions{display:none !important}
+    .wrap{max-width:100%;padding:0}
+    a{color:#000;text-decoration:none}
+
+    header.masthead{border-bottom:1.5px solid #000}
+    .masthead-inner{padding:0 0 14pt}
+    .eyebrow{color:#000;margin-bottom:6pt;font-size:8pt}
+    h1{font-size:26pt;margin-bottom:4pt}
+    .role-line{font-size:12pt;color:#000}
+    .stack-line{font-size:8.5pt;color:#333;margin-bottom:10pt}
+    .pitch{font-size:10pt;color:#222;margin-bottom:12pt;max-width:none}
+
+    .facts{border:1px solid #999;background:#999;border-radius:0;gap:1px}
+    .fact{background:#fff;padding:7pt 9pt}
+    .fact .k{font-size:7pt;color:#444}
+    .fact .v{font-size:9.5pt;color:#000}
+    .fact .v small{font-size:8pt;color:#444}
+    .fact.rate .v{color:#000}
+
+    section{padding:13pt 0;break-inside:auto}
+    section + section{border-top:1px solid #bbb}
+    .sec-head{margin-bottom:11pt}
+    .sec-head h2{color:#000;font-size:9pt}
+    .sec-head .rule{background:#bbb}
+
+    .chip{background:#fff;border:1px solid #777;color:#000;font-size:9pt;padding:3pt 8pt}
+
+    .highlights li{font-size:9.6pt;color:#111;padding-left:16pt}
+    .highlights li::before{background:#000;width:6px;height:6px;top:.5em}
+    .highlights strong{color:#000}
+
+    .skills-grid{gap:11pt 22pt}
+    .skillgroup{break-inside:avoid}
+    .skillgroup h3{font-size:8.5pt;border-bottom:1px solid #ccc;color:#000}
+    .tag{background:#fff;border:1px solid #aaa;color:#222;font-size:8pt;padding:1pt 5pt}
+
+    .entry{
+      grid-template-columns:118px 1fr;gap:0 18pt;
+      padding:9pt 0;border-top:1px solid #ccc;
+      break-inside:avoid;page-break-inside:avoid;
+    }
+    .entry .period{font-size:8.5pt;color:#000}
+    .entry .dur{font-size:7.5pt;color:#555}
+    .entry .body h3{font-size:11pt;color:#000;margin-bottom:3pt}
+    .entry .client{font-size:9pt;color:#111}
+    .entry .roles{color:#000;font-size:8.5pt}
+    .entry .desc{font-size:9pt;color:#222;max-width:none;margin-bottom:6pt}
+    .entry .stack .tag{font-size:7.5pt;padding:1pt 4pt}
+
+    .contact-grid{gap:18pt}
+    .contact-block h3{color:#000;font-size:8.5pt}
+    .contact-list{gap:6pt}
+    .contact-list li{font-size:9pt}
+    .contact-list .lbl{font-size:7.5pt;color:#444}
+    .contact-list a{color:#000}
+    .edu-item .title{font-size:9.5pt;color:#000}
+    .edu-item .org{font-size:9pt;color:#222}
+    .edu-item .date,.edu-item .verify{font-size:8pt;color:#444}
+
+    footer{border-top:1px solid #999;padding:8pt 0}
+    .foot-inner{font-size:8pt;color:#444}
+
+    /* keep section headers with their content */
+    .sec-head{break-after:avoid}
+    h2,h3{break-after:avoid}
+  }
+
+</style>
+</head>
+<body>
+
+<div class="doc-actions">
+  <a class="print-btn" href="webmethods-mund-o2c.pdf" download="Jens-Laufer-CV-webmethods-mund-o2c.pdf" aria-label="CV als PDF-Datei herunterladen">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+    PDF herunterladen
+  </a>
+  <button class="print-btn print-btn--ghost" onclick="window.print()" aria-label="Lebenslauf drucken">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4v-7h16v7h-2M6 14h12v6H6z"/></svg>
+    Drucken
+  </button>
+</div>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <p class="eyebrow">Freelancer · Softwareentwicklung</p>
+    <h1>Jens Laufer</h1>
+    <p class="role-line">Fullstack- &amp; Integrations-Entwickler — Spring Boot · CI/CD · Cloud-native</p>
+    <p class="stack-line">Java · Spring Boot · Enterprise-Integration (ESB/EAI, Kafka, REST/SOAP) · Angular/Vue · GitLab CI/CD · Kubernetes · Oracle · KI-gestützte Entwicklung</p>
+    <p class="pitch">~16 Jahre Fullstack-Entwicklung mit Schwerpunkt Spring-Boot-Microservices in Produktion (u. a. Volkswagen, Deutsche Telekom, Brunata, Condor) und Enterprise-Integration heterogener Systeme (ESB/EAI mit ServiceMix &amp; Spring Integration, Kafka, REST/SOAP). Stark in GitLab CI/CD, Kubernetes/Cloud-native und Oracle. Seit Ende 2025 zusätzlich Harness- &amp; Agentic-Engineering: produktiver Einsatz von KI-Werkzeugen in der Entwicklung. webMethods ist nicht in meinem Stack — die zugrundeliegenden Integrationsmuster sind es.</p>
+
+    <div class="facts">
+      <div class="fact">
+        <div class="k">Verfügbar</div>
+        <div class="v">ab 01.07.2026</div>
+      </div>
+      <div class="fact">
+        <div class="k">Einsatzort</div>
+        <div class="v">weltweit</div>
+      </div>
+      <div class="fact">
+        <div class="k">Remote-Anteil</div>
+        <div class="v">95 %<small>Vor-Ort 5 %</small></div>
+      </div>
+      <div class="fact rate">
+        <div class="k">Satz Remote</div>
+        <div class="v">89 €/h<small>netto</small></div>
+      </div>
+      <div class="fact rate">
+        <div class="k">Satz Vor-Ort</div>
+        <div class="v">99 €/h<small>netto</small></div>
+      </div>
+      <div class="fact">
+        <div class="k">Standort</div>
+        <div class="v">Karlstein am Main<small>Deutschland</small></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- Schwerpunkte -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><h2>Schwerpunkte</h2><span class="rule"></span></div>
+      <ul class="highlights">
+        <li><strong>~16 Jahre Fullstack-Erfahrung</strong> (seit 2009), durchgehend als Freelancer.</li>
+        <li><strong>Java/Spring-Boot-Microservices</strong> mit Vue.js- und React-Frontends — end-to-end mit Docker, Kubernetes und GitLab CI.</li>
+        <li><strong>Konsequent testgetrieben</strong> (TDD, JUnit, Mockito, Playwright/Selenium).</li>
+        <li><strong>Zweites Standbein Data Science &amp; Machine Learning</strong> — Udacity ML Engineer &amp; Data Analyst, Kaggle, Autor auf Towards Data Science.</li>
+        <li><strong>Breite Branchenerfahrung:</strong> Bank/Finanz, Versicherung, Automobil, Telekommunikation, Touristik, Industrie, Einzelhandel, Marketing und Startups.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Rollen -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><h2>Rollen</h2><span class="rule"></span></div>
+      <div class="chips">
+        <span class="chip">Fullstack-Entwicklung</span>
+        <span class="chip">Konzeption</span>
+        <span class="chip">Backend-Entwicklung</span>
+        <span class="chip">DevOps</span>
+        <span class="chip">Build- &amp; Konfigurationsmanagement</span>
+        <span class="chip">Data Analysis</span>
+        <span class="chip">Prototyping</span>
+        <span class="chip">Machine Learning</span>
+        <span class="chip">Jenkins-Pluginentwicklung</span>
+        <span class="chip">Maven-Pluginentwicklung</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kenntnisse -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><h2>Kenntnisse</h2><span class="rule"></span></div>
+      <div class="skills-grid">
+        <div class="skillgroup">
+          <h3>Microservices / Backend</h3>
+          <div class="tags"><span class="tag">Spring Boot</span><span class="tag">Spring</span><span class="tag">Spring Data</span><span class="tag">Spring Integration</span><span class="tag">Spring Security</span><span class="tag">OAuth2</span><span class="tag">Microservices</span><span class="tag">Feign</span><span class="tag">Sleuth</span><span class="tag">Zipkin</span><span class="tag">Python Eve</span><span class="tag">Python Flask</span><span class="tag">Java EE</span><span class="tag">EJB</span>
+          </div>
+        </div>
+        <div class="skillgroup">
+          <h3>DevOps / Cloud</h3>
+          <div class="tags"><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Rancher</span><span class="tag">GitLab CI</span><span class="tag">Jenkins</span><span class="tag">Maven</span><span class="tag">Grunt</span><span class="tag">npm</span><span class="tag">Artifactory</span><span class="tag">AWS (EC2, S3, SageMaker, VPC)</span><span class="tag">Microsoft Azure</span><span class="tag">DigitalOcean</span>
+          </div>
+        </div>
+        <div class="skillgroup">
+          <h3>Persistenz / Datenbanken</h3>
+          <div class="tags"><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">PostgreSQL</span><span class="tag">Oracle</span><span class="tag">Neo4j</span><span class="tag">JPA</span><span class="tag">Hibernate</span>
+          </div>
+        </div>
+        <div class="skillgroup">
+          <h3>Tooling / Sonstiges</h3>
+          <div class="tags"><span class="tag">Git</span><span class="tag">GitLab</span><span class="tag">Subversion</span><span class="tag">Jira</span><span class="tag">Confluence</span><span class="tag">Kibana</span><span class="tag">ANTLR</span><span class="tag">JavaCC</span><span class="tag">ZXing (QR)</span><span class="tag">PayPal API</span><span class="tag">RDF/XML/JSON</span><span class="tag">SAP (BAPI)</span><span class="tag">Phonegap</span><span class="tag">JBoss</span><span class="tag">Tomcat</span>
+          </div>
+        </div>
+        <div class="skillgroup">
+          <h3>Sprachen</h3>
+          <div class="tags"><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">R</span><span class="tag">Groovy</span>
+          </div>
+        </div>
+        <div class="skillgroup">
+          <h3>Frontend</h3>
+          <div class="tags"><span class="tag">Vue.js</span><span class="tag">React</span><span class="tag">AngularJS</span><span class="tag">GWT</span><span class="tag">Quasar</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Bootstrap</span>
+          </div>
+        </div>
+        <div class="skillgroup">
+          <h3>Security / IAM</h3>
+          <div class="tags"><span class="tag">Keycloak</span><span class="tag">Spring Security</span><span class="tag">OAuth2</span>
+          </div>
+        </div>
+        <div class="skillgroup">
+          <h3>Testing</h3>
+          <div class="tags"><span class="tag">JUnit</span><span class="tag">TDD</span><span class="tag">Mockito</span><span class="tag">Selenium</span><span class="tag">DBUnit</span><span class="tag">Playwright</span>
+          </div>
+        </div>
+        <div class="skillgroup">
+          <h3>API / Integration</h3>
+          <div class="tags"><span class="tag">REST</span><span class="tag">Swagger</span><span class="tag">OpenAPI</span><span class="tag">SOAP</span><span class="tag">Webservices</span><span class="tag">CXF</span><span class="tag">XFire</span><span class="tag">Kafka</span><span class="tag">ServiceMix</span>
+          </div>
+        </div>
+        <div class="skillgroup">
+          <h3>Machine Learning</h3>
+          <div class="tags"><span class="tag">scikit-learn</span><span class="tag">Keras</span><span class="tag">DeepLearning4J</span><span class="tag">CNN</span><span class="tag">Transfer Learning</span><span class="tag">Supervised/Unsupervised</span><span class="tag">k-means</span><span class="tag">PCA</span><span class="tag">t-SNE</span><span class="tag">Reinforcement Learning</span><span class="tag">OpenAI Gym</span><span class="tag">Topic Modeling</span>
+          </div>
+        </div>
+        <div class="skillgroup">
+          <h3>Data Science</h3>
+          <div class="tags"><span class="tag">pandas</span><span class="tag">numpy</span><span class="tag">dplyr</span><span class="tag">Jupyter</span><span class="tag">RMarkdown</span><span class="tag">ggplot</span><span class="tag">seaborn</span><span class="tag">Vega-Lite</span><span class="tag">A/B Testing</span><span class="tag">Webscraping</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projekthistorie -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><h2>Projekthistorie</h2><span class="rule"></span></div>
+      <div class="timeline">
+        <article class="entry">
+          <div class="when"><div class="period">seit 12/2025</div><div class="dur">laufend</div></div>
+          <div class="body">
+            <h3>Autonome KI-Agenten-Systeme — Harness &amp; Agentic Engineering</h3>
+            <p class="client">Solytics GmbH · Remote <span class="branch">— KI / SaaS</span></p><p class="roles">Harness Engineering · Agent Engineering · KI-Systemarchitektur · Fullstack-Entwicklung · DevOps</p>
+            <p class="desc">Aufbau autonomer KI-Agenten-Systeme auf LLM-Basis als <strong>Harness Engineer</strong>: das Gerüst um das Modell — Agenten-Loop, Tool-Use / MCP, Freigabe-Gates, Memory, Observability und Budget-Steuerung — nicht das Modell selbst. Zwei produktive Systeme: ein selbststeuernder KI-Geschäftspartner, der rund um die Uhr plant, Code schreibt, testet und deployt, sowie <strong>Fabrik</strong> (<a href="https://fabrikhq.com">fabrikhq.com</a>), eine Multi-Agenten-Plattform für autonome Softwareentwicklung mit parallelen Worker-Agenten. Ereignisgesteuerte Orchestrierung über Telegram, GitHub und systemd; mehrere KI-gebaute SaaS-Produkte end-to-end ausgeliefert.</p>
+            <div class="stack"><span class="tag">Claude / Anthropic API</span><span class="tag">LLM-Agenten</span><span class="tag">Agent Harness</span><span class="tag">Multi-Agent-Orchestration</span><span class="tag">Tool Use / MCP</span><span class="tag">RAG</span><span class="tag">Prompt Engineering</span><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Vue 3</span><span class="tag">Go</span><span class="tag">Docker</span><span class="tag">systemd</span><span class="tag">GitHub Actions</span><span class="tag">DigitalOcean</span><span class="tag">SQLite</span><span class="tag">TDD</span>
+            </div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="when"><div class="period">07/2024–06/2025</div><div class="dur">12 Monate</div></div>
+          <div class="body">
+            <h3>Digitale Immobilien-Visitenkarte für Eigentümer</h3>
+            <p class="client">verkaufe.immobilien · Remote <span class="branch">— Internet</span></p><p class="roles">Fullstack-Entwicklung · Konzeption · DevOps</p>
+            <p class="desc">Fullstack-Entwicklung einer digitalen Immobilien-Visitenkarte: Vue.js-Frontend, Python-Backend. Eigentümer erstellen und verwalten die Visitenkarte selbst.</p>
+            <div class="stack"><span class="tag">Python</span><span class="tag">Python Eve</span><span class="tag">MongoDB</span><span class="tag">TDD</span><span class="tag">Vue.js</span><span class="tag">Docker</span><span class="tag">GitLab</span><span class="tag">GitLab CI</span><span class="tag">REST</span><span class="tag">Playwright</span>
+            </div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="when"><div class="period">07/2022–04/2024</div><div class="dur">22 Monate</div></div>
+          <div class="body">
+            <h3>Front- &amp; Backend, Heizkostenabrechnung</h3>
+            <p class="client">Brunata · Remote <span class="branch">— Industrie</span></p><p class="roles">Fullstack-Entwicklung · Konzeption · DevOps</p>
+            <p class="desc">Microservice zum Parsing und Erzeugen von Heizkostendateien (Haweiko-Arge-Standard). Absicherung der Microservices mit Keycloak. Vue.js-Frontend.</p>
+            <div class="stack"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">MongoDB</span><span class="tag">JUnit</span><span class="tag">TDD</span><span class="tag">React</span><span class="tag">Docker</span><span class="tag">GitLab</span><span class="tag">GitLab CI</span><span class="tag">Spring Security</span><span class="tag">Keycloak</span><span class="tag">Mockito</span><span class="tag">OpenAPI</span><span class="tag">Swagger</span><span class="tag">REST</span><span class="tag">Microservices</span><span class="tag">Playwright</span>
+            </div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="when"><div class="period">01/2022–06/2022</div><div class="dur">6 Monate</div></div>
+          <div class="body">
+            <h3>Migration Payment-Backend Java EE → Spring Boot</h3>
+            <p class="client">Condor · Remote <span class="branch">— Marketing</span></p><p class="roles">Backend-Entwicklung</p>
+            <p class="desc">EJB-basiertes Java-EE-Payment-Backend nach Spring Boot migriert, als Docker-Container bereitgestellt.</p>
+            <div class="stack"><span class="tag">Java</span><span class="tag">Java EE</span><span class="tag">JPA</span><span class="tag">Spring Boot</span><span class="tag">MySQL</span><span class="tag">Docker</span><span class="tag">Mockito</span><span class="tag">JUnit</span><span class="tag">TDD</span>
+            </div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="when"><div class="period">04/2021–11/2021</div><div class="dur">8 Monate</div></div>
+          <div class="body">
+            <h3>Software &amp; Datenanalyse im Marketing</h3>
+            <p class="client">DigitalMarketer.com · Remote <span class="branch">— Marketing</span></p><p class="roles">Fullstack-Entwicklung · Prototyping · Konzeption · Data Analysis</p>
+            <p class="desc">Webscraping-Microservices in Spring Boot; Microsites in Vue.js + Spring-Boot-Backend für Berechnungstools, Umfragen, Questionnaire-Funnels; Datenanalyse in R.</p>
+            <div class="stack"><span class="tag">Scrum</span><span class="tag">Spring Boot</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Microservices</span><span class="tag">REST</span><span class="tag">R</span><span class="tag">Python</span><span class="tag">Java</span><span class="tag">OpenAPI</span><span class="tag">Feign</span><span class="tag">JUnit</span><span class="tag">TDD</span><span class="tag">Mockito</span><span class="tag">Vue.js</span><span class="tag">Quasar</span><span class="tag">MongoDB</span><span class="tag">dplyr</span><span class="tag">GitLab CI</span><span class="tag">GitLab</span><span class="tag">PostgreSQL</span><span class="tag">Python Eve</span><span class="tag">Python Flask</span><span class="tag">DigitalOcean</span><span class="tag">Webscraping</span><span class="tag">A/B Testing</span><span class="tag">Topic Modeling</span>
+            </div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="when"><div class="period">01/2021–03/2021</div><div class="dur">3 Monate</div></div>
+          <div class="body">
+            <h3>Marketing-Kampagnen-Tools</h3>
+            <p class="client">DigitalMarketer.com · Remote <span class="branch">— Marketing</span></p><p class="roles">Fullstack-Entwicklung · Konzeption</p>
+            <p class="desc">Tools zur Generierung von Marketing-Kampagnen und Publikation auf Google Ads / Twitter Ads.</p>
+            <div class="stack"><span class="tag">Scrum</span><span class="tag">Spring Boot</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Microservices</span><span class="tag">REST</span><span class="tag">Java</span><span class="tag">OpenAPI</span><span class="tag">Feign</span><span class="tag">JUnit</span><span class="tag">TDD</span><span class="tag">Mockito</span><span class="tag">Vue.js</span><span class="tag">Quasar</span><span class="tag">AWS S3</span><span class="tag">GitLab CI</span><span class="tag">GitLab</span>
+            </div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="when"><div class="period">12/2019–12/2020</div><div class="dur">13 Monate</div></div>
+          <div class="body">
+            <h3>Konfiguration von Telekommunikationsendgeräten über Webschnittstelle</h3>
+            <p class="client">Deutsche Telekom · Darmstadt/Remote <span class="branch">— Telekommunikation</span></p><p class="roles">DevOps · Build- &amp; Konfigurationsmanagement · Fullstack-Entwicklung</p>
+            <p class="desc">Bestehenden Prototyp weiterentwickelt und in den Produktionsbetrieb überführt.</p>
+            <div class="stack"><span class="tag">Spring Boot</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Microservices</span><span class="tag">REST</span><span class="tag">Spring Data</span><span class="tag">JPA</span><span class="tag">JUnit</span><span class="tag">TDD</span><span class="tag">Mockito</span><span class="tag">Vue.js</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">GitLab</span><span class="tag">GitLab CI</span><span class="tag">Rancher</span><span class="tag">Kibana</span><span class="tag">Feign</span><span class="tag">Keycloak</span><span class="tag">Sleuth</span><span class="tag">Zipkin</span>
+            </div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="when"><div class="period">07/2019–12/2019</div><div class="dur">6 Monate</div></div>
+          <div class="body">
+            <h3>Training eines Agenten zum Aktienhandel</h3>
+            <p class="client">JiGaoTrading · Remote <span class="branch">— Finanz</span></p><p class="roles">Machine Learning · Data Analysis</p>
+            <p class="desc">Agent, der eigenständig an chinesischen Börsen handelt (Reinforcement Learning).</p>
+            <div class="stack"><span class="tag">Reinforcement Learning</span><span class="tag">Python</span><span class="tag">R</span><span class="tag">Docker</span><span class="tag">AWS S3</span><span class="tag">OpenAI Gym</span><span class="tag">GitLab</span><span class="tag">seaborn</span><span class="tag">AWS SageMaker</span><span class="tag">MongoDB</span>
+            </div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="when"><div class="period">08/2017–03/2019</div><div class="dur">20 Monate</div></div>
+          <div class="body">
+            <h3>Connected Van — Fahrtenbuch</h3>
+            <p class="client">Volkswagen · Remote <span class="branch">— Automobil</span></p><p class="roles">Backend-Entwicklung</p>
+            <p class="desc">Microservices für Geolocation von Fahrzeugen und Tanklogbuch.</p>
+            <div class="stack"><span class="tag">Spring Boot</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Microservices</span><span class="tag">REST</span><span class="tag">Java</span><span class="tag">Maven</span><span class="tag">Swagger</span><span class="tag">OpenAPI</span><span class="tag">Feign</span><span class="tag">Sleuth</span><span class="tag">Zipkin</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">Jira</span><span class="tag">Confluence</span><span class="tag">JUnit</span><span class="tag">TDD</span><span class="tag">Mockito</span><span class="tag">Microsoft Azure</span><span class="tag">Kibana</span><span class="tag">Spring</span><span class="tag">Git</span><span class="tag">Kafka</span>
+            </div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="when"><div class="period">07/2015–07/2017</div><div class="dur">25 Monate</div></div>
+          <div class="body">
+            <h3>Rechnungsmanagement-Plattform (KMU)</h3>
+            <p class="client">Deutsche Verrechnungstelle / DVAG · Frankfurt a. Main <span class="branch">— Versicherung, Finanz, Startup</span></p><p class="roles">Fullstack-Entwicklung</p>
+            <p class="desc">Plattform für den vollen Rechnungs-Lebenszyklus (Erstellung, Zahlung, Mahnwesen, Inkasso); diverse Spring-Boot-Microservices.</p>
+            <div class="stack"><span class="tag">Spring Boot</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Microservices</span><span class="tag">REST</span><span class="tag">Java</span><span class="tag">Maven</span><span class="tag">Spring Security</span><span class="tag">OAuth2</span><span class="tag">Spring Integration</span><span class="tag">MongoDB</span><span class="tag">Jira</span><span class="tag">Confluence</span><span class="tag">JUnit</span><span class="tag">TDD</span><span class="tag">Mockito</span><span class="tag">Selenium</span><span class="tag">AngularJS</span><span class="tag">Grunt</span><span class="tag">npm</span><span class="tag">Spring</span><span class="tag">Git</span>
+            </div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="when"><div class="period">02/2015–06/2015</div><div class="dur">5 Monate</div></div>
+          <div class="body">
+            <h3>Rechnungsmanagement-Plattform (KMU) — Inkasso-Anbindung</h3>
+            <p class="client">Deutsche Verrechnungstelle / DVAG · Frankfurt a. Main <span class="branch">— Versicherung, Finanz, Startup</span></p><p class="roles">Fullstack-Entwicklung</p>
+            <p class="desc">Microservice zur Anbindung eines Inkasso-Anbieters inkl. SinglePage-Admin-Frontend.</p>
+            <div class="stack"><span class="tag">Spring Boot</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Microservices</span><span class="tag">REST</span><span class="tag">Java</span><span class="tag">Maven</span><span class="tag">Spring Security</span><span class="tag">OAuth2</span><span class="tag">Spring Integration</span><span class="tag">MongoDB</span><span class="tag">Jira</span><span class="tag">Confluence</span><span class="tag">JUnit</span><span class="tag">TDD</span><span class="tag">Mockito</span><span class="tag">Selenium</span><span class="tag">AngularJS</span><span class="tag">Grunt</span><span class="tag">npm</span><span class="tag">Spring</span><span class="tag">Git</span>
+            </div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="when"><div class="period">09/2014–12/2014</div><div class="dur">4 Monate</div></div>
+          <div class="body">
+            <h3>Rechnungsmanagement-Plattform (KMU) — Prototyp</h3>
+            <p class="client">Deutsche Verrechnungstelle / DVAG · Frankfurt a. Main <span class="branch">— Versicherung, Finanz, Startup</span></p><p class="roles">Fullstack-Entwicklung · Konzeption · Prototyping · Build- &amp; Konfigurationsmanagement</p>
+            <p class="desc">Evaluierung Microservices / SPA, Prototyp für eine Rechnungsverwaltungsplattform.</p>
+            <div class="stack"><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Spring</span><span class="tag">Bootstrap</span><span class="tag">AngularJS</span><span class="tag">Grunt</span><span class="tag">npm</span><span class="tag">Spring Boot</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Microservices</span><span class="tag">REST</span><span class="tag">Maven</span><span class="tag">Spring Security</span><span class="tag">MongoDB</span><span class="tag">Jira</span><span class="tag">Confluence</span><span class="tag">Git</span>
+            </div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="when"><div class="period">04/2010–09/2010</div><div class="dur">6 Monate</div></div>
+          <div class="body">
+            <h3>Webservices auf einem ESB (Mediation &amp; Rating)</h3>
+            <p class="client">1&amp;1 · Montabaur <span class="branch">— Telekommunikation</span></p><p class="roles">Backend-Entwicklung</p>
+            <p class="desc">Softwaredesign, Webservices, Pflege/Wartung der Rating-Engine; Webservices zur Rechnungsübergabe an SAP.</p>
+            <div class="stack"><span class="tag">Java</span><span class="tag">Spring</span><span class="tag">Spring Security</span><span class="tag">JPA</span><span class="tag">Hibernate</span><span class="tag">Maven</span><span class="tag">JUnit</span><span class="tag">TDD</span><span class="tag">Mockito</span><span class="tag">DBUnit</span><span class="tag">ServiceMix</span><span class="tag">Webservices</span><span class="tag">CXF</span><span class="tag">XFire</span><span class="tag">SAP-Anbindung</span><span class="tag">SAP BAPI</span><span class="tag">JBoss</span><span class="tag">Oracle</span><span class="tag">Subversion (SVN)</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt, Ausbildung, Zertifikate -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><h2>Kontakt &amp; Qualifikation</h2><span class="rule"></span></div>
+      <div class="contact-grid">
+
+        <div class="contact-block">
+          <h3>Kontakt &amp; Profile</h3>
+          <ul class="contact-list">
+            <li><span class="lbl">Telefon</span><a href="tel:+4915510249850">+49 15510 249850</a></li>
+            <li><span class="lbl">Standort</span><span>Karlstein am Main, Deutschland</span></li>
+            <li><span class="lbl">Website</span><a href="https://jenslaufer.com" target="_blank" rel="noopener">jenslaufer.com</a></li>
+            <li><span class="lbl">GitHub</span><a href="https://github.com/jenslaufer" target="_blank" rel="noopener">github.com/jenslaufer</a></li>
+            <li><span class="lbl">LinkedIn</span><a href="https://www.linkedin.com/in/jenslaufer" target="_blank" rel="noopener">linkedin.com/in/jenslaufer</a></li>
+            <li><span class="lbl">Kaggle</span><a href="https://kaggle.com/jenslaufer" target="_blank" rel="noopener">kaggle.com/jenslaufer</a></li>
+            <li><span class="lbl">Publikation</span><a href="https://towardsdatascience.com/@jenslaufer_32434" target="_blank" rel="noopener">Towards Data Science — Autor</a></li>
+          </ul>
+        </div>
+
+        <div class="contact-block">
+          <h3>Ausbildung</h3>
+          <div class="edu-item">
+            <div class="date">11/1997</div>
+            <div class="title">Dipl.-Ing. (Univ.) Elektrotechnik</div>
+            <div class="org">Universität Erlangen-Nürnberg</div>
+          </div>
+          <div class="edu-item">
+            <div class="date">05/1989</div>
+            <div class="title">Abitur</div>
+            <div class="org">Gymnasium am Romäusring, Villingen-Schwenningen</div>
+          </div>
+
+          <h3 style="margin-top:26px">Zertifikate</h3>
+          <div class="edu-item">
+            <div class="date">12/2018</div>
+            <div class="title">Machine Learning Engineer Nanodegree</div>
+            <div class="org">Udacity</div><div class="verify"><a href="https://confirm.udacity.com/M2PDRGD3" target="_blank" rel="noopener">Verifizieren →</a></div>
+          </div>
+          <div class="edu-item">
+            <div class="date">08/2017</div>
+            <div class="title">Data Analyst Nanodegree</div>
+            <div class="org">Udacity</div><div class="verify"><a href="https://confirm.udacity.com/CDRPDLS" target="_blank" rel="noopener">Verifizieren →</a></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>Jens Laufer · Fullstack · Data · ML · Agentic Engineering · Karlstein am Main</span>
+    <span>Verfügbar ab 01.07.2026 · weltweit · 95 % Remote</span>
+  </div>
+</footer>
+
+</body>
+</html>

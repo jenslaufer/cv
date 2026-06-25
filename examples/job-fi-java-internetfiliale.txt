@@ -1,0 +1,22 @@
+Java-Entwickler in der Internet-Filiale (m/w/d)
+Finanz Informatik GmbH & Co. KG — Hannover / Münster / Frankfurt
+Kennziffer 360/B — befristet auf 23 Monate
+
+Aufgaben:
+- Entwicklung innovativer zentraler Funktionalitäten für die Internet-Filiale aller deutschen Sparkassen
+- Federführende Entwicklung und Design komplexer Softwarelösungen mit modernen Werkzeugen und Programmiersprachen
+- Entwicklungsverantwortung für bereichsübergreifende Projekte inkl. fachlicher Beratung
+- Sicherstellung von System- und Produktqualität über den gesamten Entwicklungszyklus
+- Integration und Optimierung moderner Entwicklungswerkzeuge zur Unterstützung agiler Methoden
+- Einsatz von KI-Unterstützung zur Steigerung der Entwicklungseffizienz
+
+Anforderungen:
+- Abgeschlossenes Studium oder vergleichbare Ausbildung
+- Mindestens 6 Jahre Berufserfahrung
+- Ausgeprägte Kenntnisse in Java
+- Erfahrung mit Framework-Entwicklung und Continuous Integration
+- Fundierte Kenntnisse in Entwicklung mit KI-Unterstützung
+- Ausgeprägte Kommunikationsfähigkeit
+- Sicherheitsverständnis in der Softwareentwicklung
+
+Bewerbung unter Kennziffer 360/B an karriere@f-i.de. Kontakt: Julia Werner, Recruiterin.

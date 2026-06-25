@@ -1,0 +1,59 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: persona-service-javaee
+title: Jens Laufer — Senior Java / Java-EE Backend Engineer
+headline: Senior Java / Java-EE Backend Engineer — Enterprise-Java, EJB & Webservices
+stack_line: Java EE · EJB · JPA / Hibernate · SOAP (JAX-WS) / REST · ESB & Webservices · Spring Boot · Oracle / PostgreSQL · Maven · JUnit / TDD
+pitch: >-
+  ~16 Jahre Backend-Erfahrung in Enterprise-Java-Umgebungen — durchgehend als
+  Freelancer. Schwerpunkte: Java EE / EJB, Persistenz mit JPA/Hibernate, SOAP-
+  und REST-Webservices, ESB-/SOA-Integration und testgetriebene Entwicklung
+  (JUnit, Mockito, TDD). Tiefe Domänenerfahrung im regulierten Umfeld Bank,
+  Finanz und Versicherung (Commerzbank, DVAG, DER). Komplexe Migrations- und
+  Integrationsprojekte agil zum Erfolg geführt — von EJB-Altanwendungen bis zu
+  modernen Microservices.
+highlights:
+- '**~16 Jahre Backend-Entwicklung** in Enterprise-Java-Umgebungen (seit 2009), durchgehend als Freelancer.'
+- '**Java EE & EJB:** Migration eines EJB-basierten Java-EE-Payment-Backends nach Spring Boot (Condor); EntryCheck (Build & Deployment) für eine große Java-EE-Unternehmensanwendung (Deutsche Telekom).'
+- '**SOAP-/REST-Webservices & ESB/SOA:** Mediation-/Rating-Webservices auf einem ESB mit Rechnungsübergabe an SAP (1&1); kanonisches XML-Modell für die Stammdaten-Migration einer Großbank (Commerzbank).'
+- '**Regulierte Domänen:** Bank, Finanz und Versicherung (Commerzbank, DVAG, DER) — strukturierte Anforderungen, Dokumentation, Qualitätssicherung.'
+- '**Konsequent testgetrieben** (TDD, JUnit, Mockito, DBUnit) sowie Versions- und Build-Management mit Git und Maven.'
+include_projects:
+- 0
+- 3
+- 11
+- 13
+- 14
+- 15
+- 16
+- 17
+- 18
+- 19
+- 20
+- 21
+- 22
+emphasize_skills:
+- Java
+- Java EE
+- EJB
+- JPA
+- Hibernate
+- SOAP
+- Webservices
+- CXF
+- REST
+- Oracle
+- PostgreSQL
+- Maven
+- Git
+- JUnit
+- Mockito
+- DBUnit
+- TDD
+- Confluence
+- JBoss
+- Tomcat

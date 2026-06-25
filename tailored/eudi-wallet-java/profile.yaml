@@ -1,0 +1,53 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: eudi-wallet-java
+title: Jens Laufer — Senior Java Backend Engineer · Digital Identity
+headline: 'Senior Java-/Spring-Boot-Backend-Entwickler — sichere Schnittstellen, OAuth2/OpenID Connect & digitale Identität'
+stack_line: ''
+pitch: '~16 Jahre Erfahrung als freiberuflicher Java-/Spring-Boot-Backend-Entwickler (seit 2009), durchgehend testgetrieben und end-to-end mit Docker, Kubernetes und CI/CD. Schwerpunkt auf sicheren Schnittstellen und Identität: von einem OAuth2-Microservice (2015) über RESTful-API-Backends bis zu aktueller OAuth2-/OpenID-Connect- und IAM-Föderation. Breite Branchenerfahrung in Finanz, Versicherung, Automobil und Telekommunikation.'
+highlights:
+- '**~16 Jahre Java-/Fullstack-Erfahrung** (seit 2009), durchgehend als Freelancer.'
+- '**Java/Spring-Boot-Microservices** mit Docker, Kubernetes und GitLab CI — von Architektur und Modellierung bis zum Deployment.'
+- '**Sichere Schnittstellen & Identität:** OAuth2-/OpenID-Connect- und IAM-Föderation, Token-basierte Authentifizierung, RESTful APIs (OpenAPI/Swagger).'
+- '**Konsequent testgetrieben** (TDD, JUnit, Mockito, Playwright/Selenium) und qualitätsgetrieben (Code Reviews, CI/CD, Codeanalyse).'
+- '**Breite Branchenerfahrung:** Bank/Finanz, Versicherung, Automobil, Telekommunikation, Touristik, Industrie und Startups.'
+include_projects:
+- 0
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 11
+- 13
+- 14
+- 15
+- 16
+- 17
+- 19
+emphasize_skills:
+- Confluence
+- Docker
+- Git
+- GitLab
+- GitLab CI
+- Java
+- Jenkins
+- Jira
+- Konzeption
+- Kubernetes
+- Maven
+- Microservices
+- OAuth2
+- Oracle
+- PostgreSQL
+- Rancher
+- REST
+- Scrum
+- Spring Boot
+- TDD

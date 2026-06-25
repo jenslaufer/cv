@@ -1,0 +1,20 @@
+Senior Backend-Entwickler Java für die European Digital Identity Wallet (EUDI-Wallet) (m/w/d)
+
+Start: 01.08.2026
+Laufzeit: bis 30.12.2029
+Format: > 90% Remote
+
+Projektbeschreibung:
+Für die Umsetzung der European Digital Identity Wallet (EUDI-Wallet) werden zentrale Softwarekomponenten für eine digitale Identitäts- und Nachweisinfrastruktur entwickelt. Im Fokus steht die Entwicklung eines Ausstellersystems mit Schnittstellen zur Bürger-Wallet, zur Vertrauensinfrastruktur, zu internen Systemen sowie zu externen Fachverfahren und Partnern. Zu den vorgesehenen Komponenten zählen ein Wallet-Kommunikationsdienst, ein Widerrufsservice, Authentifizierungs- und Identifizierungsservices, ein Signatur- bzw. Siegeldienst sowie Transferprogramme und Schnittstellen zur Bereitstellung von Daten für die Credential-Erstellung.
+
+Aufgaben:
+Entwicklung und Weiterentwicklung von Java-basierten Backend-Komponenten im Umfeld der EUDI-Wallet. Erstellung und iterative Anpassung eines Ausstellersystems für digitale Credentials. Entwicklung von Wallet-Kommunikationsdiensten, Widerrufskomponenten sowie Authentifizierungs- und Identifizierungsservices. Entwicklung und Anbindung von Signatur- und Siegeldiensten. Umsetzung sicherer Schnittstellen zu Wallets, Vertrauensinfrastrukturen, Fachverfahren und externen Partnern. Entwicklung von Transferprogrammen zur Verarbeitung von Daten für die Credential-Erstellung. Entwicklung und Weiterentwicklung von RESTful APIs. Mitarbeit bei Design, Modellierung und Architektur komplexer Softwaresysteme. Umsetzung von Qualitäts-, Sicherheits-, Test- und Performance-Anforderungen.
+
+Anforderungen (Must-Have):
+Gute praktische Erfahrung in der Java-Entwicklung. Erfahrung in der Entwicklung von Softwarekomponenten im Backend-Umfeld. Erfahrung mit Container-Umgebungen, insbesondere Docker, Kubernetes oder Rancher. Erfahrung mit serviceorientierten Architekturen (SOA) und Microservices. Kenntnisse in objektorientierter Analyse und Design (OOA/OOD, UML). Erfahrung mit relationalen Datenbanken (DB2, MS SQL Server, Oracle, PostgreSQL). Kenntnisse in Deployment-Systemen. Erfahrung mit Qualitätssicherungskonzepten (Code Reviews, Tests, Codeanalyse, Profiling). Erfahrung mit Testautomatisierung für Codequalität, Funktionalität und Sicherheit. Erfahrung mit Continuous Integration und automatisierten Build- und Testprozessen (Maven, Jenkins, Tekton, GitLab CI). Erfahrung mit Git. Performance-Optimierung von Anwendungen. Entwicklung von RESTful APIs. Kenntnisse in Protokoll- und Verzeichnisdiensten (LDAP, Active Directory). Erfahrung mit Applikationssicherheit in Konzeption und Implementierung. Kenntnisse in Verschlüsselung, Token-basierter Authentifizierung (OAuth2, OpenID Connect) und sicheren Schnittstellen. Erfahrung im Datenaustausch zwischen Behörden, Fachverfahren und externen Partnern. Erfahrung in Digitalisierungsprojekten mit Wallets oder digitalen Identitätslösungen.
+
+Methodik: V-Modell XT, Scrum, Kanban, SAFe. Geschäftsprozessmodellierung. Anforderungserhebung und -analyse.
+
+Persönlich: Analytische, strukturierte, methodische Arbeitsweise. Selbstständiges, lösungsorientiertes Arbeiten. Teamfähigkeit. Klare Kommunikation in deutscher Sprache, Deutschkenntnisse mindestens C1. Bereitschaft zur Sicherheitsüberprüfung Ü2 nach SÜG.
+
+Umfeld/Tools: HCL Notes, Atlassian Jira, Atlassian Confluence, Microsoft Office.

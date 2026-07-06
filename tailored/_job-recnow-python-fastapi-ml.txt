@@ -1,0 +1,32 @@
+Python / FastAPI Developer mit AI/ML Kenntnissen — RecNow GmbH (Bacel Issa)
+
+Start: ASAP
+Dauer: Ende September / Mitte Oktober mit Verlängerungsoption
+Auslastung: Vollzeit
+Remote / vor Ort: Großteil Remote
+Ort: Stuttgart
+
+Must-have:
+- 3–5 Jahre Berufserfahrung als Python Developer
+- Sehr gute Kenntnisse in Python 3.11+, insbesondere async/await, Type Hints und f-strings
+- Erfahrung mit FastAPI, REST APIs, Pydantic Models und Dependency Injection
+- Sicherer Umgang mit REST API Design, Request-/Response-Modellen und Status Codes
+- Sehr gute Git-Kenntnisse: Branching, Merging, Rebasing, Conventional Commits und Conflict Resolution
+- Erfahrung mit Testing, insbesondere pytest, Coverage und Mocking
+- Erfahrung im Umgang mit YAML-Konfigurationsdateien
+- Grundkenntnisse im AI/ML-Umfeld: Prompts, Embeddings, Vector Search, Semantic Similarity und RAG-Konzepte
+- Sicherer Umgang mit CLI, lokalen Debugging-Prozessen und Log-Analyse
+- Software-Prinzipien: SOLID, DRY, KISS, Separation of Concerns
+
+Nice-to-have:
+- Hydra für YAML-basierte Konfigurationen und Overrides
+- Azure OpenAI, Deployment-Konfigurationen und API Patterns
+- Kafka, async Producers/Consumers und DLQ Pattern
+- LanceDB für Vector Storage Operations
+- Docker, Kubernetes und Helm Charts
+- GitLab Pipelines, CI/CD Workflows und Template Includes
+- Prometheus für Metrics Instrumentation
+- Kibana für Log-Analyse und Query Building
+- ServiceNow Table API und Ticket Updates
+- LangGraph / MCP für Agent Tooling und MCP Server Work
+- Agent Frameworks, Fine-Tuning, Model Evaluation und Prompt Engineering Optimization

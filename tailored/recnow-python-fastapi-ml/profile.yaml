@@ -1,0 +1,50 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: recnow-python-fastapi-ml
+title: Jens Laufer — Python / FastAPI / AI-ML
+headline: ''
+stack_line: ''
+pitch: ''
+highlights: []
+include_projects:
+- 0
+- 1
+- 2
+- 4
+- 5
+- 6
+- 7
+- 8
+- 11
+- 13
+- 14
+- 16
+emphasize_skills:
+- Docker
+- FastAPI
+- Git
+- GitLab
+- Kafka
+- Kibana
+- Kubernetes
+- Prompt Engineering
+- Python
+- RAG
+- REST
+_scores:
+  0: 5
+  1: 4
+  2: 3
+  4: 5
+  5: 4
+  6: 5
+  7: 3
+  8: 3
+  11: 6
+  13: 4
+  14: 4
+  16: 4

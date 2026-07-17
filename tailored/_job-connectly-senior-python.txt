@@ -1,0 +1,26 @@
+Senior Python Developer (m/w/x) // ASAP // 6 month + // 100% remote // part- and fulltime // english
+Connectly GmbH, Marcel Wlömer, 13.07.2026
+
+For one of our long standing clients, we are looking for an experienced Senior Python Developer (m/f/x) with expertise in monitoring solutions and the development of modern REST APIs.
+
+Responsibilities:
+- Develop Python based custom extensions and monitoring solutions
+- Design, develop, and integrate modern REST APIs
+- Build high quality Python applications with a strong focus on clean, maintainable, and well documented code
+- Collaborate closely with the internal development team
+- Independently estimate development effort and communicate project progress
+- Work closely with the customer's technical stakeholders
+
+Profile:
+- Several years of professional Python development experience (at least 5 to 10 years)
+- Strong expertise in Python
+- Experience with Flask or extensive experience in native Python development
+- Experience designing and integrating REST APIs
+- Ideally, experience with monitoring solutions
+- Strong understanding of Clean Code, software architecture, and best practices such as SOLID principles
+- Experience working with Git and writing clean, well structured, and well documented code
+- Experience with cloud platforms such as Azure, SAP Cloud, or Cisco Cloud is a plus, but not required
+- Excellent German or English communication skills
+- High level of ownership and excellent communication skills
+
+Project: Start August 1, 2026. Duration 6 months with option to extend. Initially 5 to 10 hours per week, gradual increase up to full time. 100% Remote.

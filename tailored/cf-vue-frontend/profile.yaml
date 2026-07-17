@@ -1,0 +1,41 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: cf-vue-frontend
+title: Jens Laufer — Frontend Developer Vue.js
+headline: ''
+stack_line: ''
+pitch: ''
+highlights: []
+include_projects:
+- 0
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 7
+- 8
+- 9
+- 16
+- 17
+emphasize_skills:
+- JavaScript
+- Vue.js
+_scores:
+  0: 0
+  1: 1
+  2: 0
+  3: 0
+  4: 1
+  5: 1
+  6: 1
+  7: 0
+  8: 0
+  9: 0
+  16: 1
+  17: 1

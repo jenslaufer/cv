@@ -1,0 +1,23 @@
+Freiberuflicher Frontend Developer (Vue.js) / Hybrid / Start 1.8
+Computer Futures (SThree GmbH), Philippe Strass, 13.07.2026
+
+Für einen renommierten Kunden aus dem Umfeld Softwareentwicklung und intelligente Planungslösungen suchen wir kurzfristig einen erfahrenen Frontend Developer mit Schwerpunkt Vue.js zur Unterstützung eines bestehenden Entwicklungsteams.
+
+Profil:
+- Mehrjährige Berufserfahrung als Frontend- oder Fullstack Developer
+- Sehr gute Kenntnisse in: Vue.js, JavaScript, TypeScript, HTML5, CSS3
+- Erfahrung mit modernen Frontend-Architekturen, Microfrontends, agilen Entwicklungsprozessen
+- Wünschenswert: Kenntnisse in C#, Erfahrung mit komplexen Enterprise-Anwendungen
+- Selbstständige und strukturierte Arbeitsweise
+- Sehr gute Deutschkenntnisse sowie gute Englischkenntnisse
+
+Aufgaben:
+- Weiterentwicklung einer modernen Softwarelösung im Enterprise-Umfeld
+- Umsetzung neuer Features und Optimierung bestehender Frontend-Komponenten
+- Mitarbeit an einer skalierbaren Microfrontend-Architektur
+- Analyse technischer Anforderungen sowie Entwicklung nachhaltiger Lösungen
+- Enge Zusammenarbeit mit Product Ownern, Entwicklern und Fachbereichen
+
+Rahmenbedingungen: Start 01.08.2026, Laufzeit 6 Monate, 40 Stunden pro Woche, Mid-Level bis Senior, Einsatzort Hybrid (2-3 Tage vor Ort), Einarbeitung in den ersten 1-2 Wochen überwiegend vor Ort.
+
+Gewünscht in der Bewerbung: Verfügbarkeit, Stundensatzvorstellung, relevante Projektreferenzen, kurze Selbsteinschätzung der genannten Technologien (Skala 1-10).

@@ -1,0 +1,42 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: connectly-senior-python
+title: Jens Laufer — Senior Python Developer
+headline: ''
+stack_line: ''
+pitch: ''
+highlights: []
+include_projects:
+- 0
+- 1
+- 2
+- 4
+- 5
+- 8
+- 11
+- 12
+- 13
+- 14
+- 15
+- 16
+emphasize_skills:
+- Git
+- Python
+- REST
+_scores:
+  0: 1
+  1: 2
+  2: 1
+  4: 2
+  5: 1
+  8: 2
+  11: 2
+  12: 2
+  13: 2
+  14: 2
+  15: 2
+  16: 2

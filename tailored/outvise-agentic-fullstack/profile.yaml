@@ -1,0 +1,47 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: outvise-agentic-fullstack
+title: Senior Full Stack Developer — Agentic Coding
+headline: ''
+stack_line: ''
+pitch: ''
+highlights: []
+include_projects:
+- 0
+- 2
+- 3
+- 4
+- 5
+- 6
+- 9
+- 11
+- 13
+- 14
+- 15
+- 16
+- 17
+emphasize_skills:
+- Java
+- JavaScript
+- Kafka
+- Microservices
+- Spring
+- Spring Boot
+_scores:
+  0: 0
+  2: 3
+  3: 2
+  4: 3
+  5: 3
+  6: 2
+  9: 3
+  11: 5
+  13: 4
+  14: 4
+  15: 3
+  16: 5
+  17: 3

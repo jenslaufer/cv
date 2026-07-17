@@ -1,0 +1,25 @@
+Senior Full Stack Developer Agentic Coding (m/w/d)
+Outvise, Sophie Hindennach, 17.07.2026 (freelancermap Postfach id=4573208)
+
+Für einen unserer Kunden, ein IT-Beratungsunternehmen, suchen wir einen Senior Full Stack Developer Agentic Coding (m/w/d) für ein langfristiges Projekt bei einem Endkunden aus dem Retail-Umfeld.
+
+Auslastung: Vollzeit
+Start: 01.09.26, Dauer: 18 Monate
+80–90 % Remote, gelegentlich vor Ort in Köln
+Sprache: Deutsch – Must-Have und Wohnort in Deutschland
+
+Hintergrund/Aufgaben
+Im Rahmen des Projekts soll ein bestehendes Microservice-System Richtung Agentic AI weiterentwickelt werden.
+Die Person soll sich aktiv in die KI-Weiterentwicklung im Team einbringen (Mitgestaltung von Tools/Guidelines, nicht nur Anwender) und eine Mentoring-Funktion für Junior-Entwickler übernehmen – fachliche und methodische Anleitung.
+Die bestehende Testsuite soll weiterentwickelt und ausgebaut werden. Expertise in gängigen Testautomatisierungs-Frameworks ist erforderlich.
+
+Professional background
+Senior-Level, 3- idealerweise 5+ Jahre Berufserfahrung als Full Stack Developer (Java, Spring Boot, Kafka, Angular, JavaScript)
+Mehrmonatige, praktische Erfahrung mit echten Agentic AI Workflows – ausdrücklich nicht nur Copilot-Autocomplete, sondern autonome/agentenbasierte Coding-Workflows (z. B. Agent Mode, Multi-Step-Task-Automatisierung)
+Expertise in Testautomatisierung und gängiger Frameworks
+Retail-Erfahrung von Vorteil
+Backend: Java, Spring Boot – aktuelle/neueste Versionen sollten sicher beherrscht werden
+Messaging: Kafka
+Frontend: Angular, JavaScript – aktuelle Versionen
+Architektur: Microservices – Weiterentwicklung eines bestehenden Systems (kein Greenfield)
+Cloud: Google Cloud

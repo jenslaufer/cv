@@ -1,0 +1,37 @@
+Senior Java Entwickler / Developer (m/w/d)
+Global Network AG, René Schwindt, 22.07.2026 (freelancermap Postfach id=4594211)
+
+Für ein langfristiges Digitalisierungsprojekt des Rechenzentrums der Finanzverwaltung
+Nordrhein-Westfalen (RZF NRW) zur Weiterentwicklung zentraler Anwendungen im
+KONSENS-Umfeld werden mehrere erfahrene Senior Java Entwickler gesucht.
+
+Java 17 | Java EE / Jakarta EE | Spring Boot | JBoss | WildFly | Oracle | REST | SOAP | KONSENS
+
+Contracting / freelance. Einsatzort: Düsseldorf / überwiegend Remote (ca. 1 Tag/Monat vor Ort).
+Projektstart: 04.01.2027, Laufzeit bis 31.12.2027 (Option auf Verlängerung), Vollzeit (~220 PT).
+
+Aufgaben:
+Weiterentwicklung bestehender Java-Anwendungen im KONSENS-Umfeld; Entwicklung neuer
+Softwarekomponenten nach fachlichen Vorgaben; Analyse von Fach- und technischen
+Anforderungen; Konzeption und Implementierung neuer Funktionen; Entwicklung und Pflege
+von REST- und SOAP-Webservices; Wartung und Optimierung bestehender Anwendungen;
+Fehleranalyse und Fehlerbehebung; Durchführung von Code-Reviews; Unterstützung bei
+Integrationstests und Qualitätssicherung; technische Dokumentation; Mitarbeit im Build-
+und Deployment-Prozess; agile Entwicklung.
+
+Zwingende Anforderungen:
+Mehrjährige Berufserfahrung (min. 5 Jahre) als Java-Entwickler in Enterprise-Projekten;
+sehr gute Kenntnisse in Java EE / Jakarta EE; fundierte Erfahrung mit Java 17 oder höher;
+Erfahrung mit Spring Boot; Erfahrung mit JBoss / WildFly; Erfahrung mit relationalen
+Datenbanken, insbesondere Oracle; Erfahrung mit REST- und SOAP-Webservices; Git;
+Maven-, Gradle- und Jenkins-Buildprozesse; XML-Technologien; objektorientierte
+Softwareentwicklung; Wartung und Weiterentwicklung bestehender Anwendungen; sehr gute
+Deutschkenntnisse in Wort und Schrift.
+
+Skills: Spring Framework, Maven, Gradle, Hibernate / JPA, SQL, PL/SQL, IntelliJ IDEA,
+JIRA, Confluence, GitLab, Jenkins Pipelines, WildFly, Apache Tomcat, XML, JSON, Linux,
+agile Entwicklung, öffentliche Verwaltung, KONSENS-Umfeld.
+
+Wünschenswert: verteilte Anwendungen, Microservice-Architekturen, Continuous Delivery,
+automatisierte Softwaretests, Performanceoptimierung, Legacy-Systeme, Docker, Kubernetes,
+DevOps, CI/CD, Swagger, OpenAPI, Testautomatisierung.

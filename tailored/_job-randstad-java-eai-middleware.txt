@@ -1,0 +1,22 @@
+Senior Java / EAI & Middleware Entwickler (m/w/d)
+Randstad Professional GmbH (vorm. GULP), Alyssa Matthäus, 22.07.2026 (freelancermap Postfach id=4592641)
+
+Endkunde im deutschen Gesundheitswesen, Hamburg. Überführung einer monolithischen
+Middleware-/EAI-Landschaft in eine moderne, eventgetriebene Service-Architektur.
+Standort Hamburg / 60 % Remote / 40 % vor Ort. Start 01.09.2026 (spät. 01.11.2026),
+12 Monate, Vollzeit. Projektsprache Deutsch (C1+).
+
+Aufgaben:
+Konzeption, Implementierung und Dokumentation neuer Broker-Komponenten auf Basis von
+Spring Boot mit JMS- und Kafka-APIs; transaktionale Nachrichtenverarbeitung via JMS-API
+und Oracle AQ (Queues/Topics, Dead-Letter-Handling, Recovery); Entwicklung und Pflege von
+REST- und SOAP-Schnittstellen inkl. Transformations-Protokolle (XML/SOAP, JSON/REST,
+JMS-Payloads); L3-Support der bestehenden EAI-Lösung; CI/CD-Pipelines (Docker, OpenShift,
+Jenkins), Code-Reviews, automatisierte Tests, Performance-Analysen; agile Abstimmung.
+
+Anforderungen:
+Mind. 5 Jahre Enterprise-Java als Freiberufler; nachweisbare Erfahrung mit komplexen
+Middleware-/Broker-Architekturen; sehr gute JMS-API-Kenntnisse, Oracle AQ (oder
+vergleichbare relationale Queues), Kafka-API für Event-Driven Architectures; Spring Boot
+Microservices, REST und SOAP; Docker, Kubernetes/OpenShift, Git, CI/CD; schnelle
+Einarbeitung in gewachsene Codebases; verhandlungssicheres Deutsch.

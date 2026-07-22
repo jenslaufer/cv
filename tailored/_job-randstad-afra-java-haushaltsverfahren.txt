@@ -1,0 +1,22 @@
+AFRA-10771 — Backend-Entwickler (m/w/d) mit Spring Boot und Java
+Randstad Digital Germany AG, Jeannine Keith, 22.07.2026 (freelancermap Postfach id=4592797)
+
+Modernisierung der Haushaltsverfahren des Bundes (Bundesfinanzministerium), CL2 - SVIK Team 14.
+Contracting / freelance. Einsatzort: vsl. 80 % Remote / 20 % Berlin. Projektsprache Deutsch.
+Zeitraum 10.08.2026–31.12.2026. Tagessatz 600 € all-in. Profile bis 23.07.2026 10 Uhr.
+
+Aufgaben:
+Backend-Entwicklung mit Spring Boot und Java; Code-Reviews und automatisierte Tests;
+selbstständiges Umsetzen von User Stories in Sprints; Refactorings und Codeoptimierungen
+erkennen und einbringen; Einarbeitung in die umfangreiche Fachlichkeit des Bundeshaushalts;
+kontinuierliche Weiterbildung in Fachlichkeit und Technik.
+
+Muss-Anforderungen (Tätigkeitsnachweis pro Projekt gefordert, nicht nur Technologie-Nennung):
+Abgeschlossenes Studium im Fachbereich IT; Belastbarkeit / Stressresistenz; Bereitschaft zu
+wenigen Dienstreisen nach Berlin; agiles Arbeiten; sehr gute Kenntnisse Java, Spring Boot,
+JUnit; gute Kenntnisse PostgreSQL; gute Kenntnisse Designpatterns und Softwarearchitektur;
+Bereitschaft zur tiefen Einarbeitung in Fachlichkeit und neue Technologien.
+
+Soll-Anforderungen:
+React und TypeScript; DevOps; OpenShift oder Kubernetes; Helm-Charts; CI/CD-Pipelines;
+GitOps / ArgoCD.

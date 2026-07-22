@@ -1,0 +1,50 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: randstad-afra-java-haushaltsverfahren
+title: Jens Laufer — Senior Java / Spring Boot (Backend, oeffentliche Verwaltung)
+headline: ''
+stack_line: ''
+pitch: ''
+highlights: []
+include_projects:
+- 0
+- 2
+- 3
+- 4
+- 5
+- 6
+- 11
+- 13
+- 14
+- 16
+- 18
+- 19
+- 21
+emphasize_skills:
+- Backend-Entwicklung
+- DevOps
+- Java
+- JUnit
+- Kubernetes
+- PostgreSQL
+- React
+- Spring
+- Spring Boot
+_scores:
+  0: 1
+  2: 5
+  3: 4
+  4: 5
+  5: 4
+  6: 4
+  11: 6
+  13: 6
+  14: 6
+  16: 5
+  18: 4
+  19: 4
+  21: 4

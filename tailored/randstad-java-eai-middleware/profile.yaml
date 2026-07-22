@@ -1,0 +1,55 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: randstad-java-eai-middleware
+title: Jens Laufer — Senior Java / EAI & Middleware
+headline: ''
+stack_line: ''
+pitch: ''
+highlights: []
+include_projects:
+- 0
+- 2
+- 4
+- 5
+- 6
+- 9
+- 11
+- 13
+- 14
+- 15
+- 16
+- 17
+- 19
+emphasize_skills:
+- Docker
+- Git
+- Java
+- Jenkins
+- Kafka
+- Konzeption
+- Kubernetes
+- Microservices
+- Oracle
+- REST
+- SOAP
+- Spring
+- Spring Boot
+- XML
+_scores:
+  0: 1
+  2: 6
+  4: 7
+  5: 7
+  6: 5
+  9: 4
+  11: 9
+  13: 8
+  14: 8
+  15: 6
+  16: 9
+  17: 4
+  19: 5

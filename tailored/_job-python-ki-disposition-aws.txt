@@ -1,0 +1,29 @@
+Senior Python Backend Developer KI (m/w/d) — (Liam Herzer)
+
+KI-Projekt zur Disposition: KI-basierte Anwendung zur Unterstützung der operativen
+Einsatzplanung. Analysiert betriebliche Echtzeitdaten und erstellt datenbasierte
+Handlungsvorschläge zur Optimierung von Dispositionsentscheidungen. Simulierte Szenarien
+des Verkehrsverlaufs für die nächsten Minuten zur Entscheidungsbewertung. Bereits in
+mehreren Regionen produktiv getestet, soll auf weitere Einsatzgebiete skaliert werden.
+Ziel: Effizienzsteigerung, Reduzierung von Verspätungen und Störungen im Betriebsablauf.
+
+Wesentliche Leistungsbestandteile
+- Backend-Entwicklung mit Python
+- Konzeption und Implementierung technischer Komponenten
+- Entwicklung von REST-Schnittstellen und Datenverarbeitung
+- Data Engineering sowie CI/CD- und Testunterstützung
+
+Benötigte Erfahrungen und Skills
+MUSS: 5 Jahre Python-Programmierung
+MUSS: 5 Jahre AWS Cloud / AWS Services
+MUSS: 5 Jahre REST-API-Entwicklung
+MUSS: 5 Jahre SQL
+SOLL: 1 Referenz Transport & Logistik
+SOLL: 5 Jahre Docker
+SOLL: 5 Jahre Grafana
+
+Rahmendaten
+- Vollzeit, 8h/Tag, 5 Tage/Woche
+- Projektzeitraum 06.08.2026 – 31.12.2026
+- Leistung größtenteils an einem Ort eigener Wahl in Deutschland (onshore)
+- Wunsch: ~10% vor Ort in Frankfurt am Main (onsite)

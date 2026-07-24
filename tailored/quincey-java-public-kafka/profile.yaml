@@ -1,0 +1,62 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: quincey-java-public-kafka
+title: Jens Laufer — Java / Spring Boot Backend (Public)
+headline: ''
+stack_line: ''
+pitch: ''
+highlights: []
+include_projects:
+- 0
+- 2
+- 4
+- 5
+- 6
+- 11
+- 13
+- 14
+- 15
+- 16
+- 17
+- 19
+- 21
+emphasize_skills:
+- Confluence
+- Git
+- Java
+- Jenkins
+- Jira
+- JPA
+- JUnit
+- Kafka
+- Maven
+- Microservices
+- Mockito
+- OpenAPI
+- Oracle
+- REST
+- Scrum
+- Spring
+- Spring Boot
+- Spring Data
+- Spring Security
+- Swagger
+- XML
+_scores:
+  0: 0
+  2: 9
+  4: 8
+  5: 8
+  6: 7
+  11: 14
+  13: 12
+  14: 12
+  15: 7
+  16: 10
+  17: 9
+  19: 9
+  21: 8

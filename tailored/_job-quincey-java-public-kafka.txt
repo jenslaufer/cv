@@ -1,0 +1,45 @@
+Senior Java Backend Developer Public — QUINCEY (Max Dimmler)
+
+Java Backend-Entwickler, Spring Boot / Microservices / Kafka (m/w/d)
+Start: 01.08.2026 oder etwas später
+Laufzeit: bis 31.10.2026, mit Option auf Verlängerung
+Auslastung: Vollzeit, > 90% remote
+Sprache: Deutsch mindestens C1
+Bewerbung: aktueller deutschsprachiger CV in Word-Format, Angabe zu Verfügbarkeit und Stundensatz.
+Wichtig: relevante Technologien mit den praktisch eingesetzten Versionen aufführen.
+
+Projektbeschreibung
+Weiterentwicklung einer geschäftskritischen Anwendung im öffentlichen Umfeld (elektronischer
+Rechts- und Verwaltungsverkehr). Arbeit im agilen Team mit Lead-Entwickler. Schwerpunkt:
+Microservices, Schnittstellen und ereignisbasierte Backend-Komponenten.
+
+Aufgaben
+- Umsetzung fachlicher und technischer Anforderungen in Java und Spring Boot
+- Entwicklung von Services und Schnittstellen in einer Microservice-Architektur
+- Ereignisbasierte Kommunikation mit Apache Kafka und Spring Cloud
+- Entwicklung und Integration von REST- und WSDL-Schnittstellen
+- Verarbeitung strukturierter Datenformate: XML, XSD, JAXB, JSON
+- Anbindung relationaler Datenbanken, insbesondere Oracle
+- Pair Programming, Code Reviews, Aufwandsschätzung
+- Unit-, Komponenten- und Integrationstests; Fehleranalyse in Produktion; Dokumentation
+
+Anforderungen (Muss)
+- Mehrjährige praktische Java-Backend-Erfahrung
+- Sehr gute Kenntnisse in Java LTS und Spring Boot 3.x
+- Fundierte Erfahrung mit Microservice-Architekturen
+- Spring Framework und Spring Cloud
+- Ereignisbasierte Kommunikation mit Apache Kafka
+- Entwicklung und Integration von REST-Services
+- Spring Security, OAuth 2.0, Spring Data JPA, OpenAPI/Swagger
+- SQL und relationale Datenbanken, idealerweise Oracle 19c
+- Maven, Git
+- Tests mit JUnit 5, Mockito, AssertJ
+- XML, XSD, JAXB, JSON
+- Agile Methoden / Scrum, Jira, Confluence
+- CI/CD, defensive Programmierung, Configuration as Code
+- Deutsch C1
+
+Weitere Kenntnisse (Kann)
+- Öffentliche Verwaltung, XÖV-Standards, XJustiz
+- Spring Boot 4.x, Spring Security 7.x, Spring Cloud Stream/Function, OpenFeign, Spring HATEOAS
+- Jenkins, Bitbucket, Ansible, Gitflow, Spock, Cucumber, XSLT

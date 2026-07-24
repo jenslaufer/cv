@@ -1,0 +1,45 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: python-ki-disposition-aws
+title: Jens Laufer — Python Backend / KI & Data Engineering
+headline: ''
+stack_line: ''
+pitch: ''
+highlights: []
+include_projects:
+- 0
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 7
+- 8
+- 9
+- 11
+- 16
+emphasize_skills:
+- AWS
+- Backend-Entwicklung
+- Docker
+- Konzeption
+- Python
+- REST
+_scores:
+  0: 2
+  1: 4
+  2: 3
+  3: 2
+  4: 4
+  5: 3
+  6: 2
+  7: 2
+  8: 2
+  9: 2
+  11: 3
+  16: 3

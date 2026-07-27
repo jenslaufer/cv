@@ -1,0 +1,32 @@
+Backend Entwickler (m/w/d) Java — somi (Rashin Roshan / Kontakt: Lisa Arndt)
+
+Backend-Entwickler Java, Microservices / Spring Boot (m/w/d)
+Vermittler: somi (freelancermap-Postfach, Inbound 26.07.2026)
+Sprache: Deutsch
+Bewerbung: aktueller CV, Angabe zu Verfügbarkeit und Stundensatz.
+
+Tätigkeiten
+- Umsetzung fachlicher und technischer Anforderungen
+- Implementierung von Services, Funktionen und Schnittstellen im agilen Team
+  (Pair-Programming, Code-Reviews, Wissensaustausch)
+- Unterstützung bei Anforderungsspezifikation und Aufwandsschätzung
+- Abstimmung mit Schnittstellen-, Middleware- und Infrastruktur-Ansprechpartnern
+- Analyse und Behebung von Fehlern und Ausfällen produktiver Anwendungen
+- Dokumentation von Prozessen, Konfigurationen und Entwicklungsaufgaben
+
+Anforderungen
+- Einschlägige Erfahrung mit Microservice-Architekturen (Spring Boot,
+  ereignisbasierte Kommunikation, REST-Services)
+- Praktische Kenntnisse mit Scrum und agilen Methoden
+- Umgang mit JIRA und Confluence
+- Integration einer Datenbank (Oracle oder andere) in eine Softwarelösung
+- Grundverständnis Continuous Integration / Continuous Deployment
+  (Bitbucket, Jenkins, Ansible optional)
+- Defensives Programmieren, Configuration as Code
+- Java LTS, Spring Cloud (Stream, Function oder OpenFeign)
+- Spring Boot 3.x, Spring Framework (Spring Security 6.x/7.x, OAuth 2.0,
+  Spring Data / JPA oder Spring HATEOAS)
+- OpenAPI / Swagger, SQL, Apache Kafka 2.x, Maven >= 3.6
+- Unit-/Komponenten-/Integrationstests mit JUnit 5, Mockito, AssertJ
+  (optional Spock, Cucumber)
+- REST, WSDL, JAXB, XML, XSD, JSON (optional XSLT)

@@ -1,0 +1,43 @@
+Senior Backend Developer – Java/Kotlin, Integration & DevOps — Thryve (Faisal Amejee)
+
+Senior Backend Developer, Integration & DevOps (m/w/d)
+Vermittler: Thryve (freelancermap-Postfach, Inbound 27.07.2026)
+Start: ASAP
+Laufzeit: ca. 12 Monate (100% bis 31.12.2026, danach 50% bis 30.06.2027)
+Auslastung: Remote
+Sprache: Deutsch und Englisch fließend
+
+Projektbeschreibung
+Fachliche und technische Integration einer neuen Drittsoftware in eine bestehende
+Anwendungslandschaft. Entwurf, Implementierung, Deployment und Betrieb der neuen
+Integrationsarchitektur.
+
+Aufgaben
+- Integration einer neuen Drittsoftware-Lösung entwerfen und umsetzen
+- Synchrone Kommunikationsprozesse in ein asynchrones Modell überführen
+- Kommunikationsflüsse über API-Management-Plattform / API-Gateway implementieren
+- Eigenständigen Anti-Corruption-Layer bzw. Adapter-Webservice zur sauberen
+  Domänentrennung entwerfen und entwickeln
+- Backend-Services mit Java oder Kotlin und Spring Boot entwickeln
+- APIs im API-first-Ansatz entwerfen und implementieren
+- Drittsoftware und neue Integrationsservices auf Kubernetes konfigurieren/deployen
+- CI/CD- und GitOps-Prozesse aufbauen und pflegen
+- Grafana-Dashboards, Metriken und Alerting für den Betrieb erstellen
+- Enge Zusammenarbeit mit Plattform- und Infrastrukturteams
+- Technische Anleitung des bestehenden Entwicklungsteams
+- Best Practices: Clean Code, Code Reviews, automatisierte Tests, hohe Unit-Test-Abdeckung
+
+Anforderungen (Muss)
+- Mehrjährige Backend-Erfahrung mit Java und/oder Kotlin
+- Starke Kenntnisse in Spring Boot
+- Fundierte Erfahrung mit Integrationsarchitekturen und Messaging-Systemen
+- Überführung synchroner in asynchrone Kommunikation
+- Praxis mit RabbitMQ, idealerweise Apache Camel
+- Erfahrung mit API-Gateways / API-Management, bevorzugt Kong
+- Domain-Driven Design und Integrationsmuster (Anti-Corruption-Layer, Adapter-Pattern)
+- API-first-Entwicklung
+- Containerisierung, Plattformarchitekturen, Infrastructure as Code
+- Kubernetes; Argo CD, Rancher, Harbor
+- GitOps-basierte Deployment-Prozesse
+- Grafana (Dashboards, Alerts)
+- Agile Arbeitsweise, Mentoring, hoher Anspruch an Architektur/Codequalität/Tests

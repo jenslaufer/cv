@@ -1,0 +1,25 @@
+Senior Python Backend Developer - KI-Empfehlungssystem (RecNow GmbH, Bacel Issa)
+Start: August 2026, Laufzeit bis Ende Dezember 2026, mind. 4 Tage/Woche.
+Groesstenteils remote, ca. 1-2 Tage pro Monat vor Ort in Stuttgart.
+
+Aufgaben:
+- Konzeption und Architektur eines KI-gestuetzten Empfehlungssystems
+- Entwicklung der Backend- und Datenverarbeitungskomponenten
+- Aufbau und Weiterentwicklung von Datenpipelines
+- Einsatz moderner KI-Tools und KI-gestuetzter Entwicklungsansaetze
+- Enge Zusammenarbeit mit Fach- und Entwicklungsteams
+
+Anforderungen:
+- Mehrjaehrige Erfahrung in der Backend-Entwicklung
+- Expertenkenntnisse Python
+- Erfahrung mit Google Cloud Platform und Handling grosser Datenmengen
+- Erfahrung mit agentischem Entwickeln mit Claude Code
+- Erfahrung im Data Engineering
+- Fundierte Erfahrung in Konzeption und Softwarearchitektur
+- Erfahrung in der Entwicklung von Empfehlungssystemen
+- Praktische Erfahrung mit dem Einsatz von KI im Entwicklungsprozess
+
+Nice-to-have:
+- Aufbau agentischer Software-Factorys (Multi-Agent-Workflows, Agent-Orchestrierung, MCP, CI/CD)
+
+Gesucht: CV, Stundensatz, Verfuegbarkeit.

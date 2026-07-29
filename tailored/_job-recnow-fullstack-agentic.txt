@@ -1,0 +1,20 @@
+Senior Fullstack-Entwickler (m/w/d) - React, Kotlin & Agentic AI (RecNow GmbH, Florian Gaudchau)
+Kunde aus dem Retail. Start ASAP, Vollzeit bevorzugt, Laufzeit ca. 9 Monate, fast 100% remote.
+
+Aufgaben:
+- Entwicklung neuer Features mit Claude Code bzw. vergleichbaren Coding Agents als zentralem Workflow
+- Weiterentwicklung und Optimierung von CLAUDE.md, Skills, MCP-Setups und Agent-Workflows
+- Mitgestaltung einer agentischen Software-Factory inkl. Automatisierung von Entwicklungs- und CI/CD-Prozessen
+- Moderne Benutzeroberflaechen mit React 19 und TypeScript
+- Backend-Funktionalitaeten mit Kotlin (Ktor / Spring Boot)
+- Hexagonale Architektur (Ports & Adapters)
+- Eventbasierte Kommunikation (Kafka, GCP Pub/Sub, Server-Sent Events)
+- Softwarequalitaet durch automatisierte Tests und CI/CD-Pipelines
+
+Muss:
+- Agentisches Entwickeln: mehrjaehrige Praxis mit Claude Code oder vergleichbaren AI Coding Agents, agentischer Workflow als taeglicher Standard, CLAUDE.md, projektspezifische Skills, MCP-Server
+- Git, GitLab, CI/CD
+- Frontend: React 19, TypeScript, Vite, pnpm-Monorepos, ESLint, Vitest, Testing Library, Playwright (E2E, Visual Regression), komponentenbasierte UI
+- Backend: Kotlin, Ktor und/oder Spring Boot, hexagonale Architektur, PostgreSQL, Kafka
+
+Nice-to-have: agentische Software-Factorys, Micro-Frontends/Module Federation, GCP (Cloud SQL, Pub/Sub), Cloud Foundry, Ansible, Podman, OpenTelemetry, Datadog, Retail/Point-of-Sale.

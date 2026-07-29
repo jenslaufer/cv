@@ -1,0 +1,49 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: recnow-fullstack-agentic
+title: Senior Fullstack-Entwickler – Agentic AI, React & TypeScript
+headline: ''
+stack_line: ''
+pitch: ''
+highlights: []
+include_projects:
+- 0
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 11
+- 13
+- 14
+- 15
+- 16
+- 17
+emphasize_skills:
+- Git
+- GitLab
+- Kafka
+- Playwright
+- PostgreSQL
+- React
+- Spring
+- Spring Boot
+_scores:
+  0: 0
+  1: 2
+  2: 4
+  3: 1
+  4: 3
+  5: 2
+  6: 2
+  11: 4
+  13: 3
+  14: 3
+  15: 2
+  16: 3
+  17: 2

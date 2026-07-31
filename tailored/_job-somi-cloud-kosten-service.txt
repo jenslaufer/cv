@@ -1,0 +1,52 @@
+Sehr geehrter Herr Laufer, 
+
+Es geht um einen internen Service, der Cloud-Kosten technisch erfasst und aufbereitet. Wenn verschiedene Teams oder Anwendungen Cloud-Ressourcen wie Rechenleistung, Speicher oder Datenbanken nutzen, entstehen Kosten. Der Service sammelt diese Kostendaten, speichert sie und stellt sie über Oberflächen oder Schnittstellen bereit, damit sie ausgewertet oder zugeordnet werden können.
+
+Als Entwickler entwickelst du die Software hinter diesem Service weiter: Du baust AWS-Komponenten mit CDK, entwickelst Python-Logik, verarbeitest Daten in relationalen Datenbanken und setzt Frontend-Oberflächen mit TypeScript, HTML und CSS um. Dazu gehören außerdem Architektur, Schnittstellen- und Datenbankdesign sowie Code- und Test-Reviews.
+
+
+
+Rahmenbedingungen
+
+Frankfurt Main / Nearshore
+11.08.2026–31.12.2026
+100 PT
+Remote: 100%
+Budget: 95,- €
+
+Für die Weiterentwicklung eines Cloud-Kosten-Services suchen wir einen Senior Developer.
+
+
+
+Deine Aufgaben
+
+Programmierung, Implementierung und Customizing technischer Komponenten in Applikationen
+Erarbeitung, Abstimmung und Qualitätssicherung technischer Architekturen
+Analyse fachlicher Anforderungen und Erarbeitung technischer Umsetzungsmöglichkeiten
+Erstellung technischer Architekturkonzepte, Datenbankdesigns sowie Schnittstellen- und Servicebeschreibungen
+Aufwandsschätzungen sowie Reviews von Design, Code und Tests
+
+
+Das bringst du mit
+
+Mindestens fünf Jahre Erfahrung in AWS-Cloudarchitektur und -Entwicklung
+Mindestens fünf Jahre Erfahrung in der Datenbankentwicklung mit relationalen Datenbanken, z. B. Amazon RDS oder MySQL
+Mindestens fünf Jahre Erfahrung in der Frontend-Entwicklung, z. B. mit TypeScript, HTML und CSS
+Mindestens fünf Jahre Erfahrung mit AWS CDK
+Mindestens fünf Jahre Erfahrung in Python-Programmierung
+Deutschkenntnisse auf B2-Niveau
+
+
+Wünschenswert
+
+Erfahrung in DevSecOps
+Erfahrung in Testautomatisierung
+Erfahrung in der strukturierten Analyse komplexer Sachverhalte
+Methodenkenntnisse und Erfahrung mit Vorgehensmodellen der Softwareentwicklung, Scrum und Agile
+
+Wenn das interessant klingt, freue ich mich auf deine Bewerbung unter Angabe deines Stundensatzes.
+
+Viele Grüße
+Daryl
+Senior Recruiting Manager
+SOMI Experts GmbH

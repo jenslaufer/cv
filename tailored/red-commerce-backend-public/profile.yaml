@@ -1,0 +1,57 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: red-commerce-backend-public
+title: Jens Laufer — Senior Java / Spring Boot Backend
+headline: ''
+stack_line: ''
+pitch: ''
+highlights: []
+include_projects:
+- 0
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 11
+- 13
+- 14
+- 15
+- 16
+- 19
+emphasize_skills:
+- Artifactory
+- DevOps
+- Docker
+- GitLab
+- GitLab CI
+- Java
+- JPA
+- Konzeption
+- Kubernetes
+- Maven
+- Microservices
+- OpenAPI
+- REST
+- Scrum
+- Spring
+- Spring Boot
+_scores:
+  0: 2
+  1: 6
+  2: 10
+  3: 4
+  4: 11
+  5: 11
+  6: 9
+  11: 9
+  13: 8
+  14: 8
+  15: 6
+  16: 9
+  19: 7

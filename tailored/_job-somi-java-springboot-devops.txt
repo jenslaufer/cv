@@ -1,0 +1,41 @@
+Sehr geehrter Herr Laufer, 
+
+Für ein Contracting-Projekt im Umfeld kundenorientierter IT-Services suchen wir einen erfahrenen Java-/Spring-Boot-Entwickler. Du begleitest moderne Services ganzheitlich von der Konzeption über die technische Umsetzung bis zum Betrieb im DevOps-Modell.
+
+
+
+Rahmenbedingungen
+Contracting-Projekt
+Zeitraum: 05.08.2026 bis 31.12.2026
+Umfang: 106 Personentage
+Remote-Anteil: 100%
+Budget: Remote 90,- €  bis  95,- € 
+
+
+Deine Tätigkeiten:
+
+Entwicklung und Betrieb moderner Services und APIs
+Konzeption technischer Lösungen gemeinsam mit dem Team
+Mitgestaltung von Architektur- und Technologieentscheidungen
+Fachliche Unterstützung der Kunden aus der Reisendeninformation
+Kontinuierliche Verbesserung der Entwicklungs- und Betriebsprozesse
+
+
+
+Das gesuchte Profil:
+
+Mindestens drei Jahre Erfahrung mit DevOps-Prinzipien im geschäftlichen Umfeld
+Mindestens drei Jahre Erfahrung im Design moderner Softwarearchitekturen
+Mindestens fünf Jahre Erfahrung in der Entwicklung serverseitiger Dienste mit Spring Boot 3.x oder 4.x
+Mindestens fünf Jahre Erfahrung in der Implementierung sicherer und skalierbarer APIs
+Mindestens fünf Jahre Erfahrung in der Erstellung wartbarer Softwarelösungen mit Java
+Deutschkenntnisse auf C2-Niveau
+
+
+Wünschenswert:
+
+Mindestens drei Jahre Kotlin-Erfahrung in der Backend- und API-Entwicklung
+Mindestens drei Jahre praktischer Einsatz von Amazon Kiro oder dem Vorgänger Amazon Q im Entwicklungsalltag
+Mindestens drei Jahre aktive GitLab-Nutzung inklusive Versionsverwaltung, Merge Requests und Reviews
+Mindestens drei Jahre Entwicklung und Betrieb OpenShift-basierter Plattformen
+Das Projekt wurde aktualisiert. Bitte prüfen Sie die Details.

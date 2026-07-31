@@ -1,0 +1,42 @@
+Sehr geehrter Herr Laufer, 
+
+Für unseren Kunden aus dem Public-Sector-Umfeld suchen wir einen Senior Backend Developer (m/w/d) mit Schwerpunkt Java, Spring Boot, Kubernetes und Microservices für ein langfristiges Digitalisierungsprojekt.
+
+Aufgaben
+•    Softwareentwicklung (Konzeption, Entwicklung, Pflege) von modernen (barrierearmen)
+IT-Anwendungen auf Basis aktueller Technologien (Java, Spring Boot, Docker, Kubernetes) und mittels agiler bzw. klassischer Entwicklungsmethoden,
+•    Neu-/Weiterentwicklung von Backendkomponenten für Webanwendungen, ClientServer- Lösungen und Content Management Systeme für eine komplexe Portal Plattform
+•    Beratung bei Backend-Architektur-Themen für eine komplexe Portalanwendung,
+•    Erstellung, Durchführung und Dokumentation von Entwicklertests (Modultests, Komponententests).
+
+Anforderungen
+•    2 Jahre Kenntnisse im Bereich DevOps (DevOps Mindset - you build it, you run it - Logging/Monitoring), 
+•    2 Jahre Kenntnisse in der Architektur und der Kommunikation von verteilten Syste-men (Microservices), 
+•    Kenntnisse des Software-Lebenszyklus des Software-Delivery Prozesses mit den ein-schlägigen Tools (gitlab, Kubernetes, artifactory, docker), 
+•    2 Jahre Kenntnisse im Bereich relationale Datenbanken, 
+•    3 Jahre Kenntnisse in der Programmiersprache Java, 
+•    2 Jahre Kenntnisse mit dem Spring-Framework und Spring Boot sowie erweiterte Kenntnisse in Web Security, 
+•    2 Jahre Kenntnisse in der Spezifikation und Implementierung von REST-Schnittstel-len auf der Basis von OpenAPI und Spring Boot, 
+•    2 Jahre Kenntnisse im Bereich Unit-Tests und Integrationstests, 
+•    2 Jahre Kenntnisse in der Arbeit mit Build-Management-Tools (insbesondere Apache Maven).
+•    Kenntnisse in Public Key Infrastructure (PKI) und digitalen Signaturen 
+•    Kenntnisse in der Entwicklung mit JSON Web Token (JWT) 
+•    Kenntnisse in der Arbeit mit relationalen Datenbanken 
+•    Kenntnisse in der Konfiguration von Spring-Framework- und Spring-Boot-basierten Applikationen 
+•    Kenntnisse in der Entwicklung und Anpassung von Helm Charts 
+•    Kenntnisse in der Umsetzung von CI/CD-Pipelines 
+•    Kenntnisse in der Umsetzung von hexagonalen Architekturen 
+•    Kenntnisse mit agilen Software-Entwicklungsprozessen (insbesondere Scrum, Code Reviews etc.) 
+•    Kenntnisse im Bereich der Testautomatisierung (Unit-Tests, Integrations-Tests) 
+•    Kenntnisse im Umgang mit gängigen Build Tools.
+•    Erfahrung in JPA, Erfahrung in Postgres, Erfahrung in Java 17, Erfahrung in GitLab CI/CD
+•    Erfahrung mit Domain-driven Design (DDD)
+ 
+Projektdetails:  
+•    Start: August 2026
+•    Projektdauer: 4 Monate + Option bis Ende 2028
+•    Auslastung: 100% 
+•    Ort: remote 
+•    Sprache: Deutsch &amp; Englisch
+ 
+Bei Interesse an diesem Projekt kommen Sie gerne auf mich zu.

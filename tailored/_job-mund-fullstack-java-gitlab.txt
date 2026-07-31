@@ -1,0 +1,36 @@
+Fullstack-Entwickler (Java, Spring Boot, GitLab) (m/w/d) 100% remote ID03108
+
+Für ein Projekt im Transport und Logistik suchen wir einen Fullstack-Entwickler (m/w/d) mit Erfahrung in Java, Spring Boot und GitLab.
+
+Projektinformationen
+
+Start: 15.08.2026
+Laufzeit: 15.08.2026 – 31.12.2026
+Branche: Transport und Logistik
+
+Aufgaben
+
+Entwicklung und Betrieb moderner Services, Konzeption technischer Lösungen, Mitgestaltung von Architektur- und Technologieentscheidungen, Beratung im Kontext von DB Vertrieb und DB Regio, Optimierung von Backend-for-Frontend mit Spring Boot, selbstständige Optimierung der Deployment-Pipelines, Analyse und Verbesserung der Softwarestruktur, Dokumentation der technischen Komponenten.
+
+Muss-Anforderungen
+
+Aktive Nutzung von GitLab in der Entwicklung (ab 5 Jahre)
+Arbeit nach DevOps-Prinzipien (ab 5 Jahre)
+Entwicklung produktiver serverseitiger Dienste/APIs mit Java und Spring Boot (3.x) (ab 5 Jahre)
+Entwurf und Entwicklung von Anwendungen in einer Microservices-Architektur (ab 3 Jahre)
+Erstellung und Wartung von CI/CD-Pipelines (ab 5 Jahre)
+
+Soll-Anforderungen
+
+Erstellung und Pflege automatisierter End-to-End-Tests im Entwicklungsprozess (ab 3 Jahre)
+Praktische Entwicklung von App-/Web-Oberflächen mit Flutter/Dart (ab 1 Jahr)
+Einsatz von Redis in Anwendungen (ab 1 Jahr)
+Entwicklung im E-Commerce-Umfeld (ab 1 Jahr)
+Entwicklung mit PostgreSQL (ab 1 Jahr)
+Praktische Kenntnis der Angebotsprozesse innerhalb von Vertriebssystemplattformen (ab 1 Jahr)
+Praktische Kenntnis der Vertriebsprozesse innerhalb von Vertriebssystemplattformen (ab 1 Jahr)
+Praktischer Einsatz des KI-gestützten Entwicklungs-Assistenten Amazon Kiro (mindestens 1 Referenz)
+
+Technologien & Methoden
+
+Java, Spring Boot, GitLab, Microservices, CI/CD, Flutter, Dart, Redis, PostgreSQL, Amazon Kiro

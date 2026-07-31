@@ -1,0 +1,49 @@
+Sehr geehrter Herr Laufer, 
+
+Backend-Entwickler (Python, AWS, REST-API) (m/w/d) 90% remote ID03119
+
+Für ein Projekt im Transport und Logistik suchen wir einen Backend-Entwickler (m/w/d) mit Erfahrung in Python, AWS und REST-API.
+
+Projektinformationen
+
+
+
+Ort: Berlin / 90% Remote (10% OnSite Berlin)
+
+Start: 06.08.2026
+
+Laufzeit: 06.08.2026 – 31.12.2026
+
+Branche: Transport und Logistik
+Aufgaben
+
+Konzeption, Implementierung und Weiterentwicklung technischer Komponenten, Schnittstellen und Datenverarbeitungslösungen mit Python, AWS und REST-APIs, einschließlich Fehlerbehebung, Testunterstützung und Dokumentation gemäß den Entwicklungsstandards.
+
+Muss-Anforderungen
+
+
+Erfahrung in der Python-Progammierung (ab 5 Jahre)
+Erfahrung mit AWS Cloud/AWS Services (ab 5 Jahre)
+Praktische Erfahrung mit REST-API-basierten Schnittstellen (ab 5 Jahre)
+Praktische Erfahrung mit SQL (ab 5 Jahre)
+Soll-Anforderungen
+
+
+Erfahrung innerhalb des Sektors Transport und Logistik (mind. 1 Referenz)
+Erfahrung mit Docker (ab 5 Jahre)
+Erfahrung mit Grafana (ab 5 Jahre)
+Erfahrung mit Kafka (ab 5 Jahre)
+Erfahrung mit Kinesis (ab 5 Jahre)
+Erfahrung mit Open Telemetry (ab 5 Jahre)
+Erfahrung mit Polars (ab 5 Jahre)
+Erfahrung mit Prometheus (ab 5 Jahre)
+Technologien &amp; Methoden
+
+Python, AWS, REST-API, SQL, Docker, Grafana, Kafka, Kinesis, Open Telemetry, Polars, Prometheus
+
+Das Team von mund consulting freut sich auf Ihre Bewerbung mit CV &amp; Stundensatz und unterstützt gerne im weiteren Prozess.
+
+Herzliche Grüße
+Das Recruiting Team
+post@mund-consulting.de
+Das Projekt wurde aktualisiert. Bitte prüfen Sie die Details.

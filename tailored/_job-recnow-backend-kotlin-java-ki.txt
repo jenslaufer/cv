@@ -1,0 +1,22 @@
+Senior Backend Developer (Kotlin/Java) - KI-Empfehlungssystem
+RecNow GmbH - Start August 2026, Laufzeit bis Ende Dezember 2026, mind. 4 Tage/Woche, groesstenteils remote, 1-2 Tage/Monat Stuttgart
+
+Aufgaben
+Konzeption und Architektur eines KI-gestuetzten Empfehlungssystems
+Entwicklung der Backend- und Datenverarbeitungskomponenten
+Aufbau und Weiterentwicklung von Datenpipelines
+Einsatz moderner KI-Tools und KI-gestuetzter Entwicklungsansaetze
+Enge Zusammenarbeit mit Fach- und Entwicklungsteams
+
+Anforderungen
+Mehrjaehrige Erfahrung in der Backend-Entwicklung (Java / Kotlin) mit Spring Boot
+Gute Kenntnisse Python / PySpark
+Erfahrung mit der Google Cloud Platform und dem Handling grosser Datenmengen
+Erfahrung mit agentischem Entwickeln mit Claude Code
+Erfahrung im Data Engineering mit Python / PySpark
+Fundierte Erfahrung in Konzeption und Softwarearchitektur
+Erfahrung in der Entwicklung von Empfehlungssystemen
+Praktische Erfahrung mit dem Einsatz von KI im Entwicklungsprozess
+
+Nice-to-have
+Erfahrung beim Aufbau agentischer Software-Factorys (Multi-Agent-Workflows, Agent-Orchestrierung, MCP, CI/CD)

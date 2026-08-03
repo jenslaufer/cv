@@ -1,0 +1,47 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: recnow-backend-kotlin-java-ki
+title: Jens Laufer — Senior Backend (Java/Kotlin) & KI
+headline: ''
+stack_line: ''
+pitch: ''
+highlights: []
+include_projects:
+- 0
+- 2
+- 3
+- 4
+- 5
+- 11
+- 13
+- 14
+- 16
+- 17
+- 18
+- 19
+- 21
+emphasize_skills:
+- Backend-Entwicklung
+- Java
+- Konzeption
+- Python
+- Spring
+- Spring Boot
+_scores:
+  0: 1
+  2: 3
+  3: 3
+  4: 4
+  5: 3
+  11: 4
+  13: 3
+  14: 3
+  16: 4
+  17: 3
+  18: 3
+  19: 3
+  21: 3

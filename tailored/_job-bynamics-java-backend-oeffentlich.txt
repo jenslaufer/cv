@@ -1,0 +1,33 @@
+Backend Developer (m/w/d) - Java, Spring Boot & Microservices
+bynamics GmbH - langfristiges Softwareentwicklungsprojekt im oeffentlichen Umfeld
+
+Aufgaben
+Entwicklung und Weiterentwicklung von Backend-Komponenten und Microservices mit Java und Spring Boot.
+Umsetzung fachlicher Anforderungen sowie technischer Weiterentwicklungen.
+Entwicklung und Anbindung von REST-Schnittstellen und weiteren Integrationskomponenten.
+Mitarbeit bei technischer Konzeption, Aufwandsschaetzung und Anforderungsklaerung.
+Entwicklung ereignisbasierter Kommunikationsloesungen und Integration externer Systeme.
+Analyse und Behebung von Fehlern in Entwicklungs-, Test- und Produktivumgebungen.
+Code Reviews, Wissenstransfer, technische Dokumentation.
+
+Anforderungen
+Mehrjaehrige praktische Erfahrung in der Java Backend-Entwicklung
+Sehr gute Kenntnisse in Java und Spring Boot
+Erfahrung mit Microservice-Architekturen und RESTful Services
+Praxis in der Entwicklung verteilter und integrierter Softwaresysteme
+Erfahrung mit Spring Data/JPA und relationalen Datenbanken, idealerweise Oracle
+Kenntnisse in der Entwicklung und Nutzung von APIs mit REST und/oder SOAP/WSDL
+Erfahrung mit Kafka oder vergleichbaren Messaging-/Event-Streaming-Technologien
+Sicherer Umgang mit Maven und Git
+Erfahrung mit automatisierten Tests, insbesondere JUnit 5 und Mockito
+Grundverstaendnis von CI/CD-Prozessen und modernen DevOps-Praktiken
+Erfahrung mit agilen Entwicklungsmethoden, vorzugsweise Scrum
+Sicherer Umgang mit Jira und Confluence
+Kenntnisse in XML, JSON, XSD und OpenAPI/Swagger
+Sehr gute Deutschkenntnisse mindestens C1
+
+Von Vorteil
+Erfahrung mit XOeV-Standards und vergleichbaren standardisierten Datenaustauschformaten
+Kenntnisse in Configuration as Code und automatisierter Bereitstellung
+Erfahrung mit Jenkins, Ansible oder vergleichbaren CI/CD-Tools
+Erfahrung im Umfeld groesserer Organisationen oder komplexer IT-Landschaften

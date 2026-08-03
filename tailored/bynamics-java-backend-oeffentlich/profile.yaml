@@ -1,0 +1,65 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: bynamics-java-backend-oeffentlich
+title: Jens Laufer — Java Backend (Spring Boot, Microservices)
+headline: ''
+stack_line: ''
+pitch: ''
+highlights: []
+include_projects:
+- 0
+- 2
+- 4
+- 5
+- 6
+- 11
+- 13
+- 14
+- 16
+- 17
+- 18
+- 19
+- 21
+emphasize_skills:
+- Backend-Entwicklung
+- Confluence
+- DevOps
+- Git
+- Java
+- Jenkins
+- Jira
+- JPA
+- JUnit
+- Kafka
+- Konzeption
+- Maven
+- Microservices
+- Mockito
+- OpenAPI
+- Oracle
+- REST
+- Scrum
+- SOAP
+- Spring
+- Spring Boot
+- Spring Data
+- Swagger
+- XML
+_scores:
+  0: 1
+  2: 10
+  4: 9
+  5: 9
+  6: 8
+  11: 15
+  13: 11
+  14: 11
+  16: 10
+  17: 9
+  18: 8
+  19: 9
+  21: 8

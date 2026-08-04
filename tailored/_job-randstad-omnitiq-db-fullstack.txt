@@ -1,0 +1,45 @@
+Sehr geehrter Herr Laufer, 
+
+Für unseren Kunden suche ich einen 
+Fullstack-Entwickler (m/w/d) (Omnitiq) für ein remote Projekt. 
+
+Aufgaben:
+
+Entwicklung und Betrieb moderner Services
+Konzeption technischer Lösungen gemeinsam mit dem Team
+Mitgestaltung von Architektur- und Technologieentscheidungen
+Beratung im Kontext unserer Kunden aus DB Vertrieb und DB Regio kontinuierliche Verbesserung unserer Entwicklungs- und Betriebsprozesse
+Verifikation der Ergebnisse mit assistiven Technologien
+Erstellung von Tests in der Implementierungsphase zur nachhaltigen Qualitätssicherung
+Abstimmung im Team, Code-Reviews und Wissensweitergabe
+Fachliche Unterstützung an Optimierungen des Backend-for-Frontend (Spring Boot) selbstständige fachliche Unterstützung beim Optimieren der Deployment Pipelines
+Analyse und Verbesserung der bestehenden Softwarestruktur zur Steigerung der Effizienz und Wartbarkeit.
+Dokumentation der technischen Komponenten und Code-Änderungen
+Erstellen von Systemdokumentationen
+Erstellen von Lieferpaketen für die betreffenden Applikationen
+
+Anforderungen must have, sind zwingend erforderlich und müssen exakt wie gefordert in den Projekten aufgeführt sein: bitte auch das wording und die Jahre beachten! Es muss durch eindeutig beschriebene Tätigkeitsnachweise in den einzelnen Projekten nachgewiesen werden und nicht nur durch Nennung der Technologie. Gern copy paste aus den Anforderungen (muss & soll)
+
+Aktive Nutzung von GitLab in der Entwicklung (Versionsverwaltung, Merge-Request- und Review-Workflow) // Erfahrungslevel ab 5 Jahre
+Arbeit nach DevOps-Prinzipien (Verantwortung für Build, Betrieb, Monitoring; „you build it, you run it") // Erfahrungslevel ab 5 Jahre
+Entwicklung produktiver serverseitiger Dienste/APIs mit Java und Spring Boot (3.x)  // Erfahrungslevel ab 5 Jahre
+Entwurf und Entwicklung von Anwendungen in einer Microservices-Architektur (verteilte Dienste, API-Kommunikation)  // Erfahrungslevel ab 3 Jahre
+Erstellung und Wartung von CI/CD-Pipelines zur automatisierten Build- und Deployment-Ausführung // Erfahrungslevel ab 5 Jahre
+
+Soll Anforderungen:
+
+Erstellung und Pflege automatisierter End-to-End-Tests im Entwicklungsprozess   // Erfahrungslevel ab 3 Jahre
+Praktische Entwicklung von App-/Web-Oberflächen mit Flutter/Dart   // Erfahrungslevel ab 1 Jahr
+Einsatz von Redis in Anwendungen (z. B. Caching, Session-/Datenhaltung   // Erfahrungslevel ab 1 Jahr
+Entwicklung im E-Commerce-Umfeld (z. B. Shop-, Bestell- oder Zahlungsprozesse)   // Erfahrungslevel ab 1 Jahr
+Entwicklung mit PostgreSQL (Datenmodellierung, Abfragen, Anbindung in Anwendungen)   // Erfahrungslevel ab 1 Jahr
+Praktische Kenntnis der Angebotsprozesse innerhalb von Vertriebssystemplattformen   // Erfahrungslevel ab 1 Jahr
+Praktische Kenntnis der Vertriebsprozesse innerhalb von Vertriebssystemplattformen // Erfahrungslevel ab 1 Jahr
+Praktischer Einsatz des KI-gestützten Entwicklungs-Assistenten Amazon Kiro // Anzahl Referenzen 1
+
+Zeitraum - von: 24.08.2026
+Zeitraum - bis: 31.12.2026
+Profile bis: 05.08.2026 um 12Uhr
+Projektsprache: Deutsch
+Tagessatz allin:600€-700€
+Ich freue mich auf Ihre Rückmeldung und dem Stundensatz

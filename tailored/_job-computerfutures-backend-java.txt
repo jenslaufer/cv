@@ -1,0 +1,29 @@
+Senior Backend Developer Java (m/w/d)
+Computer Futures (SThree GmbH) — Frankfurt, 80% remote, 36 Monate, freiberuflich
+
+Deine Aufgaben
+Entwicklung moderner Backend-Anwendungen im Umfeld digitaler Informations- und Plattformlösungen
+Konzeption, Design und Implementierung cloud-nativer Microservices
+Entwicklung und Betrieb von Anwendungen auf Basis aktueller Java-Technologien
+Weiterentwicklung und Optimierung bestehender Systeme im DevOps-Umfeld
+Durchführung von Code Reviews und Sicherstellung hoher Qualitätsstandards
+Analyse und Behebung technischer Probleme sowie Performance-Optimierung
+Zusammenarbeit mit Product Ownern, Architekten und Entwicklungsteams
+Mitwirkung bei Architekturentscheidungen und technischen Konzepten
+Erstellung von sauberem, wartbarem und dokumentiertem Code
+Dein Profil
+Must-have
+Mehrjährige Erfahrung in der Backend-Entwicklung mit Java
+Sehr gute Kenntnisse in Spring Boot
+Umfangreiche Erfahrung mit Microservice-Architekturen
+Erfahrung mit Kubernetes und Containerisierung
+Fundierte Kenntnisse im Bereich CI/CD
+Erfahrung mit Kafka oder RabbitMQ
+Know-how in Software- und Systemarchitektur
+Erfahrung im DevOps-Umfeld
+Nice-to-have
+Erfahrung mit PostgreSQL
+Kenntnisse in AWS
+Erfahrung in agilen Projekten nach Scrum oder Kanban
+Erfahrung mit automatisierten Tests und JUnit
+Branchenkenntnisse im Mobilitäts-, Verkehrs- oder ÖPNV-Umfeld

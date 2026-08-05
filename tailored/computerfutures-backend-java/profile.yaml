@@ -1,0 +1,54 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: computerfutures-backend-java
+title: Jens Laufer — computerfutures-backend-java
+headline: ''
+stack_line: ''
+pitch: ''
+highlights: []
+include_projects:
+- 0
+- 2
+- 3
+- 4
+- 5
+- 6
+- 10
+- 11
+- 13
+- 14
+- 16
+- 17
+- 18
+emphasize_skills:
+- AWS
+- Backend-Entwicklung
+- DevOps
+- Java
+- JUnit
+- Kafka
+- Konzeption
+- Kubernetes
+- Microservices
+- PostgreSQL
+- Scrum
+- Spring
+- Spring Boot
+_scores:
+  0: 1
+  2: 6
+  3: 4
+  4: 8
+  5: 7
+  6: 6
+  10: 4
+  11: 8
+  13: 6
+  14: 6
+  16: 6
+  17: 4
+  18: 4

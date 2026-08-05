@@ -1,0 +1,51 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: red-commerce-application-developer
+title: Jens Laufer — red-commerce-application-developer
+headline: ''
+stack_line: ''
+pitch: ''
+highlights: []
+include_projects:
+- 0
+- 2
+- 3
+- 4
+- 5
+- 6
+- 10
+- 11
+- 13
+- 14
+- 15
+- 16
+- 17
+emphasize_skills:
+- AWS
+- Backend-Entwicklung
+- Git
+- Java
+- Kafka
+- Kubernetes
+- Playwright
+- Scrum
+- Spring
+- Spring Boot
+_scores:
+  0: 0
+  2: 3
+  3: 3
+  4: 4
+  5: 4
+  6: 3
+  10: 3
+  11: 7
+  13: 5
+  14: 5
+  15: 3
+  16: 5
+  17: 3

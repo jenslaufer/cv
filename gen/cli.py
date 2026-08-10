@@ -3,7 +3,7 @@
   python -m gen build                       # regenerate base index.html (+ --pdf --docx)
   python -m gen tailor --job posting.txt --slug acme [--title "..."]
   python -m gen tailor --profile tailored/acme/profile.yaml   # re-render after editing
-  python -m gen check                       # fail if index.html is out of sync with data/*.csv
+  python -m gen check                       # fail if index.html or any tailored variant is stale
 """
 from __future__ import annotations
 
@@ -73,14 +73,37 @@ def cmd_tailor(args) -> int:
 
 
 def cmd_check(args) -> int:
-    """Sync guard: regenerating from data/*.csv must reproduce index.html byte-for-byte."""
-    current = (ROOT / "index.html").read_text(encoding="utf-8")
-    regenerated = _render.render(_parse.parse(lang=args.lang), lang=args.lang)
-    if current != regenerated:
-        print("OUT OF SYNC: index.html differs from `python -m gen build`. "
-              "Edit data/*.csv and rebuild, never edit index.html by hand.", file=sys.stderr)
+    """Sync guard: every published page must be byte-for-byte what data/*.csv renders.
+
+    That is index.html *and* every tailored variant — they are just as public, and
+    a variant nobody re-rendered keeps printing withdrawn facts (day rate,
+    availability) long after the source was corrected.
+    """
+    stale = []
+    if (ROOT / "index.html").read_text(encoding="utf-8") != \
+            _render.render(_parse.parse(lang=args.lang), lang=args.lang):
+        stale.append(("index.html", "python3 -m gen build"))
+
+    for prof_path in sorted((ROOT / "tailored").glob("*/profile.yaml")):
+        profile = yaml.safe_load(prof_path.read_text(encoding="utf-8"))
+        lang = profile.get("lang", "de")
+        regenerated = _render.render(_parse.parse(lang=lang),
+                                     _tailor.render_profile(profile), lang=lang)
+        page = prof_path.parent / "index.html"
+        if not page.exists() or page.read_text(encoding="utf-8") != regenerated:
+            rel = page.relative_to(ROOT)
+            stale.append((str(rel), f"python3 -m gen tailor --profile "
+                                    f"{prof_path.relative_to(ROOT)} --pdf"))
+
+    if stale:
+        print(f"OUT OF SYNC ({len(stale)}): never edit generated HTML by hand — "
+              "edit data/*.csv and re-render.", file=sys.stderr)
+        for path, fix in stale:
+            print(f"  {path} -> {fix}", file=sys.stderr)
         return 1
-    print("in sync: index.html == generate(data/*.csv)")
+
+    n = len(list((ROOT / "tailored").glob("*/profile.yaml")))
+    print(f"in sync: index.html + {n} tailored variant(s) == generate(data/*.csv)")
     return 0
 
 

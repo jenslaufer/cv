@@ -48,13 +48,18 @@ pip install -r requirements.txt
 # Basis-CV neu bauen, nachdem data/*.csv geändert wurde:
 python3 -m gen build --pdf --docx
 
-# Prüfen, dass index.html zur Quelle passt (CI-/Pre-Commit-Guard):
+# Prüfen, dass index.html UND jede tailored-Variante zur Quelle passen
+# (CI-/Pre-Commit-Guard, nennt bei Abweichung den Re-Render-Befehl je Datei):
 python3 -m gen check
 
 # Auf eine Ausschreibung zuschneiden:
 python3 -m gen tailor --job examples/job-java-backend.txt \
                      --slug java-backend-versicherung \
                      --title "Jens Laufer — Java / Spring Boot Backend" --pdf
+
+# Nach jeder Änderung an data/*.csv: alle Varianten nachziehen, sonst stehen dort
+# weiter die alten Fakten (Tagessatz, Verfügbarkeit) — die Links sind draußen.
+for p in tailored/*/profile.yaml; do python3 -m gen tailor --profile "$p" --pdf; done
 ```
 
 ### Sprachen

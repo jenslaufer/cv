@@ -9,7 +9,7 @@ def test_base_render_has_all_projects():
 
 def test_key_facts_present():
     html = render.render(parse.parse())
-    for needle in ("Jens Laufer", "89 €/h", "ab 01.07.2026", "github.com/jenslaufer"):
+    for needle in ("Jens Laufer", "2.000 €/Tag", "sofort", "github.com/jenslaufer"):
         assert needle in html
 
 

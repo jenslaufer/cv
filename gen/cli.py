@@ -28,8 +28,8 @@ def _write(path: Path, text: str) -> None:
 
 
 def cmd_build(args) -> int:
-    data = _parse.parse()
-    html = _render.render(data)
+    data = _parse.parse(lang=args.lang)
+    html = _render.render(data, lang=args.lang)
     _write(ROOT / "index.html", html)
     if args.pdf:
         exporters.to_pdf(ROOT / "index.html", ROOT / "cv.pdf")
@@ -41,10 +41,13 @@ def cmd_build(args) -> int:
 
 
 def cmd_tailor(args) -> int:
-    data = _parse.parse()
+    lang = args.lang
+    data = _parse.parse(lang=lang)
     if args.profile:
         profile = yaml.safe_load(Path(args.profile).read_text(encoding="utf-8"))
         slug = profile.get("slug") or Path(args.profile).parent.name
+        lang = profile.get("lang", lang)
+        data = _parse.parse(lang=lang)
     else:
         if not args.job or not args.slug:
             print("tailor: need --job and --slug (or --profile)", file=sys.stderr)
@@ -53,10 +56,11 @@ def cmd_tailor(args) -> int:
         slug = args.slug
         profile = _tailor.build_profile(job_text, data, slug,
                                         title=args.title, top=args.top)
+        profile["lang"] = lang
         prof_path = ROOT / "tailored" / slug / "profile.yaml"
         _write(prof_path, _profile_yaml(profile))
 
-    html = _render.render(data, _tailor.render_profile(profile))
+    html = _render.render(data, _tailor.render_profile(profile), lang=lang)
     out = ROOT / "tailored" / slug / "index.html"
     _write(out, html)
     n = len(_tailor.render_profile(profile).get("include_projects") or data["projects"])
@@ -71,7 +75,7 @@ def cmd_tailor(args) -> int:
 def cmd_check(args) -> int:
     """Sync guard: regenerating from data/*.csv must reproduce index.html byte-for-byte."""
     current = (ROOT / "index.html").read_text(encoding="utf-8")
-    regenerated = _render.render(_parse.parse())
+    regenerated = _render.render(_parse.parse(lang=args.lang), lang=args.lang)
     if current != regenerated:
         print("OUT OF SYNC: index.html differs from `python -m gen build`. "
               "Edit data/*.csv and rebuild, never edit index.html by hand.", file=sys.stderr)
@@ -98,6 +102,7 @@ def main(argv=None) -> int:
     b = sub.add_parser("build", help="regenerate base index.html")
     b.add_argument("--pdf", action="store_true", help="also export cv.pdf")
     b.add_argument("--docx", action="store_true", help="also export cv.docx")
+    b.add_argument("--lang", default="de", help="language of the CV (de|en)")
     b.set_defaults(func=cmd_build)
 
     t = sub.add_parser("tailor", help="build a tailored variant for a job posting")
@@ -107,9 +112,11 @@ def main(argv=None) -> int:
     t.add_argument("--profile", help="re-render from an existing profile.yaml")
     t.add_argument("--top", type=int, default=12, help="max projects when overlap is thin")
     t.add_argument("--pdf", action="store_true", help="also export the variant PDF")
+    t.add_argument("--lang", default="de", help="language of the variant (de|en)")
     t.set_defaults(func=cmd_tailor)
 
     c = sub.add_parser("check", help="verify index.html is in sync with data/*.csv")
+    c.add_argument("--lang", default="de", help="language to verify (de|en)")
     c.set_defaults(func=cmd_check)
 
     args = ap.parse_args(argv)

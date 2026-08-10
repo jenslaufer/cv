@@ -29,8 +29,29 @@ from pathlib import Path
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 
 
-def _rows(data_dir: Path, name: str) -> list[dict]:
-    path = data_dir / name
+class _Source:
+    """Resolves a CSV name against a language overlay, falling back to the base.
+
+    ``data/en/projects.csv`` overrides ``data/projects.csv``; tables that carry
+    no prose (``tech.csv``, ``project_tech.csv``) have no overlay and are read
+    once for every language. Field *names* stay German in every language — they
+    are the schema, not prose.
+    """
+
+    def __init__(self, base: Path, lang: str) -> None:
+        self.base = base
+        self.overlay = base / lang if lang and lang != "de" else None
+
+    def path(self, name: str) -> Path:
+        if self.overlay is not None:
+            candidate = self.overlay / name
+            if candidate.exists():
+                return candidate
+        return self.base / name
+
+
+def _rows(data_dir: _Source | Path, name: str) -> list[dict]:
+    path = data_dir.path(name) if isinstance(data_dir, _Source) else data_dir / name
     with path.open(encoding="utf-8", newline="") as f:
         return list(csv.DictReader(f))
 
@@ -89,13 +110,14 @@ def _parse_projects(data_dir: Path) -> list[dict]:
     return out
 
 
-def parse(path: str | Path | None = None) -> dict:
+def parse(path: str | Path | None = None, lang: str = "de") -> dict:
     """Build the CV model from the CSV source.
 
     ``path`` may point at an alternative data directory (used in tests);
-    defaults to the repo-level ``data/``.
+    defaults to the repo-level ``data/``. ``lang`` selects a prose overlay
+    below it (``data/en/``), falling back per file to the base directory.
     """
-    data_dir = Path(path) if path else DATA_DIR
+    data_dir = _Source(Path(path) if path else DATA_DIR, lang)
 
     kond = _kv(data_dir, "konditionen.csv")
 

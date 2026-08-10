@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="{{ html_lang }}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,19 +19,19 @@
 <body>
 
 <div class="doc-actions">
-  <a class="print-btn" href="{{ pdf_href }}" download="{{ pdf_download }}" aria-label="CV als PDF-Datei herunterladen">
+  <a class="print-btn" href="{{ pdf_href }}" download="{{ pdf_download }}" aria-label="{{ L.pdf_aria }}">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
-    PDF herunterladen
+    {{ L.pdf_btn }}
   </a>
   {%- if docx_href %}
-  <a class="print-btn print-btn--ghost" href="{{ docx_href }}" download="{{ docx_download }}" aria-label="CV als Word-Datei herunterladen">
+  <a class="print-btn print-btn--ghost" href="{{ docx_href }}" download="{{ docx_download }}" aria-label="{{ L.docx_aria }}">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
-    Word herunterladen
+    {{ L.docx_btn }}
   </a>
   {%- endif %}
-  <button class="print-btn print-btn--ghost" onclick="window.print()" aria-label="Lebenslauf drucken">
+  <button class="print-btn print-btn--ghost" onclick="window.print()" aria-label="{{ L.print_aria }}">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4v-7h16v7h-2M6 14h12v6H6z"/></svg>
-    Drucken
+    {{ L.print_btn }}
   </button>
 </div>
 
@@ -56,10 +56,10 @@
 
 <main>
 
-  <!-- Schwerpunkte -->
+  <!-- highlights -->
   <section>
     <div class="wrap">
-      <div class="sec-head"><h2>Schwerpunkte</h2><span class="rule"></span></div>
+      <div class="sec-head"><h2>{{ L.sec_highlights }}</h2><span class="rule"></span></div>
       <ul class="highlights">
         {%- for h in highlights %}
         <li>{{ h | md }}</li>
@@ -68,10 +68,10 @@
     </div>
   </section>
 
-  <!-- Rollen -->
+  <!-- roles -->
   <section>
     <div class="wrap">
-      <div class="sec-head"><h2>Rollen</h2><span class="rule"></span></div>
+      <div class="sec-head"><h2>{{ L.sec_roles }}</h2><span class="rule"></span></div>
       <div class="chips">
         {%- for r in roles %}
         <span class="chip">{{ r }}</span>
@@ -80,10 +80,10 @@
     </div>
   </section>
 
-  <!-- Kenntnisse -->
+  <!-- skills -->
   <section>
     <div class="wrap">
-      <div class="sec-head"><h2>Kenntnisse</h2><span class="rule"></span></div>
+      <div class="sec-head"><h2>{{ L.sec_skills }}</h2><span class="rule"></span></div>
       <div class="skills-grid">
         {%- for g in skills %}
         <div class="skillgroup">
@@ -97,10 +97,10 @@
     </div>
   </section>
 
-  <!-- Projekthistorie -->
+  <!-- project history -->
   <section>
     <div class="wrap">
-      <div class="sec-head"><h2>Projekthistorie</h2><span class="rule"></span></div>
+      <div class="sec-head"><h2>{{ L.sec_projects }}</h2><span class="rule"></span></div>
       <div class="timeline">
         {%- for p in projects %}
         <article class="entry">
@@ -122,14 +122,14 @@
     </div>
   </section>
 
-  <!-- Kontakt, Ausbildung, Zertifikate -->
+  <!-- contact, education, certificates -->
   <section>
     <div class="wrap">
-      <div class="sec-head"><h2>Kontakt &amp; Qualifikation</h2><span class="rule"></span></div>
+      <div class="sec-head"><h2>{{ L.sec_contact }}</h2><span class="rule"></span></div>
       <div class="contact-grid">
 
         <div class="contact-block">
-          <h3>Kontakt &amp; Profile</h3>
+          <h3>{{ L.sub_contact }}</h3>
           <ul class="contact-list">
             {%- for c in contact %}
             <li><span class="lbl">{{ c.lbl }}</span>{% if c.href %}<a href="{{ c.href }}"{% if c.external %} target="_blank" rel="noopener"{% endif %}>{{ c.text }}</a>{% else %}<span>{{ c.text }}</span>{% endif %}</li>
@@ -138,7 +138,7 @@
         </div>
 
         <div class="contact-block">
-          <h3>Ausbildung</h3>
+          <h3>{{ L.sub_education }}</h3>
           {%- for e in education %}
           <div class="edu-item">
             <div class="date">{{ e.date }}</div>
@@ -147,13 +147,13 @@
           </div>
           {%- endfor %}
 
-          <h3 style="margin-top:26px">Zertifikate</h3>
+          <h3 style="margin-top:26px">{{ L.sub_certificates }}</h3>
           {%- for c in certificates %}
           <div class="edu-item">
             <div class="date">{{ c.date }}</div>
             <div class="title">{{ c.title }}</div>
             <div class="org">{{ c.org }}</div>
-            {%- if c.url %}<div class="verify"><a href="{{ c.url }}" target="_blank" rel="noopener">Verifizieren →</a></div>{% endif %}
+            {%- if c.url %}<div class="verify"><a href="{{ c.url }}" target="_blank" rel="noopener">{{ L.verify }}</a></div>{% endif %}
           </div>
           {%- endfor %}
         </div>

@@ -1,0 +1,52 @@
+project_id,role
+0,Harness engineering
+0,Agent engineering
+0,AI system architecture
+0,Full-stack engineering
+0,DevOps
+1,Full-stack engineering
+1,Solution design
+1,DevOps
+2,Full-stack engineering
+2,Solution design
+2,DevOps
+3,Backend engineering
+4,Full-stack engineering
+4,Prototyping
+4,Solution design
+4,Data analysis
+5,Full-stack engineering
+5,Solution design
+6,DevOps
+6,Build & configuration management
+6,Full-stack engineering
+7,Machine learning
+7,Data analysis
+8,Machine learning
+8,Data analysis
+9,Machine learning
+9,Data analysis
+10,Machine learning
+10,Data analysis
+11,Backend engineering
+12,Machine learning
+12,Data analysis
+13,Full-stack engineering
+14,Full-stack engineering
+15,Full-stack engineering
+16,Full-stack engineering
+16,Solution design
+16,Prototyping
+16,Build & configuration management
+17,Full-stack engineering
+17,Solution design
+17,Prototyping
+17,Build & configuration management
+18,Backend engineering
+19,Full-stack engineering
+19,Solution design
+19,Build & configuration management
+20,Jenkins plugin development
+20,Maven plugin development
+21,Backend engineering
+22,Backend engineering

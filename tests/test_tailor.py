@@ -85,4 +85,4 @@ def test_facts_unchanged_by_tailoring():
     d = parse.parse()
     prof = tailor.build_profile(JAVA_JOB, d, "java-backend")
     html = render.render(d, tailor.render_profile(prof))
-    assert "89 €/h" in html and "ab 01.07.2026" in html
+    assert "2.000 €/Tag" in html and "sofort" in html

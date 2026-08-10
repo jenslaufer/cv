@@ -46,16 +46,33 @@ ist damit inhaltlich absorbiert.
 pip install -r requirements.txt
 
 # Basis-CV neu bauen, nachdem data/*.csv geändert wurde:
-python -m gen build --pdf --docx
+python3 -m gen build --pdf --docx
 
 # Prüfen, dass index.html zur Quelle passt (CI-/Pre-Commit-Guard):
-python -m gen check
+python3 -m gen check
 
 # Auf eine Ausschreibung zuschneiden:
-python -m gen tailor --job examples/job-java-backend.txt \
+python3 -m gen tailor --job examples/job-java-backend.txt \
                      --slug java-backend-versicherung \
                      --title "Jens Laufer — Java / Spring Boot Backend" --pdf
 ```
+
+### Sprachen
+
+Der CV gibt es auf Deutsch (Standard) und Englisch. Englisch ist **generiert**, nicht
+von Hand geschrieben: `data/en/*.csv` ist eine Prosa-Ueberlagerung ueber `data/`, und
+`gen/labels.py` haelt die festen Texte der Seite (Ueberschriften, Knoepfe, Fakten-
+Bezeichner). Dateien ohne Prosa (`tech.csv`, `project_tech.csv`) haben **keine**
+Ueberlagerung — Produktnamen sind sprachneutral. Die **Feldnamen** bleiben in jeder
+Sprache deutsch: sie sind das Schema, nicht der Text.
+
+```bash
+python3 -m gen build --lang en                      # englischen Basis-CV rendern
+python3 -m gen tailor --profile tailored/<slug>/profile.yaml   # `lang:` im Profil
+```
+
+`tests/test_i18n.py` laesst eine fehlende Uebersetzung die Suite brechen, statt ein
+deutsches Wort in einem englischen CV zu rendern.
 
 `tailor` matcht die Ausschreibung gegen Projekthistorie und Skill-Vokabular aus
 `data/*.csv`, behält das aktuelle Flaggschiff plus die relevantesten Projekte (neueste
@@ -64,7 +81,7 @@ zuerst) und hebt die passenden Skill-Gruppen nach vorn. Es schreibt eine
 Pitch, Projektauswahl) — danach neu rendern:
 
 ```bash
-python -m gen tailor --profile tailored/<slug>/profile.yaml --pdf
+python3 -m gen tailor --profile tailored/<slug>/profile.yaml --pdf
 ```
 
 Eine Variante fügt **keine** neuen Fakten hinzu — sie wählt aus, ordnet und
@@ -73,7 +90,7 @@ rahmt nur. So kann ein zugeschnittener CV nie von der Quelle abweichen.
 ## Tests
 
 ```bash
-python -m pytest -q
+python3 -m pytest -q
 ```
 
 `tests/test_sync.py` erzwingt die Synchronität: `index.html` muss exakt das sein,

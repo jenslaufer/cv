@@ -1,0 +1,21 @@
+Founding Forward Deployed Engineer — AI Start-up (Remote Germany)
+Quelle: LinkedIn-Nachricht William Harris (Data and AI Managing Consultant), 10.08.2026 17:40
+
+They're building an AI platform that helps enterprises automate complex business
+processes by connecting AI with existing systems across ERP, CRM, document
+management and internal workflows.
+
+You'd work at the intersection of engineering, product and customers - deploying AI
+solutions, building integrations, designing scalable workflows, and helping shape the
+platform as the company grows.
+
+They're looking for someone with experience across:
+- Python & backend engineering
+- APIs (REST, GraphQL, gRPC)
+- Enterprise integrations (SAP, CRM, Microsoft Dynamics, etc.)
+- LLMs, RAG, prompt engineering and AI workflows
+- Customer-facing engineering, solutions engineering or technical consulting
+
+- Remote Germany
+- Up to EUR 90k
+- Fluent German & English required

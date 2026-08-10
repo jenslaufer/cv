@@ -23,7 +23,8 @@ pitch: >-
   since 2009, so requirements, delivery and production support have always been
   the same conversation.
 highlights:
-- "**Harness engineering, in production since 12/2025:** agent loop, **tool use over MCP**, RAG, memory, approval gates, observability, budget control — the scaffolding around the model, not the model itself. Two live systems, several AI-built SaaS products shipped end to end."
+- "**Harness engineering is the work, in production since 12/2025:** agent loop with stop conditions, **tool use over MCP**, layered memory, RAG, approval gates before anything irreversible, quality gates an agent must pass before it may ship, observability over every run, budget and rate-limit control with model routing and fallback, and recovery after a killed run."
+- "**Two harnesses running live:** an autonomous AI business partner that plans, writes code, tests and deploys around the clock, and **Fabrik**, a multi-agent platform where worker agents pick up tickets and ship in parallel. A local multi-model proxy keeps both independent of any single provider."
 - "**Forward deployed by habit:** freelance since 2009, always inside the customer's team (Telekom, Commerzbank, Volkswagen, Audi, DVAG, Brunata) — scoping in conversation, delivering on site or remote, staying through production."
 - "**Integration into systems that already exist:** invoice handover to **SAP** over an ESB (1&1), master data migration on a canonical XML model (Commerzbank), the Haweiko-Arge industry format in heating cost billing (Brunata)."
 - "**Prototype to production:** took over a running prototype at Deutsche Telekom, developed it further and put it live — with the Docker/Kubernetes, tracing and CI work that being live actually requires."

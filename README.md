@@ -92,6 +92,17 @@ python3 -m gen tailor --profile tailored/<slug>/profile.yaml --pdf
 Eine Variante fügt **keine** neuen Fakten hinzu — sie wählt aus, ordnet und
 rahmt nur. So kann ein zugeschnittener CV nie von der Quelle abweichen.
 
+**Einzige Ausnahme: der Satz.** Er wird pro Projekt verhandelt, deshalb darf ihn eine
+Variante überschreiben — `rate` ersetzt den Wert, `rate_label` die Beschriftung:
+
+```yaml
+rate: 99 €/h
+rate_label: Stundensatz
+```
+
+Ohne diese Schlüssel gilt der `Tagessatz` aus `data/konditionen.csv`. Alle anderen
+Fakten (Verfügbarkeit, Einsatzort, Remote-Anteil) kommen weiter nur aus der Quelle.
+
 ## Tests
 
 ```bash

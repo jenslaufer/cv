@@ -1,0 +1,50 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: computerfutures-ki-transformation
+title: Jens Laufer — KI-Transformation · Externe Begleitung & Qualitätssicherung
+headline: Externe Begleitung von KI-Initiativen — Prototypen bewerten, Use Cases priorisieren, Machbarkeit belegen
+stack_line: Produktive KI-Agenten-Systeme · Machine Learning · Prototyp → Produktionsbetrieb · Use-Case- und Business-Case-Bewertung · KPIs & Erfolgsmessung · 16 Jahre Projektarbeit in Konzern und Mittelstand
+pitch: >-
+  Seit Ende 2025 baue und betreibe ich produktive KI-Agenten-Systeme — nicht als Studie,
+  sondern im Tagesbetrieb: Agenten, die planen, Code schreiben, testen und ausliefern,
+  abgesichert über Freigabe-Gates, Quality Gates, Observability und Budgetsteuerung.
+  Davor rund 16 Jahre als Freelancer in Konzernen und im Mittelstand, mit einem zweiten
+  Standbein in Machine Learning: Modelle und Prototypen bewertet, in den Produktionsbetrieb
+  überführt und dort messbar gemacht. In eine KI-Transformation bringe ich damit die Seite
+  ein, an der die meisten Programme scheitern — die nüchterne Einschätzung, was ein Prototyp
+  wirklich trägt, welcher Use Case den Aufwand rechtfertigt und woran sich Erfolg ablesen
+  lässt. Als Geschäftsführer einer eigenen GmbH kenne ich die Entscheidungslage im
+  gesellschaftergeführten Mittelstand aus der Betreiberperspektive.
+highlights:
+- "**Produktive KI-Systeme statt Folien:** seit 12/2025 zwei laufende Agenten-Systeme im Eigenbetrieb — ein selbststeuernder KI-Geschäftspartner und **Fabrik**, eine Multi-Agenten-Plattform für autonome Softwareentwicklung."
+- "**Prototyp → Produktionsbetrieb:** bestehenden Prototyp der Deutschen Telekom übernommen, weiterentwickelt und produktiv gestellt; ML-Modelle bei Sellics und AirDNA als Microservices in bestehende Systemlandschaften deployt."
+- "**Use Cases mit Business-Case-Logik:** Modell zur Früherkennung unterversorgter Produktnischen (Sellics), Prototyp zur Vorhersage von Zahlungseingängen (DVAG), Datenanalyse und Clustering bei der Co-operative Group."
+- "**Sparringspartner seit 2009:** durchgehend als Freelancer direkt beim Kunden — Telekom, Commerzbank, Volkswagen, Audi, DVAG, Brunata, 1&1 — Anforderungen mit Fachbereich und Management klären."
+- "**Branchennähe Gebäude & Immobilien:** Microservice für Heizkostenabrechnung nach Branchenstandard (Brunata, 22 Monate), digitale Immobilien-Plattform für Eigentümer (verkaufe.immobilien, 12 Monate)."
+include_projects:
+- 0
+- 1
+- 2
+- 6
+- 7
+- 8
+- 9
+- 10
+- 12
+- 22
+emphasize_skills:
+- Reinforcement Learning
+- Transfer Learning
+- scikit-learn
+- Keras
+- pandas
+- A/B Testing
+- Python
+- R
+rate: 99 €/h
+rate_label: Stundensatz
+lang: de

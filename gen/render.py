@@ -42,15 +42,18 @@ def _env() -> Environment:
     return env
 
 
-def _facts(data: dict, L: dict) -> list[dict]:
+def _facts(data: dict, L: dict, profile: dict | None = None) -> list[dict]:
     k = data["konditionen"]
     p = data["person"]
+    profile = profile or {}
+    # The rate is negotiated per engagement — the only fact a variant may override.
+    rate = _rate(profile.get("rate") or k.get("Tagessatz", ""))
     return [
         {"k": L["fact_available"], "v": k.get("Verfügbarkeit", "")},
         {"k": L["fact_worldwide"], "v": k.get("Einsatzort", "")},
         {"k": L["fact_remote"], "v": data["remote_pct"],
          "small": f"{data['onsite_pct']} {L['onsite']}"},
-        {"k": L["fact_rate"], "v": _rate(k.get("Tagessatz", "")),
+        {"k": profile.get("rate_label") or L["fact_rate"], "v": rate,
          "small": L["net"], "rate": True},
         {"k": L["fact_based"], "v": p.get("Wohnort", ""), "small": L["country"]},
     ]
@@ -122,6 +125,9 @@ def build_context(data: dict, profile: dict | None = None,
         "css": CSS,
         "noindex": profile.get("noindex", False),
         "asset_prefix": profile.get("asset_prefix", ""),
+        # {"href", "hreflang", "label"} on the two base pages, None on tailored
+        # variants — those are single-language, so a switch there is a 404.
+        "lang_switch": profile.get("lang_switch"),
         "pdf_href": profile.get("pdf_href", "cv.pdf"),
         "pdf_download": profile.get("pdf_download", "Jens-Laufer-CV.pdf"),
         "docx_href": profile.get("docx_href", "cv.docx"),
@@ -131,7 +137,7 @@ def build_context(data: dict, profile: dict | None = None,
         "role_line": role_line,
         "stack_line": stack_line,
         "pitch": pitch,
-        "facts": _facts(data, L),
+        "facts": _facts(data, L, profile),
         "highlights": highlights,
         "roles": data["roles"],
         "skills": skills,

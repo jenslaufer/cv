@@ -20,6 +20,27 @@ from . import exporters
 
 ROOT = Path(__file__).resolve().parent.parent
 
+# Every language that is actually *served*, and the chrome that makes the pair
+# navigable. The English CV existed as data (data/en/) for three days while
+# `build` still only ever wrote the German index.html — so cv.jenslaufer.com
+# answered every English reader in German, and the English work sample at
+# jenslaufer.com/harry/en/ linked straight into it (Jens, 17.08.). A language
+# that renders but is never written out does not exist for a reader.
+#
+# This table is the single definition of "published": `build` writes from it and
+# `check` verifies from it, so a new language cannot arrive with a guard that
+# still only watches the old one.
+BASE_PAGES: dict[str, tuple[str, dict]] = {
+    "de": ("index.html", {
+        "lang_switch": {"href": "en/", "hreflang": "en", "label": "English"},
+    }),
+    "en": ("en/index.html", {
+        # favicon lives at the repo root, one level up from en/
+        "asset_prefix": "../",
+        "lang_switch": {"href": "../", "hreflang": "de", "label": "Deutsch"},
+    }),
+}
+
 
 def _write(path: Path, text: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -28,15 +49,22 @@ def _write(path: Path, text: str) -> None:
 
 
 def cmd_build(args) -> int:
+    try:
+        out, profile = BASE_PAGES[args.lang]
+    except KeyError:
+        print(f"build: {args.lang!r} is not a published language "
+              f"(have: {', '.join(BASE_PAGES)})", file=sys.stderr)
+        return 2
+    page = ROOT / out
     data = _parse.parse(lang=args.lang)
-    html = _render.render(data, lang=args.lang)
-    _write(ROOT / "index.html", html)
+    _write(page, _render.render(data, profile, lang=args.lang))
+    # Downloads sit next to their page: the English page offers the English PDF.
     if args.pdf:
-        exporters.to_pdf(ROOT / "index.html", ROOT / "cv.pdf")
-        print("wrote cv.pdf")
+        exporters.to_pdf(page, page.parent / "cv.pdf")
+        print(f"wrote {(page.parent / 'cv.pdf').relative_to(ROOT)}")
     if args.docx:
-        exporters.to_docx(data, ROOT / "cv.docx")
-        print("wrote cv.docx")
+        exporters.to_docx(data, page.parent / "cv.docx", lang=args.lang)
+        print(f"wrote {(page.parent / 'cv.docx').relative_to(ROOT)}")
     return 0
 
 
@@ -75,14 +103,20 @@ def cmd_tailor(args) -> int:
 def cmd_check(args) -> int:
     """Sync guard: every published page must be byte-for-byte what data/*.csv renders.
 
-    That is index.html *and* every tailored variant — they are just as public, and
-    a variant nobody re-rendered keeps printing withdrawn facts (day rate,
-    availability) long after the source was corrected.
+    That is every language in BASE_PAGES *and* every tailored variant — they are
+    just as public, and a variant nobody re-rendered keeps printing withdrawn
+    facts (day rate, availability) long after the source was corrected.
+
+    It checks all languages regardless of ``--lang``: a guard that verifies only
+    the language you happen to ask about is how the English page could have been
+    missing for three days without a single red test.
     """
     stale = []
-    if (ROOT / "index.html").read_text(encoding="utf-8") != \
-            _render.render(_parse.parse(lang=args.lang), lang=args.lang):
-        stale.append(("index.html", "python3 -m gen build"))
+    for lang, (out, profile) in BASE_PAGES.items():
+        page = ROOT / out
+        regenerated = _render.render(_parse.parse(lang=lang), profile, lang=lang)
+        if not page.exists() or page.read_text(encoding="utf-8") != regenerated:
+            stale.append((out, f"python3 -m gen build --lang {lang} --pdf --docx"))
 
     for prof_path in sorted((ROOT / "tailored").glob("*/profile.yaml")):
         profile = yaml.safe_load(prof_path.read_text(encoding="utf-8"))
@@ -103,7 +137,9 @@ def cmd_check(args) -> int:
         return 1
 
     n = len(list((ROOT / "tailored").glob("*/profile.yaml")))
-    print(f"in sync: index.html + {n} tailored variant(s) == generate(data/*.csv)")
+    langs = "/".join(BASE_PAGES)
+    print(f"in sync: {len(BASE_PAGES)} base page(s) [{langs}] + {n} tailored "
+          f"variant(s) == generate(data/*.csv)")
     return 0
 
 
@@ -138,8 +174,7 @@ def main(argv=None) -> int:
     t.add_argument("--lang", default="de", help="language of the variant (de|en)")
     t.set_defaults(func=cmd_tailor)
 
-    c = sub.add_parser("check", help="verify index.html is in sync with data/*.csv")
-    c.add_argument("--lang", default="de", help="language to verify (de|en)")
+    c = sub.add_parser("check", help="verify every published page is in sync with data/*.csv")
     c.set_defaults(func=cmd_check)
 
     args = ap.parse_args(argv)

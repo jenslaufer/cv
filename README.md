@@ -45,11 +45,13 @@ ist damit inhaltlich absorbiert.
 ```bash
 pip install -r requirements.txt
 
-# Basis-CV neu bauen, nachdem data/*.csv geändert wurde:
+# Basis-CV neu bauen, nachdem data/*.csv geändert wurde — BEIDE Sprachen,
+# sonst altert die, die man selbst nicht liest:
 python3 -m gen build --pdf --docx
+python3 -m gen build --lang en --pdf --docx
 
-# Prüfen, dass index.html UND jede tailored-Variante zur Quelle passen
-# (CI-/Pre-Commit-Guard, nennt bei Abweichung den Re-Render-Befehl je Datei):
+# Prüfen, dass JEDE veröffentlichte Seite (de + en) UND jede tailored-Variante
+# zur Quelle passt (CI-/Pre-Commit-Guard, nennt den Re-Render-Befehl je Datei):
 python3 -m gen check
 
 # Auf eine Ausschreibung zuschneiden:
@@ -72,12 +74,24 @@ Ueberlagerung — Produktnamen sind sprachneutral. Die **Feldnamen** bleiben in 
 Sprache deutsch: sie sind das Schema, nicht der Text.
 
 ```bash
-python3 -m gen build --lang en                      # englischen Basis-CV rendern
+python3 -m gen build --lang en --pdf --docx         # -> en/index.html, en/cv.pdf, en/cv.docx
 python3 -m gen tailor --profile tailored/<slug>/profile.yaml   # `lang:` im Profil
 ```
 
+**Welche Sprachen ausgeliefert werden, steht in `gen/cli.py` → `BASE_PAGES`** — deutsch
+unter `/`, englisch unter `/en/`, jede mit ihren eigenen Downloads daneben und einem
+Umschalter auf die andere. `build` schreibt aus dieser Tabelle und `check` prueft aus
+derselben, damit eine neue Sprache nicht mit einem Waechter ankommt, der nur die alte
+kennt. Genau das war der Fehler: `data/en/` lag ab 14.08. vollstaendig da, `gen build`
+schrieb aber weiter nur die deutsche `index.html`. Alle i18n-Tests waren gruen, und
+cv.jenslaufer.com antwortete trotzdem jedem englischen Leser auf Deutsch — aufgefallen
+ist es erst von aussen, ueber den Knopf „See the CV" auf jenslaufer.com/harry/en/
+(Jens, 17.08.). **Eine Sprache, die rendert, aber nie geschrieben wird, gibt es fuer
+einen Leser nicht.**
+
 `tests/test_i18n.py` laesst eine fehlende Uebersetzung die Suite brechen, statt ein
-deutsches Wort in einem englischen CV zu rendern.
+deutsches Wort in einem englischen CV zu rendern; `tests/test_published_languages.py`
+prueft dasselbe eine Ebene tiefer — am Artefakt auf der Platte, nicht am Renderer.
 
 `tailor` matcht die Ausschreibung gegen Projekthistorie und Skill-Vokabular aus
 `data/*.csv`, behält das aktuelle Flaggschiff plus die relevantesten Projekte (neueste

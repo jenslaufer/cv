@@ -9,6 +9,9 @@
 {%- if noindex %}
 <meta name="robots" content="noindex">
 {%- endif %}
+{%- if lang_switch %}
+<link rel="alternate" hreflang="{{ lang_switch.hreflang }}" href="{{ lang_switch.href }}">
+{%- endif %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -33,6 +36,12 @@
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4v-7h16v7h-2M6 14h12v6H6z"/></svg>
     {{ L.print_btn }}
   </button>
+  {%- if lang_switch %}
+  <a class="print-btn print-btn--ghost" href="{{ lang_switch.href }}" hreflang="{{ lang_switch.hreflang }}" lang="{{ lang_switch.hreflang }}">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18zM3 12h18M12 3c2.5 2.4 2.5 15.6 0 18M12 3c-2.5 2.4-2.5 15.6 0 18"/></svg>
+    {{ lang_switch.label }}
+  </a>
+  {%- endif %}
 </div>
 
 <header class="masthead">

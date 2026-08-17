@@ -14,6 +14,8 @@ import subprocess
 import tempfile
 from pathlib import Path
 
+from .labels import DEFAULT_LANG, labels as _labels
+
 CHROMIUM_CANDIDATES = ["chromium", "chromium-browser", "google-chrome", "chrome"]
 
 
@@ -41,10 +43,19 @@ def to_pdf(html_path: str | Path, pdf_path: str | Path) -> Path:
     return pdf_path
 
 
-def to_docx(data: dict, path: str | Path, profile: dict | None = None) -> Path:
+def to_docx(data: dict, path: str | Path, profile: dict | None = None,
+            lang: str = DEFAULT_LANG) -> Path:
+    """Editable Word export — same source, same language as the page it sits next to.
+
+    Every heading comes from the label pack. Hard-coded German headings would
+    have shipped a Word file titled "Projekthistorie" from the English CV: the
+    same defect the English page itself had, one layer further down where nobody
+    reads it before sending it to a recruiter.
+    """
     from docx import Document
     from docx.shared import Pt, RGBColor
 
+    L = _labels(lang)
     profile = profile or {}
     person = data["person"]
     accent = RGBColor(0x0A, 0x46, 0x40)
@@ -60,30 +71,38 @@ def to_docx(data: dict, path: str | Path, profile: dict | None = None) -> Path:
     run.bold = True
     doc.add_paragraph(person.get("Untertitel", ""))
 
+    # 'Rate Remote'/'Rate Vor-Ort' were replaced by a single 'Tagessatz' on
+    # 2026-08-10. The exporter kept asking for the old keys, so the published
+    # cv.docx read "Remote 95 % ·  remote /  vor Ort" — two empty slots where
+    # the day rate belongs, on the one artifact that goes out by e-mail.
     kond = data["konditionen"]
-    doc.add_paragraph(
-        f"Verfügbar {kond.get('Verfügbarkeit','')} · {kond.get('Einsatzort','')} · "
-        f"Remote {data['remote_pct']} · {kond.get('Rate Remote','')} remote / "
-        f"{kond.get('Rate Vor-Ort','')} vor Ort"
-    )
+    facts = [
+        f"{L['fact_available']} {kond.get('Verfügbarkeit','')}",
+        kond.get("Einsatzort", ""),
+        f"{L['fact_remote']} {data['remote_pct']}",
+    ]
+    rate = profile.get("rate") or kond.get("Tagessatz", "")
+    if rate:
+        facts.append(f"{profile.get('rate_label') or L['fact_rate']} {rate}")
+    doc.add_paragraph(" · ".join(f for f in facts if f))
 
     def heading(text):
         h = doc.add_heading(text, level=1)
         for r in h.runs:
             r.font.color.rgb = accent
 
-    heading("Schwerpunkte")
+    heading(L["sec_highlights"])
     for h in (profile.get("highlights") or data["highlights"]):
         clean = h.replace("**", "")
         doc.add_paragraph(clean, style="List Bullet")
 
-    heading("Kenntnisse")
+    heading(L["sec_skills"])
     for g in data["skills"]:
         p = doc.add_paragraph()
         p.add_run(f"{g['name']}: ").bold = True
         p.add_run(", ".join(g["tags"]))
 
-    heading("Projekthistorie")
+    heading(L["sec_projects"])
     for pr in projects:
         head = doc.add_paragraph()
         r = head.add_run(f"{pr['period']} ({pr['dur']}) — {pr['title']}")
@@ -91,21 +110,23 @@ def to_docx(data: dict, path: str | Path, profile: dict | None = None) -> Path:
         meta = " · ".join(x for x in (pr["client"], pr["location"], pr["branch"]) if x)
         doc.add_paragraph(meta)
         if pr["roles"]:
-            doc.add_paragraph("Rollen: " + " · ".join(pr["roles"]))
+            doc.add_paragraph(f'{L["sec_roles"]}: ' + " · ".join(pr["roles"]))
         doc.add_paragraph(pr["desc"].replace("**", ""))
         if pr["tech"]:
             doc.add_paragraph("Tech: " + ", ".join(pr["tech"]))
 
-    heading("Ausbildung & Zertifikate")
+    heading(f'{L["sub_education"]} & {L["sub_certificates"]}')
     for e in data["education"] + data["certificates"]:
         p = doc.add_paragraph()
         p.add_run(f"{e['date']} — {e['title']}").bold = True
         p.add_run(f", {e['org']}")
 
-    heading("Kontakt")
+    heading(L["sub_contact"])
+    # Field names are the schema and stay German; only the printed label is
+    # translated. Website/GitHub/LinkedIn/Kaggle are proper nouns either way.
     for key in ("Telefon", "Website", "GitHub", "LinkedIn", "Kaggle"):
         if person.get(key):
-            doc.add_paragraph(f"{key}: {person[key]}")
+            doc.add_paragraph(f'{L["c_phone"] if key == "Telefon" else key}: {person[key]}')
 
     path = Path(path)
     doc.save(str(path))

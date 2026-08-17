@@ -1,4 +1,21 @@
-from gen import parse, render
+import re
+
+from gen import labels, parse, render
+
+
+def test_fact_grid_has_one_column_per_fact():
+    """An empty sixth cell reads as a number that failed to load.
+
+    The wide breakpoint asked for 6 columns while ``_facts()`` has returned 5
+    since the two hourly rates became one day rate (2026-08-10) — so both
+    published pages carried a grey empty box next to the day rate. Tying the
+    number to the source means the next fact added or dropped cannot leave one
+    behind: this is the same file the rate itself is measured from.
+    """
+    facts = render._facts(parse.parse(), labels.labels("de"))
+    rule = re.search(r"\.facts\{grid-template-columns:repeat\((\d+),1fr\)\}", render.CSS)
+    assert rule, "the wide fact-grid rule moved — check gen/style.css"
+    assert int(rule.group(1)) == len(facts)
 
 
 def test_base_render_has_all_projects():

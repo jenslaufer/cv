@@ -17,7 +17,7 @@ pitch: >-
   Integrationsprojekte agil zum Erfolg geführt — von EJB-Altanwendungen bis zu
   modernen Microservices.
 highlights:
-- '**~16 Jahre Backend-Entwicklung** in Enterprise-Java-Umgebungen (seit 2009), durchgehend als Freelancer.'
+- '**~16 Jahre Backend-Entwicklung** in Enterprise-Java-Umgebungen, durchgehend als Freelancer.'
 - '**Java EE & EJB:** Migration eines EJB-basierten Java-EE-Payment-Backends nach Spring Boot (Condor); EntryCheck (Build & Deployment) für eine große Java-EE-Unternehmensanwendung (Deutsche Telekom).'
 - '**SOAP-/REST-Webservices & ESB/SOA:** Mediation-/Rating-Webservices auf einem ESB mit Rechnungsübergabe an SAP (1&1); kanonisches XML-Modell für die Stammdaten-Migration einer Großbank (Commerzbank).'
 - '**Regulierte Domänen:** Bank, Finanz und Versicherung (Commerzbank, DVAG, DER) — strukturierte Anforderungen, Dokumentation, Qualitätssicherung.'

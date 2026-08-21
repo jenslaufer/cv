@@ -37,9 +37,14 @@ def test_no_double_escaping():
 
 
 def test_inline_markdown_applied():
-    html = render.render(parse.parse())
-    # bold lead in Schwerpunkte
-    assert "<strong>~16 Jahre Fullstack-Erfahrung</strong>" in html
+    data = parse.parse()
+    html = render.render(data)
+    # bold lead in Schwerpunkte — taken from the data, not spelled out here.
+    # It used to pin "<strong>~16 Jahre Fullstack-Erfahrung</strong>", which
+    # made this test a second home for a fact that belongs in data/*.csv: it
+    # guarded the markdown and the wrong career figure with the same string.
+    lead = re.match(r"\*\*([^*]+)\*\*", data["highlights"][0]).group(1)
+    assert f"<strong>{render._fill(lead, render.career_years(data['person']))}</strong>" in html
     # link from the flagship project description
     assert '<a href="https://fabrikhq.com">fabrikhq.com</a>' in html
 

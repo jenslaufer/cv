@@ -11,19 +11,19 @@ stack_line: Python · LLM-Agenten / Tool-Use & MCP · RAG · REST-APIs & Integra
 pitch: >-
   Seit Ende 2025 baue und betreibe ich produktive LLM-Agenten-Systeme: Agenten-Loop,
   Tool-Use über MCP, Memory, Freigabe-Gates, Observability und Budget-Steuerung.
-  Davor rund 16 Jahre Backend- und Integrationsarbeit direkt beim Kunden — Rechnungs-
+  Davor rund {career_years} Jahre Backend- und Integrationsarbeit direkt beim Kunden — Rechnungs-
   und Zahlungsplattformen, Anbindung an SAP über einen ESB, Stammdaten-Migration in
   einer Großbank, Branchen-Datenformate in der Heizkostenabrechnung. Genau die
   Kombination, die ein Forward Deployed Engineer braucht: die KI-Seite und die Seite,
   auf der ERP, CRM und Dokumentenprozesse seit Jahrzehnten laufen. Als Freelancer
-  seit 2009 arbeite ich durchgehend kundennah — Anforderungen im Gespräch klären,
+  seit 1997 arbeite ich durchgehend kundennah — Anforderungen im Gespräch klären,
   vor Ort oder remote ausliefern, in Produktion begleiten.
 highlights:
 - "**Produktive KI-Agenten-Systeme** seit 12/2025: Agenten-Loop, **Tool-Use über MCP**, RAG, Memory, Freigabe-Gates, Observability, Budget-Steuerung — als Harness Engineer das Gerüst um das Modell, nicht das Modell selbst."
 - "**Integration in gewachsene Unternehmenssysteme:** Rechnungsübergabe an **SAP** über einen ESB (1&1), Stammdaten-Migration mit kanonischem XML-Modell (Commerzbank), Branchenformat Haweiko-Arge in der Heizkostenabrechnung (Brunata)."
 - "**Python & Backend:** REST-Backends in Python (Eve, Flask) und Java/Spring-Boot-Microservices mit OpenAPI, in Docker ausgeliefert."
 - "**Vom Prototyp in den Produktionsbetrieb:** bestehenden Prototyp bei der Deutschen Telekom übernommen, weiterentwickelt und produktiv gestellt."
-- "**Kundennah seit 2009:** durchgehend als Freelancer in Kundenprojekten (Telekom, Commerzbank, Volkswagen, Audi, DVAG, Brunata), Anforderungsklärung und Auslieferung in einer Hand."
+- "**Kundennah seit 1997:** durchgehend als Freelancer in Kundenprojekten (Telekom, Commerzbank, Volkswagen, Audi, DVAG, Brunata), Anforderungsklärung und Auslieferung in einer Hand."
 include_projects:
 - 0
 - 1

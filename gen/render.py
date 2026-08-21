@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import html
 import re
+from datetime import date
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -40,6 +41,35 @@ def _env() -> Environment:
     )
     env.filters["md"] = md
     return env
+
+
+def career_years(person: dict) -> int:
+    """Years since ``Karrierebeginn`` — the career figure, computed once.
+
+    It used to be typed into the prose ("~16 Jahre ... seit 2009") and was wrong
+    on both counts: 2009 is where ``projects.csv`` starts, not where the career
+    did. A typed number also cannot age. See tests/test_career_span.py.
+    """
+    month, year = person["Karrierebeginn"].split("/")
+    start = date(int(year), int(month), 1)
+    return round((date.today() - start).days / 365.2425)
+
+
+def _fill(text: str, years: int) -> str:
+    return text.replace("{career_years}", str(years)) if text else text
+
+
+def _project_window(projects: list[dict]) -> str:
+    """Earliest year the project list reaches back to — the heading says so.
+
+    23 entries starting in 2009 under a 29-year career reads as a contradiction
+    unless the heading names the list as a selection.
+    """
+    # min over *every* year in every period, not the first period's last year:
+    # "05/2009-03/2010" ends in 2010, and reading the end date turned the
+    # earliest project into a window that starts a year after it did.
+    years = [y for p in projects for y in re.findall(r"\d{2}/(\d{4})", p.get("period", ""))]
+    return min(years, default="")
 
 
 def _facts(data: dict, L: dict, profile: dict | None = None) -> list[dict]:
@@ -104,11 +134,15 @@ def build_context(data: dict, profile: dict | None = None,
     # --- skills: optionally surface matched groups/tags first ---
     skills = _order_skills(data["skills"], profile.get("emphasize_skills"))
 
+    # --- the career figure is computed, never carried in the prose ---
+    years = career_years(p)
+    L = dict(L, sec_projects=L["sec_projects"].format(von=_project_window(projects)))
+
     name = p.get("Name", "")
-    role_line = profile.get("headline") or p.get("Titel/Positionierung", "")
-    stack_line = profile.get("stack_line") or p.get("Untertitel", "")
-    pitch = profile.get("pitch") or p.get("Pitch", "")
-    highlights = profile.get("highlights") or data["highlights"]
+    role_line = _fill(profile.get("headline") or p.get("Titel/Positionierung", ""), years)
+    stack_line = _fill(profile.get("stack_line") or p.get("Untertitel", ""), years)
+    pitch = _fill(profile.get("pitch") or p.get("Pitch", ""), years)
+    highlights = [_fill(h, years) for h in (profile.get("highlights") or data["highlights"])]
     eyebrow = profile.get("eyebrow") or L["eyebrow"]
     kond = data["konditionen"]
     footer_right = " · ".join([
@@ -120,8 +154,8 @@ def build_context(data: dict, profile: dict | None = None,
     return {
         "L": L,
         "html_lang": lang,
-        "title": profile.get("title") or p.get("SEO-Titel") or f"{name} — {role_line}",
-        "description": profile.get("description") or pitch,
+        "title": _fill(profile.get("title") or p.get("SEO-Titel"), years) or f"{name} — {role_line}",
+        "description": _fill(profile.get("description"), years) or pitch,
         "css": CSS,
         "noindex": profile.get("noindex", False),
         "asset_prefix": profile.get("asset_prefix", ""),

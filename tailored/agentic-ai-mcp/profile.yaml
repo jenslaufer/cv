@@ -9,7 +9,7 @@ title: Jens Laufer — Agentic AI / MLOps · MCP
 headline: Agentic AI & MLOps Engineer — produktionsreife LLM-Agenten-Plattformen mit MCP
 stack_line: Python · Agentic AI / MCP · LLM-Inferenz & Embeddings · Kafka Event-Streaming · MLOps · Docker / Kubernetes
 pitch: >-
-  ~16 Jahre Fullstack- und Backend-Erfahrung in Python und Java, ein zweites
+  ~{career_years} Jahre Softwareentwicklung, Fullstack und Backend in Python und Java, ein zweites
   Standbein in Data Science / Machine Learning — und seit Ende 2025 produktive
   Agentic-AI-Systeme: LLM-Agenten mit Tool-Use über MCP, Memory, Freigabe-Gates,
   Observability und Budget-Steuerung, end-to-end deployt und überwacht. Genau das
@@ -21,7 +21,7 @@ highlights:
 - "**Produktive Agentic-AI-Systeme** seit Ende 2025: LLM-Agenten-Loop, **Tool-Use über MCP**, Memory, Freigabe-Gates, Observability, Budget-Steuerung — als Harness Engineer das Gerüst um das Modell."
 - "**MLOps & Production ML:** ML-Modelle (CNN, Transfer Learning) über Build-Pipelines als Microservices deployt, Kafka-Datenpipelines fürs Nachtraining, Monitoring — auf AWS-GPU und im Container."
 - "**Event-Streaming mit Kafka** und durchgehend **Docker / Kubernetes / GitLab CI**."
-- "**~16 Jahre Fullstack** (seit 2009, durchgehend Freelancer); zweites Standbein Data Science / ML — Udacity ML Engineer & Data Analyst, Kaggle, Autor auf Towards Data Science."
+- "**~{career_years} Jahre Softwareentwicklung** (seit 1997, durchgehend Freelancer); zweites Standbein Data Science / ML — Udacity ML Engineer & Data Analyst, Kaggle, Autor auf Towards Data Science."
 - "**Konsequent testgetrieben** (TDD, JUnit, Mockito, Playwright)."
 include_projects:
 - 0

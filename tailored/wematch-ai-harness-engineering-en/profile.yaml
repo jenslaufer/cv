@@ -1,0 +1,51 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: wematch-ai-harness-engineering-en
+title: Jens Laufer — AI Engineer / Harness Engineering
+headline: ''
+stack_line: ''
+pitch: ''
+highlights: []
+include_projects:
+- 0
+- 1
+- 2
+- 4
+- 5
+- 6
+- 9
+- 10
+- 11
+- 13
+- 14
+- 16
+emphasize_skills:
+- DevOps
+- Harness engineering
+- Java
+- Kafka
+- Kubernetes
+- Python
+- React
+- Spring
+- Spring Boot
+_scores:
+  0: 3
+  1: 2
+  2: 4
+  4: 4
+  5: 3
+  6: 4
+  9: 3
+  10: 3
+  11: 5
+  13: 4
+  14: 4
+  16: 4
+rate: "€125/hour"
+rate_label: HOURLY RATE
+lang: en

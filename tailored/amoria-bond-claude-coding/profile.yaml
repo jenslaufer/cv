@@ -1,0 +1,43 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: amoria-bond-claude-coding
+title: Jens Laufer — Einführung von Claude Code · Harness Engineering
+headline: ''
+stack_line: ''
+pitch: ''
+highlights: []
+include_projects:
+- 0
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 7
+- 8
+- 9
+- 10
+- 11
+emphasize_skills:
+- Harness Engineering
+_scores:
+  0: 1
+  1: 0
+  2: 0
+  3: 0
+  4: 0
+  5: 0
+  6: 0
+  7: 0
+  8: 0
+  9: 0
+  10: 0
+  11: 0
+rate: 125 €/h
+rate_label: Stundensatz
+lang: de

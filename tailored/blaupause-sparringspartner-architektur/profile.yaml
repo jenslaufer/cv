@@ -1,0 +1,47 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: blaupause-sparringspartner-architektur
+title: Jens Laufer — Sparringspartner Architektur · KI-gestuetzte Codebasis
+headline: ''
+stack_line: ''
+pitch: ''
+highlights: []
+include_projects:
+- 0
+- 1
+- 2
+- 4
+- 5
+- 6
+- 7
+- 8
+- 9
+- 10
+- 12
+- 13
+emphasize_skills:
+- FastAPI
+- GitHub Actions
+- JavaScript
+- Python
+- Playwright
+_scores:
+  0: 4
+  1: 2
+  2: 1
+  4: 3
+  5: 1
+  6: 1
+  7: 2
+  8: 2
+  9: 1
+  10: 2
+  12: 2
+  13: 1
+lang: de
+rate: 125 €/h
+rate_label: Stundensatz

@@ -1,0 +1,30 @@
+Senior AI / LLM Developer / Integrator – 100% Remote
+iBSC ltd — Ansprechpartner: Lahcene Yacef
+Ort: 100% Remote (bonn, Deutschland)
+Start: ASAP / August 2026 — Dauer: bis 31.12.2026, Verlaengerung wahrscheinlich
+Sprache: Fliessend Deutsch — zwingend
+Auslastung: 100 %
+
+Key Responsibilities
+Design, develop and deploy AI-powered services and LLM solutions
+Build scalable AI Agent and LLM-driven pipelines
+Integrate AI models into backend applications and workflows
+Develop AI-assisted code generation solutions
+Design and build scalable backend services and data-processing pipelines
+Deploy solutions within cloud-native AWS environments
+
+Required Skills
+Strong hands-on experience with LLMs / Generative AI
+Experience developing AI Agents / Agentic AI solutions
+LangChain and LangGraph
+OpenAI, Anthropic Claude and/or AWS Bedrock
+Strong development experience with Python
+Experience with Node.js, JavaScript/TypeScript and/or Golang
+Experience with MCP (Model Context Protocol) and AI tooling
+Strong backend development and API integration experience
+AWS, Docker and CI/CD / GitHub Actions
+Experience deploying production-grade AI applications
+
+Skills-Tags: IT, APIs, Code Generation, Python, Node.js, Integration (Software),
+TypeScript, Large Language Models, Generative AI, Backend, Artificial Intelligence,
+Golang

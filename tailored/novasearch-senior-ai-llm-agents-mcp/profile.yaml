@@ -1,0 +1,48 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: novasearch-senior-ai-llm-agents-mcp
+title: 'Jens Laufer — Senior AI Engineer: LLM, AI Agents, MCP'
+headline: ''
+stack_line: ''
+pitch: ''
+highlights: []
+include_projects:
+- 0
+- 1
+- 2
+- 4
+- 5
+- 7
+- 8
+- 9
+- 10
+- 11
+- 12
+- 13
+emphasize_skills:
+- Python
+- TypeScript
+- REST
+- OpenAPI
+- Docker
+- AWS (EC2, S3, SageMaker, VPC)
+_scores:
+  0: 1
+  1: 2
+  2: 2
+  4: 2
+  5: 1
+  7: 1
+  8: 1
+  9: 1
+  10: 1
+  12: 1
+  16: 1
+  17: 1
+lang: de
+rate: 83 €/h
+rate_label: Stundensatz

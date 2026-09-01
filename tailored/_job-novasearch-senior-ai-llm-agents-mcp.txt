@@ -1,0 +1,37 @@
+Senior AI Engineer – LLM / Agents / MCP - 100% Remote
+NovaSearch GmbH — Ansprechpartner: Strahinja Karanovic
+Ort: Hamburg, Deutschland — Remote: 100 %
+Start: 21.09.2026 — Dauer: 6 Monate / langfristig, noch offen
+Auslastung: Vollzeit (100 %)
+Branche: Chemische Industrie
+Vertragsart: Freelance
+
+Projektbeschreibung
+Fuer ein Projekt im Umfeld einer agentischen AI-Plattform fuer die chemische
+Industrie wird ein erfahrener Senior AI Engineer gesucht. Im Fokus steht die
+technische Integration moderner Generative-AI-Technologien sowie die Entwicklung
+und Anbindung von LLM- und Agent-basierten Loesungen.
+
+Aufgaben
+Integration und Anbindung von LLMs, AI Agents, MCPs und bestehenden AI-Services
+Technische Konzeption und Umsetzung von agentischen AI-Loesungen
+Selbststaendige Analyse technischer und fachlicher Anforderungen
+Strukturierte Entwicklung geeigneter Loesungsansaetze
+Technische Abstimmung mit Entwicklern, Architekten und Fachbereichen
+Dokumentation der entwickelten Loesungen sowie Wissenstransfer im Projekt
+
+Anforderungen
+Mehrjaehrige Erfahrung als AI Engineer / Generative AI Engineer
+Sehr gute praktische Erfahrung mit Generative AI und LLMs
+Erfahrung mit AI Agents / Agentic AI
+Kenntnisse im Bereich MCP (Model Context Protocol)
+Erfahrung bei der Integration bestehender AI-Services und APIs
+Faehigkeit, Anforderungen selbststaendig zu analysieren und in technische
+Loesungen zu uebersetzen
+Sicheres Stakeholder-Management im Austausch mit Development, Architecture und
+Fachbereichen
+Gute Deutsch- und Englischkenntnisse
+
+Skills-Tags: Chemische Industrie, AI Agents, LLM, Generative AI, Artificial
+Intelligence, MCP, Model Context Protocol, API-Integration, Python, Architektur,
+Stakeholder-Management

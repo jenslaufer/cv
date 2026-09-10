@@ -17,9 +17,17 @@ def test_check_passes_on_clean_tree(capsys):
 
 
 def test_check_fails_when_a_tailored_variant_is_stale(tmp_path, capsys):
+    """The staleness is injected, not spelled out.
+
+    This used to overwrite the literal "2.000 €/Tag". When the source went back
+    to two hourly rates (2026-09-10) that string was gone, the victim was left
+    untouched, and the test passed by asserting that a clean tree is clean —
+    the exact shape of failure the guard itself exists to prevent.
+    """
     victim = sorted((ROOT / "tailored").glob("*/index.html"))[0]
     original = victim.read_text(encoding="utf-8")
-    victim.write_text(original.replace("2.000 €/Tag", "89 €/Stunde"), encoding="utf-8")
+    assert "</body>" in original
+    victim.write_text(original.replace("</body>", "<p>stale</p></body>"), encoding="utf-8")
     try:
         rc = cli.main(["check"])
     finally:

@@ -15,6 +15,8 @@ import tempfile
 from pathlib import Path
 
 from .labels import DEFAULT_LANG, labels as _labels
+from .render import (_fill, _project_window, career_years,
+                     plain as _plain, rate_fact as _rate_fact)
 
 CHROMIUM_CANDIDATES = ["chromium", "chromium-browser", "google-chrome", "chrome"]
 
@@ -64,26 +66,41 @@ def to_docx(data: dict, path: str | Path, profile: dict | None = None,
     order = profile.get("include_projects")
     projects = [by_id[i] for i in order if i in by_id] if order else data["projects"]
 
+    # The page fills {career_years} and {von} and renders the inline markdown;
+    # this exporter did neither, so the copy that goes out by e-mail read
+    # "~{career_years} Jahre Softwareentwicklung" and quoted a link as its
+    # markdown source. Same defect class as the empty rate slot above: the
+    # .docx is the surface nobody re-reads before sending it.
+    years = career_years(person)
+    L = dict(L, sec_projects=L["sec_projects"].format(von=_project_window(projects)))
+
+    def text(raw):
+        return _plain(_fill(raw, years))
+
     doc = Document()
     doc.add_heading(person.get("Name", ""), level=0)
     sub = doc.add_paragraph()
-    run = sub.add_run(profile.get("headline") or person.get("Titel/Positionierung", ""))
+    run = sub.add_run(text(profile.get("headline") or person.get("Titel/Positionierung", "")))
     run.bold = True
-    doc.add_paragraph(person.get("Untertitel", ""))
+    doc.add_paragraph(text(person.get("Untertitel", "")))
 
-    # 'Rate Remote'/'Rate Vor-Ort' were replaced by a single 'Tagessatz' on
-    # 2026-08-10. The exporter kept asking for the old keys, so the published
-    # cv.docx read "Remote 95 % ·  remote /  vor Ort" — two empty slots where
-    # the day rate belongs, on the one artifact that goes out by e-mail.
+    # The rate keys have now moved twice: hourly -> 'Tagessatz' (2026-08-10),
+    # 'Tagessatz' -> hourly again (2026-09-10). The first time this exporter
+    # kept asking for the old keys and the published cv.docx read
+    # "Remote 95 % ·  remote /  vor Ort" — two empty slots where the price
+    # belongs, on the one artifact that goes out by e-mail. So it no longer
+    # names any CSV key itself; render.rate_fact() composes the cell once and
+    # both surfaces read it. tests/test_export_facts.py reads the .docx back.
     kond = data["konditionen"]
     facts = [
         f"{L['fact_available']} {kond.get('Verfügbarkeit','')}",
         kond.get("Einsatzort", ""),
         f"{L['fact_remote']} {data['remote_pct']}",
     ]
-    rate = profile.get("rate") or kond.get("Tagessatz", "")
-    if rate:
-        facts.append(f"{profile.get('rate_label') or L['fact_rate']} {rate}")
+    rate = _rate_fact(kond, L, profile)
+    if rate["v"]:
+        facts.append(f"{rate['k']} {rate['v']}"
+                     + (f" ({rate['small']})" if rate["small"] else ""))
     doc.add_paragraph(" · ".join(f for f in facts if f))
 
     def heading(text):
@@ -93,8 +110,7 @@ def to_docx(data: dict, path: str | Path, profile: dict | None = None,
 
     heading(L["sec_highlights"])
     for h in (profile.get("highlights") or data["highlights"]):
-        clean = h.replace("**", "")
-        doc.add_paragraph(clean, style="List Bullet")
+        doc.add_paragraph(text(h), style="List Bullet")
 
     heading(L["sec_skills"])
     for g in data["skills"]:
@@ -111,7 +127,7 @@ def to_docx(data: dict, path: str | Path, profile: dict | None = None,
         doc.add_paragraph(meta)
         if pr["roles"]:
             doc.add_paragraph(f'{L["sec_roles"]}: ' + " · ".join(pr["roles"]))
-        doc.add_paragraph(pr["desc"].replace("**", ""))
+        doc.add_paragraph(text(pr["desc"]))
         if pr["tech"]:
             doc.add_paragraph("Tech: " + ", ".join(pr["tech"]))
 

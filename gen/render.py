@@ -59,6 +59,17 @@ def _fill(text: str, years: int) -> str:
     return text.replace("{career_years}", str(years)) if text else text
 
 
+def plain(text: str) -> str:
+    """Markdown source as readable prose — for surfaces that cannot render it.
+
+    The Word export is one, and it shipped "[fabrikhq.com](https://fabrikhq.com)"
+    verbatim to every recruiter who opened it. The page has ``md()`` for this;
+    a .docx needs the same reduction without the HTML.
+    """
+    out = _MD_LINK.sub(lambda m: m.group(1), text or "")
+    return _MD_BOLD.sub(lambda m: m.group(1), out)
+
+
 def _project_window(projects: list[dict]) -> str:
     """Earliest year the project list reaches back to — the heading says so.
 
@@ -72,19 +83,39 @@ def _project_window(projects: list[dict]) -> str:
     return min(years, default="")
 
 
+def rate_fact(kond: dict, L: dict, profile: dict | None = None) -> dict:
+    """The rate cell — one negotiated number on a variant, two on the base CV.
+
+    On-site and remote are priced apart (Jens, 10.09.2026: 100 EUR/h on-site,
+    90 EUR/h remote). Both belong on the page, but the fact grid holds exactly
+    five columns, so they share one cell instead of adding a sixth that every
+    tailored variant — where the rate is a single negotiated number — would
+    leave empty. That empty cell was a real defect once (2026-08-17).
+
+    Public because the Word export needs the same composition; asking the CSV
+    for its own keys is how cv.docx came to ship two blank slots on 2026-08-10.
+    """
+    profile = profile or {}
+    if profile.get("rate"):
+        return {"k": profile.get("rate_label") or L["fact_rate"],
+                "v": _rate(profile["rate"]), "small": L["net"], "rate": True}
+    onsite = _rate(kond.get("Rate Vor-Ort", ""))
+    remote = _rate(kond.get("Rate Remote", ""))
+    small = " · ".join(x for x in (f"{remote} {L['remote']}" if remote else "", L["net"]) if x)
+    return {"k": L["fact_rate"], "v": f"{onsite} {L['onsite']}" if onsite else "",
+            "small": small, "rate": True}
+
+
 def _facts(data: dict, L: dict, profile: dict | None = None) -> list[dict]:
     k = data["konditionen"]
     p = data["person"]
     profile = profile or {}
-    # The rate is negotiated per engagement — the only fact a variant may override.
-    rate = _rate(profile.get("rate") or k.get("Tagessatz", ""))
     return [
         {"k": L["fact_available"], "v": k.get("Verfügbarkeit", "")},
         {"k": L["fact_worldwide"], "v": k.get("Einsatzort", "")},
         {"k": L["fact_remote"], "v": data["remote_pct"],
          "small": f"{data['onsite_pct']} {L['onsite']}"},
-        {"k": profile.get("rate_label") or L["fact_rate"], "v": rate,
-         "small": L["net"], "rate": True},
+        rate_fact(k, L, profile),
         {"k": L["fact_based"], "v": p.get("Wohnort", ""), "small": L["country"]},
     ]
 

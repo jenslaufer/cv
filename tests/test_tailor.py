@@ -85,18 +85,23 @@ def test_facts_unchanged_by_tailoring():
     d = parse.parse()
     prof = tailor.build_profile(JAVA_JOB, d, "java-backend")
     html = render.render(d, tailor.render_profile(prof))
-    assert "2.000 €/Tag" in html and d["konditionen"]["Verfügbarkeit"] in html
+    assert "100 €/h" in html and "90 €/h" in html
+    assert d["konditionen"]["Verfügbarkeit"] in html
 
 
-def test_rate_override_replaces_day_rate():
-    """A negotiated rate is per-engagement, so a variant may override it."""
+def test_rate_override_replaces_both_source_rates():
+    """A negotiated rate is per-engagement, so a variant may override it.
+
+    One override has to silence BOTH source rates — leaving the remote rate
+    standing next to a negotiated 125 EUR/h would quote two prices at once.
+    """
     d = parse.parse()
     prof = tailor.build_profile(JAVA_JOB, d, "java-backend")
-    prof["rate"] = "99 €/h"
+    prof["rate"] = "125 €/h"
     prof["rate_label"] = "Stundensatz"
     html = render.render(d, tailor.render_profile(prof))
-    assert "99 €/h" in html
-    assert "2.000 €/Tag" not in html
+    assert "125 €/h" in html
+    assert "100 €/h" not in html and "90 €/h" not in html
     assert "Stundensatz" in html
     # every other fact still comes from the source
     assert d["konditionen"]["Verfügbarkeit"] in html

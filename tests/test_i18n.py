@@ -91,21 +91,29 @@ def test_german_render_is_unchanged_in_language():
     assert "Projekthistorie" in html
 
 
-# --- rate: one number, on every surface -------------------------------------
+# --- rate: two numbers, on every surface ------------------------------------
 
-def test_day_rate_is_the_only_rate_in_the_source():
-    """An hourly rate next to a day rate is two prices for the same work."""
+def test_the_source_carries_an_hourly_rate_for_each_mode():
+    """On-site and remote are different work, so they carry different prices.
+
+    Jens, 10.09.2026: the 2.000 EUR day rate was replaced by 100 EUR/h on-site
+    and 90 EUR/h remote. A leftover ``Tagessatz`` key would be a second price
+    for the same work — and the one a recruiter quotes back.
+    """
     for lang in ("de", "en"):
         kond = _parse.parse(lang=lang)["konditionen"]
-        assert any("agessatz" in k or "ay rate" in k for k in kond), kond
-        assert not [k for k in kond if k.startswith("Rate ")], kond
+        assert "Rate Vor-Ort" in kond and "Rate Remote" in kond, kond
+        assert not [k for k in kond if "agessatz" in k or "ay rate" in k], kond
 
 
-@pytest.mark.parametrize("lang,expected", [("de", "2.000 €/Tag"), ("en", "€2,000/day")])
-def test_day_rate_renders(lang, expected):
+@pytest.mark.parametrize("lang,onsite,remote", [
+    ("de", "100 €/h", "90 €/h"),
+    ("en", "€100/h", "€90/h"),
+])
+def test_both_hourly_rates_render(lang, onsite, remote):
     html = _render.render(_parse.parse(lang=lang), lang=lang)
-    assert expected in html
-    assert not re.search(r"\d+\s*€/h", html), "hourly rate still printed"
+    assert onsite in html and remote in html
+    assert not re.search(r"/\s*Tag|/day", html), "day rate still printed"
 
 
 def test_footer_availability_comes_from_the_source_not_a_literal():

@@ -1,0 +1,52 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: bosch-flow-hub-ai-product-engineer
+title: Jens Laufer — bosch-flow-hub-ai-product-engineer
+headline: ''
+stack_line: ''
+pitch: ''
+highlights: []
+include_projects:
+- 0
+- 2
+- 3
+- 4
+- 5
+- 6
+- 11
+- 13
+- 14
+- 15
+- 16
+- 19
+emphasize_skills:
+- AWS
+- Docker
+- GitHub Actions
+- Java
+- Kubernetes
+- Maven
+- RAG
+- React
+- REST
+- Spring
+- Spring Boot
+- TypeScript
+_scores:
+  0: 4
+  2: 5
+  3: 3
+  4: 5
+  5: 6
+  6: 5
+  11: 7
+  13: 7
+  14: 7
+  15: 5
+  16: 7
+  19: 5
+lang: en

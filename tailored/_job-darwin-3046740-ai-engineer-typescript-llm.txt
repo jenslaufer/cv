@@ -1,0 +1,22 @@
+Senior AI Engineer - TypeScript / LLM Systems (DRWN)
+Darwin Recruitment — Cologne, Germany — 100% Remote — Freelance — Start 9/2026 — 3 months, ongoing
+
+Project focus
+You'll take ownership of live, production LLM systems: content generation pipelines,
+retrieval-augmented generation (RAG) over internal documents, and automated workflows
+tightly integrated with core business systems. The stack is TypeScript and Next.js end to
+end, and this is applied engineering on systems already in production, not model training
+or fine-tuning.
+
+Key skills and Experience required
+- Professional experience owning at least one LLM-based system in production, including incident handling
+- Advanced TypeScript and Node.js: strict typing of non-deterministic model output, async/concurrency patterns, streaming responses, structured error handling
+- Next.js in production: App Router, route handlers, server actions, streaming to the client
+- Proven track record taking over and improving existing codebases under live production traffic
+- Practical retrieval expertise: hybrid search, embedding model selection, cross-encoder reranking, metadata filtering, permission-aware retrieval, structured diagnosis of poor retrieval quality
+- Experience processing real-world documents (PDFs with tables, scanned material, DOCX, HTML), including layout-aware parsing, OCR, and evidence-based chunking
+- Structured outputs and tool calling as everyday practice: JSON Schema, Zod or comparable runtime validation, function calling, handling malformed/partial output, context window management
+- Experience designing and running LLM evaluations, plus tracing/eval tooling in a TypeScript codebase (e.g. Braintrust, Langfuse, Promptfoo, OpenTelemetry/Arize Phoenix)
+- Familiarity with Postgres and vector search (pgvector or comparable), Docker, Git, CI/CD, and a major cloud platform
+- Hands-on experience with the Anthropic and/or OpenAI TypeScript SDKs
+- Confident English communication; German is a plus

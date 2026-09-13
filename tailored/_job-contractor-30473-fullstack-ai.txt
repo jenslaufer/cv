@@ -1,0 +1,28 @@
+Fullstack AI Software Engineer (m/f/d)
+Contractor Consulting GmbH — Projekt-ID 30473
+Start: asap · Duration: 6 Monate+ · 100% Remote · full-time
+
+We are currently looking for a "Senior Full-Stack Engineer (m/f/d)" for one of our
+clients who will develop modern, cloud-native SaaS applications while integrating
+agent-based AI features into existing products.
+
+Your Key Responsibilities:
+- Full-stack development and operation of modern web applications for multiple SaaS products
+- Integration of Agent-Based AI Functions with LLMs, Retrieval, and Tool Use
+- Further Development and Operation of Cloud-Native Services
+
+Anforderungen:
+must-have:
+- Several years of experience in front-end development of modern web applications using React or Angular
+- Several years of experience in backend development for modern web applications using Java, Spring Boot, or Python
+- Proven effective use of AI in software development.
+- Strong DevOps skills, including Kafka and Terraform
+
+nice-to-have:
+- Practical experience with Claude Code or similar tools in developing agents, skills, and workflows.
+- Experience with AI pipelines, harnesses, and context engineering.
+- Exposure to LLM tooling (Azure OpenAI, Anthropic SDK, MCP).
+
+Umfeld:
+React, Angular, Java/Spring Boot, Python, C#, Kafka, Terraform, Cloud, devOps,
+Kubernetes, Helm, ArgoCD, Azure OpenAI, Anthropic SDK, MCP

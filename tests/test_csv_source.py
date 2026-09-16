@@ -92,3 +92,16 @@ def test_project_tech_join_has_no_dangling_ids():
         assert int(r["project_id"]) in project_ids, f"unknown project_id {r['project_id']}"
     for r in csv.DictReader((DATA / "project_roles.csv").open(encoding="utf-8")):
         assert int(r["project_id"]) in project_ids, f"unknown project_id {r['project_id']}"
+
+
+def test_tech_catalog_has_no_unused_entries():
+    # Mirror of the dangling-id check, pointing the other way. tech.csv is the
+    # catalog of technologies actually used in a project, so an entry no project
+    # references is a claim the CV no longer makes anywhere — and it stays in the
+    # file, inviting a later re-add. Dropping a tech means dropping both rows.
+    tech = {int(r["tech_id"]): r["tech"]
+            for r in csv.DictReader((DATA / "tech.csv").open(encoding="utf-8"))}
+    used = {int(r["tech_id"])
+            for r in csv.DictReader((DATA / "project_tech.csv").open(encoding="utf-8"))}
+    unused = {tid: name for tid, name in tech.items() if tid not in used}
+    assert not unused, f"tech.csv entries no project uses: {unused}"

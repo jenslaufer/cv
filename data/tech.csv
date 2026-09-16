@@ -9,7 +9,6 @@ tech_id,tech,category
 8,Python,Sprachen
 9,FastAPI,Microservices / Backend
 10,Vue 3,Frontend
-11,Go,Sprachen
 12,Docker,DevOps / Cloud
 13,systemd,DevOps / Cloud
 14,GitHub Actions,DevOps / Cloud

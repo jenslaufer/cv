@@ -1,0 +1,45 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: digital-associates-java-erp-agentic
+title: Jens Laufer — digital-associates-java-erp-agentic
+headline: ''
+stack_line: ''
+pitch: ''
+highlights: []
+include_projects:
+- 0
+- 2
+- 3
+- 4
+- 5
+- 6
+- 7
+- 13
+- 14
+- 15
+- 16
+- 19
+- 22
+emphasize_skills:
+- Java
+- Java EE
+- PostgreSQL
+_scores:
+  0: 0
+  2: 2
+  3: 2
+  4: 2
+  5: 1
+  6: 1
+  7: 1
+  13: 2
+  14: 2
+  15: 2
+  16: 2
+  19: 2
+  22: 3
+lang: en

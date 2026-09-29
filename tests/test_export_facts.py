@@ -7,7 +7,7 @@ on the one artifact that goes out by e-mail. Nothing caught it, because every
 test looked at the HTML.
 
 Today the move goes the other way (Jens, 10.09.2026: 100 EUR/h on-site,
-90 EUR/h remote), so the same trap is open again in the same file. This test
+95 EUR/h remote), so the same trap is open again in the same file. This test
 reads the generated Word document, not the model that fed it.
 """
 from __future__ import annotations
@@ -31,8 +31,8 @@ def _facts_line(tmp_path, lang, profile=None):
 
 
 @pytest.mark.parametrize("lang,onsite,remote", [
-    ("de", "100 €/h", "90 €/h"),
-    ("en", "€100/h", "€90/h"),
+    ("de", "100 €/h", "95 €/h"),
+    ("en", "€100/h", "€95/h"),
 ])
 def test_word_export_carries_both_rates(tmp_path, lang, onsite, remote):
     line = _facts_line(tmp_path, lang)
@@ -42,7 +42,7 @@ def test_word_export_carries_both_rates(tmp_path, lang, onsite, remote):
 def test_word_export_honours_a_negotiated_rate(tmp_path):
     line = _facts_line(tmp_path, "de", {"rate": "125 €/h", "rate_label": "Stundensatz"})
     assert "125 €/h" in line, line
-    assert "100 €/h" not in line and "90 €/h" not in line, line
+    assert "100 €/h" not in line and "95 €/h" not in line, line
 
 
 def test_word_export_never_prints_an_empty_slot(tmp_path):

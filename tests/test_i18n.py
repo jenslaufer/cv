@@ -97,7 +97,7 @@ def test_the_source_carries_an_hourly_rate_for_each_mode():
     """On-site and remote are different work, so they carry different prices.
 
     Jens, 10.09.2026: the 2.000 EUR day rate was replaced by 100 EUR/h on-site
-    and 90 EUR/h remote. A leftover ``Tagessatz`` key would be a second price
+    and 95 EUR/h remote. A leftover ``Tagessatz`` key would be a second price
     for the same work — and the one a recruiter quotes back.
     """
     for lang in ("de", "en"):
@@ -107,8 +107,8 @@ def test_the_source_carries_an_hourly_rate_for_each_mode():
 
 
 @pytest.mark.parametrize("lang,onsite,remote", [
-    ("de", "100 €/h", "90 €/h"),
-    ("en", "€100/h", "€90/h"),
+    ("de", "100 €/h", "95 €/h"),
+    ("en", "€100/h", "€95/h"),
 ])
 def test_both_hourly_rates_render(lang, onsite, remote):
     html = _render.render(_parse.parse(lang=lang), lang=lang)

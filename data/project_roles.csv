@@ -1,8 +1,23 @@
 project_id,role
+23,Harness Engineering
+23,Architektur
+23,Fullstack-Entwicklung
+27,Harness Engineering
+27,Agent Engineering
+27,DevOps
+28,Evaluation & Verifikation
+28,Reliability Engineering
+26,Agenten-Integration
+26,Fachkonzeption
+26,Backend-Entwicklung
+24,Architektur
+24,Backend-Entwicklung
+24,Security
+25,Fullstack-Entwicklung
+25,Release & Betrieb
 0,Harness Engineering
 0,Agent Engineering
 0,KI-Systemarchitektur
-0,Fullstack-Entwicklung
 0,DevOps
 1,Fullstack-Entwicklung
 1,Konzeption

@@ -1,0 +1,15 @@
+FDE Lead — Germany Remote — Contract
+Quelle: LinkedIn-Nachricht + Mail Sandra Suresh (Avance Consulting), 01.10.2026 17:16 / 17:33
+Skills: AI/LLM, API Integrations, DevOps, FDE, Fullstack, Testing. German B2.
+
+Lead technical engagement owner | Architecture, credibility, and delivery.
+Owns technical discovery, target-state architecture, key design decisions, deployment
+models, security, trade-offs. Primary technical interface for client executives and
+architects. Pushes back when scope or evidence does not support a commitment. Drives
+delivery end to end in ambiguous environments. Hands-on across frontend, backend, APIs,
+data, cloud, CI/CD, observability and AI-enabled components. Guides engineers, sets
+engineering standards. Practical experience with AI-assisted development, LLM APIs,
+agentic workflows, evaluation, verification, and controls for model or agent drift.
+Tech: Java, Python, JS/TS, React/Angular; REST/GraphQL, microservices, event-driven,
+enterprise integration; Azure/AWS/GCP, containers, Kubernetes; CI/CD, GitOps, IaC,
+observability; GenAI, RAG, LLMOps; IAM, Zero Trust, governance.

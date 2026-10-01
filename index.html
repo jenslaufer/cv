@@ -512,12 +512,72 @@
       <div class="sec-head"><h2>Projekthistorie (Auswahl ab 2009)</h2><span class="rule"></span></div>
       <div class="timeline">
         <article class="entry">
-          <div class="when"><div class="period">seit 12/2025</div><div class="dur">laufend</div></div>
+          <div class="when"><div class="period">seit 04/2026</div><div class="dur">laufend</div></div>
           <div class="body">
-            <h3>Autonome KI-Agenten-Systeme — Harness &amp; Agentic Engineering</h3>
-            <p class="client">Solytics GmbH · Remote <span class="branch">— KI / SaaS</span></p><p class="roles">Harness Engineering · Agent Engineering · KI-Systemarchitektur · Fullstack-Entwicklung · DevOps</p>
-            <p class="desc">Aufbau autonomer KI-Agenten-Systeme auf LLM-Basis als <strong>Harness Engineer</strong> — die Ingenieursarbeit um das Modell herum, nicht das Modell selbst. Das Harness ist das Produkt: <strong>Agenten-Loop</strong> mit Abbruchbedingungen, <strong>Tool-Use über MCP</strong>, geschichtetes <strong>Memory</strong> (dauerhafte Fakten, laufender Kontext, Session-Zustand), <strong>Freigabe-Gates</strong> vor allem Unumkehrbaren, <strong>Quality Gates</strong>, die grün sein müssen, bevor ein Agent ausliefern darf, <strong>Observability</strong> über jeden Lauf, <strong>Budget- und Rate-Limit-Steuerung</strong> mit Modell-Routing und Fallback sowie Wiederaufsetzen nach einem abgebrochenen Lauf. Ein lokaler Multi-Modell-Proxy hält das Ganze unabhängig von einem einzelnen Anbieter. Zwei produktive Systeme: ein selbststeuernder KI-Geschäftspartner, der rund um die Uhr plant, Code schreibt, testet und deployt, sowie <strong>Fabrik</strong> (<a href="https://fabrikhq.com">fabrikhq.com</a>), eine Multi-Agenten-Plattform für autonome Softwareentwicklung mit parallelen Worker-Agenten. Ereignisgesteuerte Orchestrierung über Telegram, GitHub und systemd; mehrere KI-gebaute SaaS-Produkte end-to-end ausgeliefert.</p>
-            <div class="stack"><span class="tag">Claude / Anthropic API</span><span class="tag">LLM-Agenten</span><span class="tag">Agent Harness</span><span class="tag">Multi-Agent-Orchestration</span><span class="tag">Tool Use / MCP</span><span class="tag">RAG</span><span class="tag">Prompt Engineering</span><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Vue 3</span><span class="tag">Docker</span><span class="tag">systemd</span><span class="tag">GitHub Actions</span><span class="tag">DigitalOcean</span><span class="tag">SQLite</span><span class="tag">TDD</span><span class="tag">TypeScript</span>
+            <h3>Fabrik — Agenten-Harness für parallele Softwareentwicklung</h3>
+            <p class="client">Fabrik (fabrikhq.com) · Solytics GmbH · Remote <span class="branch">— Software / KI</span></p><p class="roles">Harness Engineering · Architektur · Fullstack-Entwicklung</p>
+            <p class="desc">Ein Harness, in dem Worker-Agenten parallel Tickets zu Pull Requests verarbeiten (<a href="https://fabrikhq.com">fabrikhq.com</a>). Ein <strong>Control Plane</strong> (FastAPI, Vue) startet je Repository einen eigenen Agenten-Container über den Docker-Socket. Jeder Agent durchläuft eine feste Schleife — Ticket-Sync (GitHub, GitLab, Jira), Prüfung auf Umsetzbarkeit, die vage Tickets zurückweist, Plan, testgetriebene Umsetzung, ein <strong>Quality Gate</strong> in einem sauberen Sidecar-Container, dann der PR; er merged nie selbst. Energie-Budget je Agent, Rückkopplung aus PR-Kommentaren in die Schleife, ein VPS je Kunde hinter Caddy.</p>
+            <div class="stack"><span class="tag">Claude / Anthropic API</span><span class="tag">Multi-Agent-Orchestration</span><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Vue 3</span><span class="tag">Docker</span><span class="tag">Caddy</span><span class="tag">GitHub Actions</span><span class="tag">SQLite</span><span class="tag">TDD</span>
+            </div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="when"><div class="period">seit 03/2026</div><div class="dur">laufend</div></div>
+          <div class="body">
+            <h3>Autonome Coding-Pipeline — Agenten arbeiten eine Auftragsschlange ab</h3>
+            <p class="client">agent-tasks · Solytics GmbH · Remote <span class="branch">— Software / KI</span></p><p class="roles">Harness Engineering · Agent Engineering · DevOps</p>
+            <p class="desc">Ein Harness, in dem Coding-Agenten Aufträge ohne Menschen an der Tastatur abarbeiten. Eine Auftragsdatei nennt Repository, Umfang, Abnahmekriterien und Modell; ein Runner auf eigener Hardware führt sie in einem isolierten Worktree aus, lässt vor jedem Push das <strong>Quality Gate</strong> laufen (Unit-Tests, Build, Review) und öffnet einen Pull Request — gemergt wird von einem Menschen. Modellwahl je Auftrag gegen ein 5-Stunden-Token-Budget, harte Zeitlimits je Lauf, höchstens ein neuer Pull Request je Repository und Nacht. Bisher <strong>759 Aufträge</strong> über die eigenen Produkt-Repositories.</p>
+            <div class="stack"><span class="tag">Claude / Anthropic API</span><span class="tag">Python</span><span class="tag">Docker</span><span class="tag">TDD</span><span class="tag">systemd</span>
+            </div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="when"><div class="period">seit 10/2025</div><div class="dur">laufend</div></div>
+          <div class="body">
+            <h3>Autonomer KI-Geschäftspartner — Harness &amp; Agentic Engineering</h3>
+            <p class="client">Solytics GmbH · Remote <span class="branch">— KI / Automatisierung</span></p><p class="roles">Harness Engineering · Agent Engineering · KI-Systemarchitektur · DevOps</p>
+            <p class="desc">Ein selbststeuernder Agent auf Basis von Claude, der rund um die Uhr plant, Code schreibt, testet, deployt und berichtet. Gebaut als <strong>Harness Engineer</strong> — die Ingenieursarbeit um das Modell herum: <strong>Agenten-Loop</strong> mit Abbruchbedingungen, <strong>Tool-Use über MCP</strong>, geschichtetes <strong>Memory</strong> (dauerhafte Fakten, laufender Kontext, Session-Zustand), <strong>Freigabe-Gates</strong> vor allem Unumkehrbaren, <strong>Observability</strong> über jeden Lauf, <strong>Budget- und Rate-Limit-Steuerung</strong> mit Modell-Routing sowie Wiederaufsetzen nach einem abgebrochenen Lauf. Über 40 eigene Prüfwerkzeuge fangen Fehler des Agenten ab, bevor sie den Menschen erreichen. Ereignisgesteuert über Telegram, GitHub und systemd; Betrieb auf eigener Hardware mit lokalem Multi-Modell-Proxy.</p>
+            <div class="stack"><span class="tag">Claude / Anthropic API</span><span class="tag">LLM-Agenten</span><span class="tag">Agent Harness</span><span class="tag">Tool Use / MCP</span><span class="tag">RAG</span><span class="tag">Prompt Engineering</span><span class="tag">Python</span><span class="tag">systemd</span><span class="tag">Telegram Bot API</span><span class="tag">Docker</span><span class="tag">TDD</span>
+            </div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="when"><div class="period">seit 03/2026</div><div class="dur">laufend</div></div>
+          <div class="body">
+            <h3>Verifikation und Drift-Kontrolle für LLM-Agenten</h3>
+            <p class="client">Solytics GmbH · Remote <span class="branch">— KI / Automatisierung</span></p><p class="roles">Evaluation &amp; Verifikation · Reliability Engineering</p>
+            <p class="desc">Über 40 eigene Prüfwerkzeuge, die die Arbeit eines Agenten an der Wirklichkeit messen statt an seinem eigenen Bericht: jeder Link in einer ausgehenden Nachricht wird vor dem Senden aufgelöst, Zusagen des Agenten werden bis zur Einlösung verfolgt, unbeantwortete Nachrichten gemeldet, die Mergebarkeit eines Pull Requests mit git gerechnet statt aus einem veralteten API-Wert gelesen, und ein Testlauf, der nie startete, schlägt fehl, statt still zu bestehen. Jede Prüfung ist fail-closed — unbekannt heißt nie gesund — und hat eigene Tests. Watchdogs über die Dienste und Zugangsdaten des Agenten, mit einem zweiten Alarmweg für den Fall, dass der Hauptkanal selbst ausfällt.</p>
+            <div class="stack"><span class="tag">Claude / Anthropic API</span><span class="tag">Python</span><span class="tag">Docker</span><span class="tag">TDD</span>
+            </div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="when"><div class="period">seit 03/2026</div><div class="dur">laufend</div></div>
+          <div class="body">
+            <h3>LLM-Agent in der Finanzbuchhaltung einer GmbH</h3>
+            <p class="client">Solytics GmbH · Remote <span class="branch">— Finanzen / Compliance</span></p><p class="roles">Agenten-Integration · Fachkonzeption · Backend-Entwicklung</p>
+            <p class="desc">Ein Agent, der die Buchhaltung einer deutschen GmbH durchgängig führt; jede Meldung gibt ein Mensch frei. Er legt Kontoauszüge und Belege ab, bucht doppelt nach SKR04 über eine eigene CLI, gleicht jedes Konto mit dem Auszug ab und prüft Umsatzsteuer- und Lohnsteuer-Anmeldungen vor dem Absenden gegen das Journal — einmal fing er so ein Feld ab, das die Vorsteuer gekostet hätte. Darunter die Werkzeuge: eine API für <strong>XRechnung 3.0</strong> und <strong>ZUGFeRD 2.3</strong> mit fünf Validierungsschichten (Pydantic, BR-DE-Regeln, Arithmetik, XSD, Schematron), Bilanz, GuV, E-Bilanz und <strong>DATEV-Export</strong>.</p>
+            <div class="stack"><span class="tag">Python</span><span class="tag">Pydantic</span><span class="tag">XRechnung / ZUGFeRD (EN 16931)</span><span class="tag">Polars</span><span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag">TDD</span>
+            </div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="when"><div class="period">seit 03/2026</div><div class="dur">laufend</div></div>
+          <div class="body">
+            <h3>Launch Kit — mandantenfähige Identity- und E-Mail-Plattform</h3>
+            <p class="client">Launch Kit · Solytics GmbH · Remote <span class="branch">— SaaS / IAM</span></p><p class="roles">Architektur · Backend-Entwicklung · Security</p>
+            <p class="desc">OIDC-konformer Auth-Server mit E-Mail-Marketing als ein Go-Binary mit Vue-Admin-Oberfläche — Ersatz für Keycloak oder Auth0. <strong>OAuth2 mit PKCE</strong>, RS256-JWTs mit eigenem RSA-Schlüssel je Mandant, Login mit Google, rollenbasierter Zugriff. Kontakte, Segmente, Kampagnen mit asynchronem Versand, Abmeldung und DSGVO-Einwilligung. Strikte Mandantentrennung; Apps prüfen Tokens nur über JWKS und tauschen den Anbieter per Umgebungsvariable. Betreibt den Kundentrichter mehrerer eigener Produkte.</p>
+            <div class="stack"><span class="tag">Go</span><span class="tag">OpenID Connect</span><span class="tag">OAuth2</span><span class="tag">JWT</span><span class="tag">Vue 3</span><span class="tag">SQLite</span><span class="tag">Docker</span><span class="tag">Caddy</span><span class="tag">Playwright</span>
+            </div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="when"><div class="period">seit 01/2026</div><div class="dur">laufend</div></div>
+          <div class="body">
+            <h3>Browser-Extensions mit Bezahlung — FinGrab, PlaylistGrab, InvoiceGrab</h3>
+            <p class="client">FinGrab · Solytics GmbH · Remote <span class="branch">— FinTech / Browser-Software</span></p><p class="roles">Fullstack-Entwicklung · Release &amp; Betrieb</p>
+            <p class="desc">Portfolio von Browser-Extensions für Chrome (MV3) und Firefox aus einer Codebasis mit WXT und TypeScript; FinGrab exportiert Kursdaten von Yahoo Finance als CSV und hat rund 600 Nutzer. <strong>Live-Bezahlung</strong> über ExtPay und Stripe mit Abo und Einmalkauf. End-to-End-Tests mit Playwright gegen das gebaute Paket, Regressionstest gegen die veröffentlichte Version, Veröffentlichung per API im Chrome Web Store und auf addons.mozilla.org, Überwachung von Bewertungen, Abos und Paywall.</p>
+            <div class="stack"><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">Browser extensions (Chrome MV3 / Firefox)</span><span class="tag">WXT</span><span class="tag">Stripe / ExtPay</span><span class="tag">Playwright</span><span class="tag">TDD</span>
             </div>
           </div>
         </article>

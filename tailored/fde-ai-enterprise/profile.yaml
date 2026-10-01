@@ -19,7 +19,7 @@ pitch: >-
   seit 1997 arbeite ich durchgehend kundennah — Anforderungen im Gespräch klären,
   vor Ort oder remote ausliefern, in Produktion begleiten.
 highlights:
-- "**Produktive KI-Agenten-Systeme** seit 12/2025: Agenten-Loop, **Tool-Use über MCP**, RAG, Memory, Freigabe-Gates, Observability, Budget-Steuerung — als Harness Engineer das Gerüst um das Modell, nicht das Modell selbst."
+- "**Produktive KI-Agenten-Systeme** seit 10/2025: Agenten-Loop, **Tool-Use über MCP**, RAG, Memory, Freigabe-Gates, Observability, Budget-Steuerung — als Harness Engineer das Gerüst um das Modell, nicht das Modell selbst."
 - "**Integration in gewachsene Unternehmenssysteme:** Rechnungsübergabe an **SAP** über einen ESB (1&1), Stammdaten-Migration mit kanonischem XML-Modell (Commerzbank), Branchenformat Haweiko-Arge in der Heizkostenabrechnung (Brunata)."
 - "**Python & Backend:** REST-Backends in Python (Eve, Flask) und Java/Spring-Boot-Microservices mit OpenAPI, in Docker ausgeliefert."
 - "**Vom Prototyp in den Produktionsbetrieb:** bestehenden Prototyp bei der Deutschen Telekom übernommen, weiterentwickelt und produktiv gestellt."

@@ -1,0 +1,48 @@
+# Tailoring profile — hand-written for the Avance "FDE Lead" contract (01.10.2026).
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# Re-render after editing:  python3 -m gen tailor --profile <this file> --pdf
+
+slug: fde-lead-avance-en
+lang: en
+title: Jens Laufer — FDE Lead (AI agents, architecture, enterprise delivery)
+headline: FDE Lead — architecture, hands-on delivery and LLM agents in production, owned end to end with the client
+stack_line: Architecture & technical discovery · LLM agents, tool use & MCP · evaluation, quality gates & drift control · Python · Java / Spring Boot · Vue / TypeScript · REST & enterprise integration (SAP, ESB, canonical data models) · Docker / Kubernetes · CI/CD · observability · OAuth2 / OIDC
+pitch: >-
+  I own a technical engagement from the first conversation to the handover:
+  discovery, target-state architecture, the trade-offs, and the code. Since
+  12/2025 I build and run LLM agent systems in production — an autonomous AI
+  business partner that plans, writes code, tests and deploys around the clock,
+  and Fabrik, a multi-agent platform where worker agents ship software in
+  parallel. The hard part there is control, not prompting: quality gates an
+  agent must pass before it may ship, approval gates before anything
+  irreversible, observability over every run, and checks that catch an agent
+  drifting from the spec. Before that, {career_years} years of back-end,
+  full-stack and integration work inside client teams — Deutsche Telekom,
+  Commerzbank, Volkswagen, 1&1, DVAG, Brunata. Freelance since 1997, so scoping,
+  pushing back on what the evidence does not support, delivery and production
+  support have always been one conversation.
+highlights:
+- "**End-to-end technical ownership:** freelance since 1997, embedded in the client's team — technical discovery, architecture and design decisions, delivery, production support and handover, on site or remote."
+- "**AI-assisted engineering with controls, in production since 12/2025:** agent loop with stop conditions, tool use over MCP, layered memory, RAG, quality gates and approval gates, observability over every run, budget and rate-limit control with model routing, and recovery after a killed run."
+- "**Verification against agent drift:** agents' output is checked against the spec and the diff, not against their own report — a test must reproduce a bug red before the fix may turn it green."
+- "**Products shipped end to end as Solytics:** Fabrik (multi-agent software delivery), a multi-tenant OIDC/OAuth2 identity and email platform, and a portfolio of browser extensions with live payments — architecture, build, deployment and operations in one hand."
+- "**Enterprise integration:** invoice handover to **SAP** over an ESB (1&1), master data migration on a canonical XML model (Commerzbank), an industry file format in heating cost billing (Brunata)."
+- "**Prototype to production:** took over a running prototype at Deutsche Telekom and put it live — Docker/Kubernetes, tracing and CI included."
+rate: 125 €/h
+rate_label: Rate
+include_projects:
+- 0
+- 1
+- 2
+- 6
+- 3
+- 13
+- 11
+- 21
+- 22
+emphasize_skills:
+- Python
+- REST
+- Docker
+- Kubernetes
+- Spring Boot

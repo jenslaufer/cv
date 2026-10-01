@@ -20,7 +20,7 @@ def test_fact_grid_has_one_column_per_fact():
 
 def test_base_render_has_all_projects():
     html = render.render(parse.parse())
-    assert html.count('<article class="entry">') == 23
+    assert html.count('<article class="entry">') == 27
     assert html.count('<span class="chip">') == 10
 
 

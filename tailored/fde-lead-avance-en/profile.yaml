@@ -10,7 +10,7 @@ stack_line: Architecture & technical discovery · LLM agents, tool use & MCP · 
 pitch: >-
   I own a technical engagement from the first conversation to the handover:
   discovery, target-state architecture, the trade-offs, and the code. Since
-  12/2025 I build and run LLM agent systems in production — an autonomous AI
+  10/2025 I build and run LLM agent systems in production — an autonomous AI
   business partner that plans, writes code, tests and deploys around the clock,
   and Fabrik, a multi-agent platform where worker agents ship software in
   parallel. The hard part there is control, not prompting: quality gates an
@@ -23,7 +23,7 @@ pitch: >-
   support have always been one conversation.
 highlights:
 - "**End-to-end technical ownership:** freelance since 1997, embedded in the client's team — technical discovery, architecture and design decisions, delivery, production support and handover, on site or remote."
-- "**AI-assisted engineering with controls, in production since 12/2025:** agent loop with stop conditions, tool use over MCP, layered memory, RAG, quality gates and approval gates, observability over every run, budget and rate-limit control with model routing, and recovery after a killed run."
+- "**AI-assisted engineering with controls, in production since 10/2025:** agent loop with stop conditions, tool use over MCP, layered memory, RAG, quality gates and approval gates, observability over every run, budget and rate-limit control with model routing, and recovery after a killed run."
 - "**Verification against agent drift:** agents' output is checked against the spec and the diff, not against their own report — a test must reproduce a bug red before the fix may turn it green."
 - "**Products shipped end to end as Solytics:** Fabrik (multi-agent software delivery), a multi-tenant OIDC/OAuth2 identity and email platform, and a portfolio of browser extensions with live payments — architecture, build, deployment and operations in one hand."
 - "**Enterprise integration:** invoice handover to **SAP** over an ESB (1&1), master data migration on a canonical XML model (Commerzbank), an industry file format in heating cost billing (Brunata)."
@@ -31,6 +31,10 @@ highlights:
 rate: 125 €/h
 rate_label: Rate
 include_projects:
+- 23
+- 24
+- 26
+- 25
 - 0
 - 1
 - 2

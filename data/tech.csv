@@ -118,3 +118,14 @@ tech_id,tech,category
 118,RDF,Sprachen
 119,XML,Sprachen
 120,TypeScript,Sprachen
+121,Go,Sprachen
+122,OpenID Connect,Security / IAM
+123,JWT,Security / IAM
+124,Caddy,DevOps / Cloud
+125,Browser extensions (Chrome MV3 / Firefox),Frontend
+126,WXT,Frontend
+127,Stripe / ExtPay,API / Integration
+128,XRechnung / ZUGFeRD (EN 16931),API / Integration
+129,Pydantic,Microservices / Backend
+130,Polars,Data Science
+131,Telegram Bot API,API / Integration

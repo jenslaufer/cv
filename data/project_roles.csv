@@ -1,8 +1,17 @@
 project_id,role
+23,Architektur
+23,Agent Engineering
+23,Fullstack-Entwicklung
+24,Architektur
+24,Backend-Entwicklung
+24,Security
+26,Backend-Entwicklung
+26,Fachkonzeption
+25,Fullstack-Entwicklung
+25,Release & Betrieb
 0,Harness Engineering
 0,Agent Engineering
 0,KI-Systemarchitektur
-0,Fullstack-Entwicklung
 0,DevOps
 1,Fullstack-Entwicklung
 1,Konzeption

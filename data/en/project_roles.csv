@@ -1,8 +1,17 @@
 project_id,role
+23,Architecture
+23,Agent engineering
+23,Full-stack engineering
+24,Architecture
+24,Back-end engineering
+24,Security
+26,Back-end engineering
+26,Domain design
+25,Full-stack engineering
+25,Release & operations
 0,Harness engineering
 0,Agent engineering
 0,AI system architecture
-0,Full-stack engineering
 0,DevOps
 1,Full-stack engineering
 1,Solution design

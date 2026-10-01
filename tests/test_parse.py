@@ -3,7 +3,7 @@ from gen import parse
 
 def test_counts():
     d = parse.parse()
-    assert len(d["projects"]) == 23
+    assert len(d["projects"]) == 27
     assert len(d["skills"]) == 11
     assert len(d["roles"]) == 10
     assert len(d["education"]) == 2
@@ -12,11 +12,11 @@ def test_counts():
 
 def test_flagship_project():
     d = parse.parse()
-    p0 = d["projects"][0]
-    assert p0["id"] == 0
+    # 0 is the flagship (always kept when tailoring), not the newest row
+    p0 = next(p for p in d["projects"] if p["id"] == 0)
     assert p0["client"] == "Solytics GmbH"
     assert p0["location"] == "Remote"
-    assert p0["branch"] == "KI / SaaS"
+    assert p0["branch"] == "KI / Automatisierung"
     assert p0["dur"] == "laufend"
     assert "Claude / Anthropic API" in p0["tech"]
     # roles split on commas even though the section uses '·'

@@ -3,7 +3,7 @@ from gen import parse
 
 def test_counts():
     d = parse.parse()
-    assert len(d["projects"]) == 27
+    assert len(d["projects"]) == 29
     assert len(d["skills"]) == 11
     assert len(d["roles"]) == 10
     assert len(d["education"]) == 2

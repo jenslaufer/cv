@@ -12,8 +12,8 @@ pitch: >-
   discovery, target-state architecture, the trade-offs, and the code. Since
   10/2025 I build and run LLM agent systems in production — an autonomous AI
   business partner that plans, writes code, tests and deploys around the clock,
-  and Fabrik, a multi-agent platform where worker agents ship software in
-  parallel. The hard part there is control, not prompting: quality gates an
+  Fabrik, a harness where worker agents ship software in parallel, and an
+  agent that runs the finance back office of a GmbH. The hard part there is control, not prompting: quality gates an
   agent must pass before it may ship, approval gates before anything
   irreversible, observability over every run, and checks that catch an agent
   drifting from the spec. Before that, {career_years} years of back-end,
@@ -25,17 +25,18 @@ highlights:
 - "**End-to-end technical ownership:** freelance since 1997, embedded in the client's team — technical discovery, architecture and design decisions, delivery, production support and handover, on site or remote."
 - "**AI-assisted engineering with controls, in production since 10/2025:** agent loop with stop conditions, tool use over MCP, layered memory, RAG, quality gates and approval gates, observability over every run, budget and rate-limit control with model routing, and recovery after a killed run."
 - "**Verification against agent drift:** agents' output is checked against the spec and the diff, not against their own report — a test must reproduce a bug red before the fix may turn it green."
-- "**Products shipped end to end as Solytics:** Fabrik (multi-agent software delivery), a multi-tenant OIDC/OAuth2 identity and email platform, and a portfolio of browser extensions with live payments — architecture, build, deployment and operations in one hand."
+- "**Agent harnesses in daily production use:** Fabrik (parallel worker agents, ticket to PR), an unattended coding pipeline (759 tasks to date) and an LLM agent that runs the finance back office of a GmbH with a human approving every filing."
 - "**Enterprise integration:** invoice handover to **SAP** over an ESB (1&1), master data migration on a canonical XML model (Commerzbank), an industry file format in heating cost billing (Brunata)."
 - "**Prototype to production:** took over a running prototype at Deutsche Telekom and put it live — Docker/Kubernetes, tracing and CI included."
 rate: 125 €/h
 rate_label: Rate
 include_projects:
 - 23
-- 24
-- 26
-- 25
+- 27
 - 0
+- 28
+- 26
+- 24
 - 1
 - 2
 - 6

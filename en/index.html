@@ -514,10 +514,50 @@
         <article class="entry">
           <div class="when"><div class="period">since 04/2026</div><div class="dur">ongoing</div></div>
           <div class="body">
-            <h3>Fabrik — multi-agent platform for software delivery</h3>
-            <p class="client">Fabrik (fabrikhq.com) · Solytics GmbH · Remote <span class="branch">— Software / AI</span></p><p class="roles">Architecture · Agent engineering · Full-stack engineering</p>
-            <p class="desc">Platform where worker agents turn tickets into pull requests in parallel (<a href="https://fabrikhq.com">fabrikhq.com</a>). A <strong>control plane</strong> (FastAPI, Vue) spawns one agent container per repository through the Docker socket. Each agent runs ticket sync (GitHub, GitLab, Jira), an actionability review, a plan, test-first implementation, a <strong>quality gate</strong> in a clean sidecar container, and the PR — it never merges on its own. Energy budget per agent, feedback from PR comments, one VPS per customer behind Caddy.</p>
+            <h3>Fabrik — agent harness for parallel software delivery</h3>
+            <p class="client">Fabrik (fabrikhq.com) · Solytics GmbH · Remote <span class="branch">— Software / AI</span></p><p class="roles">Harness engineering · Architecture · Full-stack engineering</p>
+            <p class="desc">A harness in which worker agents turn tickets into pull requests in parallel (<a href="https://fabrikhq.com">fabrikhq.com</a>). A <strong>control plane</strong> (FastAPI, Vue) spawns one agent container per repository through the Docker socket. Each agent runs a fixed loop — ticket sync (GitHub, GitLab, Jira), an actionability review that rejects vague tickets, a plan, test-first implementation, a <strong>quality gate</strong> in a clean sidecar container, then the PR; it never merges on its own. Energy budget per agent, feedback from PR comments back into the loop, one VPS per customer behind Caddy.</p>
             <div class="stack"><span class="tag">Claude / Anthropic API</span><span class="tag">Multi-Agent-Orchestration</span><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Vue 3</span><span class="tag">Docker</span><span class="tag">Caddy</span><span class="tag">GitHub Actions</span><span class="tag">SQLite</span><span class="tag">TDD</span>
+            </div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="when"><div class="period">since 03/2026</div><div class="dur">ongoing</div></div>
+          <div class="body">
+            <h3>Autonomous coding pipeline — agents work a task queue unattended</h3>
+            <p class="client">agent-tasks · Solytics GmbH · Remote <span class="branch">— Software / AI</span></p><p class="roles">Harness engineering · Agent engineering · DevOps</p>
+            <p class="desc">Queue-driven harness in which coding agents work through tasks with nobody at the keyboard. A task file names repository, scope, acceptance criteria and model; a runner on own hardware executes it in an isolated worktree, runs the <strong>quality gate</strong> (unit tests, build, review) before any push and opens a pull request — merging stays with a human. Model chosen per task against a 5-hour token budget, hard timeouts per run, at most one new pull request per repository per night. <strong>759 tasks</strong> written to date across the own product repositories.</p>
+            <div class="stack"><span class="tag">Claude / Anthropic API</span><span class="tag">Python</span><span class="tag">Docker</span><span class="tag">TDD</span><span class="tag">systemd</span>
+            </div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="when"><div class="period">since 10/2025</div><div class="dur">ongoing</div></div>
+          <div class="body">
+            <h3>Autonomous AI business partner — Harness &amp; agentic engineering</h3>
+            <p class="client">Solytics GmbH · Remote <span class="branch">— AI / Automation</span></p><p class="roles">Harness engineering · Agent engineering · AI system architecture · DevOps</p>
+            <p class="desc">A self-directing agent built on Claude that plans, writes code, tests, deploys and reports around the clock. Built as a <strong>harness engineer</strong> — the engineering around the model: the <strong>agent loop</strong> and its stop conditions, <strong>tool use over MCP</strong>, layered <strong>memory</strong> (durable facts, running context, session state), <strong>approval gates</strong> for anything irreversible, <strong>observability</strong> over every run, <strong>budget and rate-limit control</strong> with model routing, plus recovery when a run is killed mid-flight. More than 40 purpose-built checks catch the agent's mistakes before they reach a human. Event-driven over Telegram, GitHub and systemd; runs on own hardware behind a local multi-model proxy.</p>
+            <div class="stack"><span class="tag">Claude / Anthropic API</span><span class="tag">LLM-Agenten</span><span class="tag">Agent Harness</span><span class="tag">Tool Use / MCP</span><span class="tag">RAG</span><span class="tag">Prompt Engineering</span><span class="tag">Python</span><span class="tag">systemd</span><span class="tag">Telegram Bot API</span><span class="tag">Docker</span><span class="tag">TDD</span>
+            </div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="when"><div class="period">since 03/2026</div><div class="dur">ongoing</div></div>
+          <div class="body">
+            <h3>Verification and drift controls for LLM agents</h3>
+            <p class="client">Solytics GmbH · Remote <span class="branch">— AI / Automation</span></p><p class="roles">Evaluation &amp; verification · Reliability engineering</p>
+            <p class="desc">More than 40 purpose-built checks that test an agent's work against the world instead of against its own report: every link in an outgoing message is resolved before it is sent, promises the agent made are tracked until delivered, messages without an answer are flagged, pull-request mergeability is computed with git instead of read from a cached API value, and a test run that never started fails instead of passing silently. Each check fails closed — unknown is never reported as healthy — and has its own tests. Watchdogs over the agent's services and credentials, with a second alert path for when the primary channel is the one that broke.</p>
+            <div class="stack"><span class="tag">Claude / Anthropic API</span><span class="tag">Python</span><span class="tag">Docker</span><span class="tag">TDD</span>
+            </div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="when"><div class="period">since 03/2026</div><div class="dur">ongoing</div></div>
+          <div class="body">
+            <h3>LLM agent in the finance back office of a GmbH</h3>
+            <p class="client">Solytics GmbH · Remote <span class="branch">— Finance / Compliance</span></p><p class="roles">Agent integration · Domain design · Back-end engineering</p>
+            <p class="desc">An agent that runs the bookkeeping of a German GmbH end to end, with a human approving every filing. It files bank statements and receipts, books double-entry on SKR04 through a purpose-built CLI, reconciles every account against the statement, and checks VAT and payroll returns against the journal before they are submitted — once catching a field that would have lost the input tax. Tools beneath it: an API for <strong>XRechnung 3.0</strong> and <strong>ZUGFeRD 2.3</strong> with five validation layers (Pydantic, BR-DE rules, arithmetic, XSD, Schematron), balance sheet, P&amp;L, E-Bilanz and <strong>DATEV export</strong>.</p>
+            <div class="stack"><span class="tag">Python</span><span class="tag">Pydantic</span><span class="tag">XRechnung / ZUGFeRD (EN 16931)</span><span class="tag">Polars</span><span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag">TDD</span>
             </div>
           </div>
         </article>
@@ -532,32 +572,12 @@
           </div>
         </article>
         <article class="entry">
-          <div class="when"><div class="period">since 03/2026</div><div class="dur">ongoing</div></div>
-          <div class="body">
-            <h3>E-invoicing and bookkeeping for a German GmbH</h3>
-            <p class="client">Solytics GmbH · Remote <span class="branch">— Finance / Compliance</span></p><p class="roles">Back-end engineering · Domain design</p>
-            <p class="desc">API for <strong>XRechnung 3.0</strong> (UBL, CII) and <strong>ZUGFeRD 2.3</strong> with an extension framework for industry fields beyond EN 16931 (construction, healthcare, logistics). Five validation layers: Pydantic, BR-DE business rules, arithmetic consistency, XSD, Schematron; a GoBD-compliant invoice lifecycle. Alongside it, double-entry bookkeeping on SKR04 as a CLI: balance sheet, P&amp;L, taxes, E-Bilanz and <strong>DATEV export</strong>, every statement checked against the journal. In real use for the own company.</p>
-            <div class="stack"><span class="tag">Python</span><span class="tag">Pydantic</span><span class="tag">XRechnung / ZUGFeRD (EN 16931)</span><span class="tag">Polars</span><span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag">TDD</span>
-            </div>
-          </div>
-        </article>
-        <article class="entry">
           <div class="when"><div class="period">since 01/2026</div><div class="dur">ongoing</div></div>
           <div class="body">
             <h3>Paid browser extensions — FinGrab, PlaylistGrab, InvoiceGrab</h3>
             <p class="client">FinGrab · Solytics GmbH · Remote <span class="branch">— FinTech / Browser software</span></p><p class="roles">Full-stack engineering · Release &amp; operations</p>
             <p class="desc">A portfolio of browser extensions for Chrome (MV3) and Firefox from one codebase with WXT and TypeScript; FinGrab exports market data from Yahoo Finance as CSV and has around 600 users. <strong>Live payments</strong> through ExtPay and Stripe, subscription and one-time purchase. End-to-end tests with Playwright against the built package, a regression diff against the shipped version, publishing over the API to the Chrome Web Store and addons.mozilla.org, monitoring of reviews, subscriptions and the paywall.</p>
             <div class="stack"><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">Browser extensions (Chrome MV3 / Firefox)</span><span class="tag">WXT</span><span class="tag">Stripe / ExtPay</span><span class="tag">Playwright</span><span class="tag">TDD</span>
-            </div>
-          </div>
-        </article>
-        <article class="entry">
-          <div class="when"><div class="period">since 10/2025</div><div class="dur">ongoing</div></div>
-          <div class="body">
-            <h3>Autonomous AI business partner — Harness &amp; agentic engineering</h3>
-            <p class="client">Solytics GmbH · Remote <span class="branch">— AI / Automation</span></p><p class="roles">Harness engineering · Agent engineering · AI system architecture · DevOps</p>
-            <p class="desc">A self-directing agent built on Claude that plans, writes code, tests, deploys and reports around the clock. Built as a <strong>harness engineer</strong> — the engineering around the model: the <strong>agent loop</strong> and its stop conditions, <strong>tool use over MCP</strong>, layered <strong>memory</strong> (durable facts, running context, session state), <strong>approval gates</strong> for anything irreversible, <strong>observability</strong> over every run, <strong>budget and rate-limit control</strong> with model routing, plus recovery when a run is killed mid-flight. More than 40 purpose-built checks catch the agent's mistakes before they reach a human. Event-driven over Telegram, GitHub and systemd; runs on own hardware behind a local multi-model proxy.</p>
-            <div class="stack"><span class="tag">Claude / Anthropic API</span><span class="tag">LLM-Agenten</span><span class="tag">Agent Harness</span><span class="tag">Tool Use / MCP</span><span class="tag">RAG</span><span class="tag">Prompt Engineering</span><span class="tag">Python</span><span class="tag">systemd</span><span class="tag">Telegram Bot API</span><span class="tag">Docker</span><span class="tag">TDD</span>
             </div>
           </div>
         </article>

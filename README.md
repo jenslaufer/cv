@@ -112,6 +112,7 @@ Variante überschreiben — `rate` ersetzt den Wert, `rate_label` die Beschriftu
 ```yaml
 rate: 99 €/h
 rate_label: Stundensatz
+rate_note: zzgl. 19 % USt   # optional, ersetzt „netto“
 ```
 
 Ohne diese Schlüssel gilt der `Tagessatz` aus `data/konditionen.csv`. Alle anderen

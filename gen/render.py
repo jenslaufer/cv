@@ -98,7 +98,8 @@ def rate_fact(kond: dict, L: dict, profile: dict | None = None) -> dict:
     profile = profile or {}
     if profile.get("rate"):
         return {"k": profile.get("rate_label") or L["fact_rate"],
-                "v": _rate(profile["rate"]), "small": L["net"], "rate": True}
+                "v": _rate(profile["rate"]), "small": profile.get("rate_note") or L["net"],
+                "rate": True}
     onsite = _rate(kond.get("Rate Vor-Ort", ""))
     remote = _rate(kond.get("Rate Remote", ""))
     small = " · ".join(x for x in (f"{remote} {L['remote']}" if remote else "", L["net"]) if x)

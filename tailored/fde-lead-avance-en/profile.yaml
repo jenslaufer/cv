@@ -28,8 +28,10 @@ highlights:
 - "**Agent harnesses in daily production use:** Fabrik (parallel worker agents, ticket to PR), an unattended coding pipeline (759 tasks to date) and an LLM agent that runs the finance back office of a GmbH with a human approving every filing."
 - "**Enterprise integration:** invoice handover to **SAP** over an ESB (1&1), master data migration on a canonical XML model (Commerzbank), an industry file format in heating cost billing (Brunata)."
 - "**Prototype to production:** took over a running prototype at Deutsche Telekom and put it live — Docker/Kubernetes, tracing and CI included."
-rate: 125 €/h
+rate: 400 €/day
 rate_label: Rate
+rate_note: plus 19 % VAT
+hide_rate: true
 include_projects:
 - 23
 - 27

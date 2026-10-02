@@ -111,7 +111,7 @@ def _facts(data: dict, L: dict, profile: dict | None = None) -> list[dict]:
     k = data["konditionen"]
     p = data["person"]
     profile = profile or {}
-    return [
+    facts = [
         {"k": L["fact_available"], "v": k.get("Verfügbarkeit", "")},
         {"k": L["fact_worldwide"], "v": k.get("Einsatzort", "")},
         {"k": L["fact_remote"], "v": data["remote_pct"],
@@ -119,6 +119,8 @@ def _facts(data: dict, L: dict, profile: dict | None = None) -> list[dict]:
         rate_fact(k, L, profile),
         {"k": L["fact_based"], "v": p.get("Wohnort", ""), "small": L["country"]},
     ]
+    # an agency forwarding the CV quotes its own price (Avance, 02.10.2026)
+    return [f for f in facts if not (f.get("rate") and profile.get("hide_rate"))]
 
 
 def _rate(raw: str) -> str:

@@ -98,7 +98,7 @@ def to_docx(data: dict, path: str | Path, profile: dict | None = None,
         f"{L['fact_remote']} {data['remote_pct']}",
     ]
     rate = _rate_fact(kond, L, profile)
-    if rate["v"]:
+    if rate["v"] and not (profile or {}).get("hide_rate"):
         facts.append(f"{rate['k']} {rate['v']}"
                      + (f" ({rate['small']})" if rate["small"] else ""))
     doc.add_paragraph(" · ".join(f for f in facts if f))

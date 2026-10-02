@@ -119,3 +119,20 @@ def test_rate_note_replaces_the_net_label():
     prof["rate_note"] = "plus 19 % VAT"
     html = render.render(d, tailor.render_profile(prof))
     assert "400 €/day" in html and "plus 19 % VAT" in html
+
+
+def test_hide_rate_drops_the_price_from_the_page():
+    """An agency forwards the CV to its client and quotes its own price.
+
+    Avance (02.10.2026) asked to take the budget off the CV: the client must not
+    see what the agency pays. Neither the agreed rate nor the source rates may
+    surface, and the strip must not keep an empty rate cell.
+    """
+    d = parse.parse()
+    prof = tailor.build_profile(JAVA_JOB, d, "java-backend")
+    prof["rate"] = "400 €/day"
+    prof["hide_rate"] = True
+    html = render.render(d, tailor.render_profile(prof))
+    assert "400 €/day" not in html
+    assert "€/h" not in html and "fact rate" not in html
+    assert d["konditionen"]["Verfügbarkeit"] in html

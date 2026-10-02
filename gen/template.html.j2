@@ -52,7 +52,7 @@
     <p class="stack-line">{{ stack_line }}</p>
     <p class="pitch">{{ pitch | md }}</p>
 
-    <div class="facts">
+    <div class="facts"{% if facts | length != 5 %} style="grid-template-columns:repeat({{ facts | length }},1fr)"{% endif %}>
       {%- for f in facts %}
       <div class="fact{{ ' rate' if f.rate else '' }}">
         <div class="k">{{ f.k }}</div>

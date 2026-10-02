@@ -80,3 +80,8 @@ def test_word_export_renders_links_as_prose(tmp_path, lang):
     text = _all_text(tmp_path, lang)
     assert "](http" not in text
     assert "fabrikhq.com" in text
+
+
+def test_word_export_hides_the_rate_on_request(tmp_path):
+    line = _facts_line(tmp_path, "en", {"rate": "400 €/day", "hide_rate": True})
+    assert "400" not in line and "€" not in line, line

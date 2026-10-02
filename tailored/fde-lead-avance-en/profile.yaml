@@ -31,6 +31,7 @@ highlights:
 rate: 400 €/day
 rate_label: Rate
 rate_note: plus 19 % VAT
+hide_rate: true
 include_projects:
 - 23
 - 27

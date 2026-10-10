@@ -1,0 +1,50 @@
+# Tailoring profile — hand-written for Digital Associates "Senior Product Engineer – ERP Core
+# Redesign & Product Upgrade (Agentic Engineering)" (09.10.2026).
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# Re-render after editing:  python3 -m gen tailor --profile <this file> --pdf
+
+slug: da-erp-product-engineer
+lang: en
+title: Jens Laufer — Senior Product Engineer (business software, agentic engineering)
+headline: Senior product engineer for business software — the agents write the code, I own the requirements and verify what they deliver
+stack_line: Requirements & specs for coding agents · acceptance criteria & independent tests · quality gates & drift control · business software (invoicing, billing, booking, master data) · modernisation to go-live · Java / Spring Boot · Python · Vue / TypeScript · PostgreSQL / Oracle / MySQL · Docker / Kubernetes · CI/CD
+pitch: >-
+  Since 10/2025 I work the way this project describes: coding agents write the
+  code, and my job is to break the work down into specs with acceptance
+  criteria, then verify what comes back against the spec and the diff, not
+  against the agent's own report. I build and run that in production — an
+  autonomous AI business partner, Fabrik, where worker agents turn tickets into
+  pull requests in parallel, an unattended coding pipeline with 759 tasks to
+  date, and an agent that runs the finance back office of a GmbH with a human
+  approving every filing. Before that, {career_years} years of business
+  software inside client teams: the full invoice life cycle at the Deutsche
+  Verrechnungsstelle, heating cost billing at Brunata, the re-build of a booking
+  and reservation system at DER, master data migration at Commerzbank, and a
+  Java EE to Spring Boot migration at Condor.
+highlights:
+- "**Coding agents in daily production use since 10/2025:** the agent writes the code; I write the task — repository, scope, acceptance criteria — and review the pull request. Merging stays with a human."
+- "**Verification with independent tests:** a quality gate (unit tests, build, review) must pass before any push; a test must reproduce a bug red before the fix may turn it green; more than 40 checks test an agent's work against the world instead of its own report."
+- "**Business software end to end:** full invoice life cycle (creation, payment, dunning, debt collection), heating cost billing in an industry file format, booking and reservation services, invoice handover to **SAP** over an ESB."
+- "**Modernisation to go-live:** Java EE payment back-end migrated to Spring Boot (Condor); master data migration at a major bank (Commerzbank); a running prototype taken over and put live at Deutsche Telekom."
+- "**Freelance since 1997,** embedded in the client's team — from discovery to production support and handover, 100 % remote."
+hide_rate: true
+include_projects:
+- 27
+- 23
+- 0
+- 28
+- 26
+- 2
+- 3
+- 6
+- 13
+- 14
+- 18
+- 21
+- 22
+emphasize_skills:
+- Java
+- Spring Boot
+- Python
+- PostgreSQL
+- REST

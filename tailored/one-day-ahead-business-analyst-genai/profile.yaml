@@ -1,0 +1,32 @@
+# Tailoring profile — generated from a job posting, safe to hand-edit.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# headline/stack_line/pitch/highlights: leave blank to use the base CV.
+# include_projects: project ids from data/*.csv, render order = listed order.
+# Re-render after editing:  python -m gen tailor --profile <this file>
+
+slug: one-day-ahead-business-analyst-genai
+title: Jens Laufer – Business Analyst GenAI / Solution Design
+headline: Konzeption und Solution Design für LLM- und Multi-Agenten-Systeme — aus
+  dem eigenen Bau und Betrieb
+stack_line: ''
+pitch: ''
+highlights: []
+include_projects:
+- 0
+- 23
+- 27
+- 28
+- 26
+- 24
+- 1
+- 2
+- 4
+- 6
+- 16
+- 17
+emphasize_skills:
+- Konzeption
+- RAG
+lang: de
+rate: 90 €/h
+rate_label: Stundensatz

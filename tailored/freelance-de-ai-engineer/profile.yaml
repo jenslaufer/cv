@@ -1,0 +1,53 @@
+slug: freelance-de-ai-engineer
+title: Jens Laufer — Hands-on AI Engineer / LLM Specialist
+headline: Hands-on AI Engineer — LLM-Systeme vom Prototyp bis in den Dauerbetrieb
+stack_line: Python · FastAPI · LLM-Agenten · RAG · Prompt Engineering · Claude / Anthropic
+  API · MCP · Docker
+pitch: '~{career_years} Jahre Softwareentwicklung, ein zweites Standbein in Data Science
+  / Machine Learning — und seit Ende 2025 baue und betreibe ich LLM-Systeme, die produktiv
+  arbeiten: Agenten, die Code schreiben, testen und ausliefern, und einen Agenten,
+  der die Buchhaltung einer GmbH führt. Entwickler, kein Berater.'
+highlights:
+- '**LLM-Systeme im Dauerbetrieb** seit Ende 2025: ein autonomer Agent rund um die
+  Uhr, eine Coding-Pipeline mit bisher 759 Aufträgen, die Agenten-Plattform Fabrik.'
+- '**Modellwahl nach Kosten, Tempo und Qualität:** Modell-Routing je Auftrag gegen
+  ein Token-Budget; Open-Weight-Modelle (Qwen3) lokal über Ollama erprobt.'
+- '**Geschäftsprozesse automatisiert:** die Finanzbuchhaltung einer GmbH durch einen
+  Agenten — Belege, Buchungen, Abgleich, Steuer-Anmeldungen; ein Mensch gibt frei.'
+- '**Fail-closed geprüft:** über 40 eigene Prüfwerkzeuge messen die Arbeit der Agenten
+  an der Wirklichkeit, jede mit eigenen Tests.'
+- '**Zweites Standbein Data Science & Machine Learning** — Udacity ML Engineer & Data
+  Analyst, Kaggle, Autor auf Towards Data Science.'
+include_projects:
+- 0
+- 27
+- 23
+- 28
+- 26
+- 10
+- 9
+- 8
+- 12
+- 7
+- 1
+- 2
+emphasize_skills:
+- LLM-Agenten
+- RAG
+- Prompt Engineering
+- Python
+- Claude / Anthropic API
+_scores:
+  23: 1
+  27: 1
+  0: 3
+  28: 1
+  26: 1
+  1: 1
+  4: 1
+  7: 1
+  8: 1
+  9: 1
+  10: 1
+  12: 1
+lang: de

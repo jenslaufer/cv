@@ -1,0 +1,47 @@
+# Tailoring profile — hand-written for Hays 900308/1 "Remote Fullstack Development" (02.11.2026).
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# Re-render after editing:  python3 -m gen tailor --profile <this file> --pdf
+
+slug: hays-fullstack-java-vue-en
+lang: en
+title: Jens Laufer — Senior Full Stack Developer (Java / Vue.js)
+headline: Senior Full Stack Developer — Java and Spring Boot back-ends, Vue.js front-ends, features owned from requirement to handover
+stack_line: Java · Spring Boot · REST / OpenAPI / Swagger · JPA / Hibernate · Maven · Apache Kafka · Vue.js · JUnit / Mockito / TDD · Playwright · Docker · Kubernetes / Rancher · GitLab CI · Keycloak / OAuth2
+pitch: >-
+  I build Java back-ends and Vue.js front-ends and own a feature from the
+  business requirement to the handover. At Deutsche Telekom I took over a
+  prototype for configuring telecom devices, built the Spring Boot
+  microservices and the Vue.js front-end, and ran it in production on
+  Kubernetes with Rancher and GitLab CI. At DigitalMarketer.com the same split:
+  Spring Boot services with OpenAPI interfaces and Vue.js/Quasar front-ends. At
+  Brunata I built REST services with OpenAPI and Swagger, test-driven, in a
+  remote team. {career_years} years as a freelance developer, most of them in Java client teams, including Volkswagen
+  (Kafka, Spring Boot), Condor (JPA) and 1&1 (Hibernate). Since 10/2025 I also
+  build LLM agent systems with Python and FastAPI. I work remote, in
+  English or German.
+highlights:
+- "**Java + Vue.js full stack in production:** Spring Boot microservices with a Vue.js front-end at Deutsche Telekom and DigitalMarketer.com — build, deployment and operation included."
+- "**REST and contract-first APIs:** OpenAPI and Swagger at Brunata, Volkswagen and DigitalMarketer.com; JPA/Hibernate persistence; Maven builds."
+- "**Event-driven:** Apache Kafka at Volkswagen (Connected Van); prepared a Kafka data pipeline at Sellics."
+- "**Testing as the default:** JUnit, Mockito and TDD as the standard in my Java projects; Playwright for end-to-end tests since 2022."
+- "**Cloud delivery:** Docker, Kubernetes with Rancher, GitLab CI pipelines I built and maintained myself."
+rate: 95 €/h
+rate_label: Rate (remote)
+include_projects:
+- 0
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 11
+- 13
+- 21
+emphasize_skills:
+- Java
+- Spring Boot
+- Vue.js
+- REST
+- Kafka
+- Kubernetes

@@ -1,0 +1,47 @@
+# Tailoring profile — hand-written for Hays 900527/1 "Softwareentwickler (m/w/d)" (10.11.2026).
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# Re-render after editing:  python3 -m gen tailor --profile <this file> --pdf
+
+slug: hays-java-vue-react-900527
+lang: de
+title: Jens Laufer — Softwareentwickler Java / Spring Boot, Vue.js und React
+headline: Softwareentwickler — Java- und Spring-Boot-Microservices, Frontends mit Vue.js und React, Betrieb mit CI/CD
+stack_line: Java · Spring Boot · Microservices · REST / OpenAPI / Swagger · Java EE · JPA / Hibernate · Vue.js · React · JUnit / TDD · Docker · Kubernetes · GitLab CI
+pitch: >-
+  Ich entwickle Java-Microservices mit Spring Boot und die Frontends dazu, mit
+  Vue.js und React. Bei Brunata habe ich Front- und Backend der
+  Heizkostenabrechnung gebaut: Spring-Boot-Services mit OpenAPI und Swagger,
+  ein React-Frontend, testgetrieben mit JUnit. Bei der Deutschen Telekom
+  habe ich einen Prototyp zur Konfiguration von Endgeräten übernommen, die
+  Spring-Boot-Microservices und das Vue.js-Frontend weiterentwickelt und den Dienst mit
+  GitLab CI auf Kubernetes in den Betrieb gebracht. Bei Condor habe ich ein
+  Payment-Backend von Java EE auf Spring Boot migriert. {career_years} Jahre
+  als freiberuflicher Entwickler, die meisten davon in Java-Teams bei Kunden,
+  darunter Volkswagen und 1&1.
+highlights:
+- "**Java-Microservices mit Frontend im Betrieb:** Spring Boot mit Vue.js bei Deutsche Telekom und DigitalMarketer.com, mit React bei Brunata — Bau, Auslieferung und Betrieb inklusive."
+- "**Schnittstellen:** REST mit OpenAPI bei Brunata, Volkswagen und DigitalMarketer.com, Swagger bei Brunata und Volkswagen; SOAP-Webservices beim Deutschen Reisebüro."
+- "**Bestehende Anwendungen modernisieren:** Migration eines Java-EE-Payment-Backends auf Spring Boot bei Condor."
+- "**Tests als Standard:** JUnit und TDD in meinen Java-Projekten, End-to-End-Tests mit Playwright seit 2022."
+- "**DevOps:** Docker, Kubernetes und GitLab-CI-Pipelines, selbst aufgebaut und betrieben."
+include_projects:
+- 0
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 11
+- 13
+- 18
+- 21
+emphasize_skills:
+- Java
+- Spring Boot
+- Vue.js
+- React
+- REST
+- Microservices
+rate: 75 €/h
+rate_note: netto, all-in

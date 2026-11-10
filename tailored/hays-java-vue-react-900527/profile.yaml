@@ -13,7 +13,7 @@ pitch: >-
   Heizkostenabrechnung gebaut: Spring-Boot-Services mit OpenAPI und Swagger,
   ein React-Frontend, testgetrieben mit JUnit. Bei der Deutschen Telekom
   habe ich einen Prototyp zur Konfiguration von Endgeräten übernommen, die
-  Spring-Boot-Microservices und das Vue.js-Frontend gebaut und den Dienst mit
+  Spring-Boot-Microservices und das Vue.js-Frontend weiterentwickelt und den Dienst mit
   GitLab CI auf Kubernetes in den Betrieb gebracht. Bei Condor habe ich ein
   Payment-Backend von Java EE auf Spring Boot migriert. {career_years} Jahre
   als freiberuflicher Entwickler, die meisten davon in Java-Teams bei Kunden,
@@ -25,17 +25,17 @@ highlights:
 - "**Tests als Standard:** JUnit und TDD in meinen Java-Projekten, End-to-End-Tests mit Playwright seit 2022."
 - "**DevOps:** Docker, Kubernetes und GitLab-CI-Pipelines, selbst aufgebaut und betrieben."
 include_projects:
+- 0
+- 1
 - 2
-- 6
 - 3
 - 4
 - 5
-- 1
+- 6
 - 11
 - 13
 - 18
 - 21
-- 0
 emphasize_skills:
 - Java
 - Spring Boot

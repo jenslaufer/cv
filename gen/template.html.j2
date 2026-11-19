@@ -50,6 +50,9 @@
     <h1>{{ name }}</h1>
     <p class="role-line">{{ role_line }}</p>
     <p class="stack-line">{{ stack_line }}</p>
+    {%- if phone %}
+    <p class="phone-line"><a href="{{ phone_href }}">{{ phone }}</a></p>
+    {%- endif %}
     <p class="pitch">{{ pitch | md }}</p>
 
     <div class="facts"{% if facts | length != 5 %} style="grid-template-columns:repeat({{ facts | length }},1fr)"{% endif %}>

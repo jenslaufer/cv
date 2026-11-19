@@ -27,3 +27,12 @@ def test_lead_is_agentic_coding_and_process_automation(lang, auto):
 def test_pitch_keeps_the_full_stack_foundation():
     p = parse.parse()["person"]["Pitch"]
     assert "Full-Stack" in p and "{career_years}" in p
+
+
+def test_phone_in_masthead():
+    """Jens (2026-11-19): the phone number belongs at the top, not only in the contact block."""
+    from gen import render
+    html = render.render(parse.parse())
+    head = html.split('class="masthead"', 1)[1].split('class="pitch"', 1)[0]
+    assert 'href="tel:+4915510249850"' in head
+    assert "+49 15510 249850" in head

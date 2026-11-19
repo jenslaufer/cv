@@ -1,4 +1,14 @@
 group,skill
+AI agents / Agentic Coding,Claude / Anthropic API
+AI agents / Agentic Coding,Claude Code
+AI agents / Agentic Coding,LLM agents
+AI agents / Agentic Coding,Agent harness
+AI agents / Agentic Coding,Multi-agent orchestration
+AI agents / Agentic Coding,Tool use / MCP
+AI agents / Agentic Coding,RAG
+AI agents / Agentic Coding,Quality gates / evals
+AI agents / Agentic Coding,Process automation
+AI agents / Agentic Coding,Human-in-the-loop approvals
 Languages,Java
 Languages,JavaScript
 Languages,TypeScript

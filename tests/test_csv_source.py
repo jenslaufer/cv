@@ -77,7 +77,8 @@ def test_tech_comma_in_parens_preserved_from_real_data():
 def test_skills_grouped_in_first_appearance_order():
     d = parse.parse()
     names = [g["name"] for g in d["skills"]]
-    assert names[0] == "Sprachen"
+    assert names[0] == "KI-Agenten / Agentic Coding"
+    assert names[1] == "Sprachen"
     assert len(names) == len(set(names)), "groups must be merged, not duplicated"
 
 

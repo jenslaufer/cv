@@ -1,5 +1,7 @@
 highlight
-"**~{career_years} Jahre Softwareentwicklung** (seit 1997), durchgehend als Freelancer."
+"**Agentic Coding im Betrieb:** Coding-Agenten auf Claude arbeiten Tickets bis zum Pull Request ab, mit Quality Gate vor jedem Push — bisher über 750 Aufträge."
+"**Prozessautomatisierung mit LLM-Agenten:** Buchhaltung einer GmbH, Kontoabgleich, Lead-Meldungen und Betrieb — mit Freigabe vor allem Unumkehrbaren und über 40 eigenen Prüfwerkzeugen."
+"**~{career_years} Jahre Full-Stack-Entwicklung** (seit 1997), durchgehend als Freelancer — das Fundament für Agenten, die in echte Systeme passen."
 "**Java/Spring-Boot-Microservices** mit Vue.js- und React-Frontends — end-to-end mit Docker, Kubernetes und GitLab CI."
 "**Konsequent testgetrieben** (TDD, JUnit, Mockito, Playwright/Selenium)."
 "**Zweites Standbein Data Science & Machine Learning** — Udacity ML Engineer & Data Analyst, Kaggle, Autor auf Towards Data Science."

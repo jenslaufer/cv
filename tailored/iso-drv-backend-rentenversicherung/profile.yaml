@@ -1,0 +1,56 @@
+# Tailoring profile — hand-written for ISO Recruiting / Deutsche Rentenversicherung Bund,
+# Backendentwickler Los 4 (RAV-Testdialog, Postrenten-Gateway PORE), 20.11.2026.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# Re-render after editing:  python3 -m gen tailor --profile <this file> --pdf
+
+slug: iso-drv-backend-rentenversicherung
+lang: de
+title: Jens Laufer — Backendentwicklung Java, Schnittstellen und Datenaustausch
+headline: Backendentwickler — Java und Spring Boot, REST- und SOAP-Schnittstellen, relationale Datenbanken, Tests und CI
+stack_line: Java · Spring Boot · Microservices / SOA · REST / OpenAPI · SOAP / Webservices · Oracle · MySQL · JPA / Hibernate · OAuth2 / OIDC / JWT · JUnit / TDD · Maven · Jenkins · GitLab CI · Docker · Kubernetes / Rancher
+pitch: >-
+  Ich entwickle Backends in Java, meist in bestehenden,
+  geschäftskritischen Systemen. Bei 1&1 habe ich Webservices auf einem ESB
+  gebaut, mit Oracle und der Rechnungsübergabe an SAP. Beim Deutschen
+  Reisebüro habe ich Businessservices mit SOAP umgesetzt, bei der
+  Commerzbank die Stammdatenverwaltung mit Java EE und Oracle migriert. Bei
+  Condor habe ich ein Java-EE-Backend auf Spring Boot modernisiert. Bei
+  Brunata, der Deutschen Telekom und Volkswagen habe ich Spring-Boot-Services
+  mit REST-Schnittstellen entwickelt, testgetrieben und mit CI-Pipelines,
+  bei Brunata und der Telekom abgesichert mit Spring Security und Keycloak. Tokenbasierte
+  Authentifizierung habe ich mehrfach selbst gebaut: einen OAuth2-Service bei
+  der DVAG und einen eigenen OIDC-Server mit signierten JWTs.
+  {career_years} Jahre als freiberuflicher Entwickler.
+highlights:
+- "**Bestehende Systeme modernisieren:** Java EE nach Spring Boot bei Condor, Stammdatenmigration bei der Commerzbank, Prototyp in den Betrieb überführt bei der Deutschen Telekom."
+- "**Schnittstellen und Datenaustausch:** Webservices auf einem ESB und Rechnungsübergabe an SAP bei 1&1, SOAP beim Deutschen Reisebüro, Anbindung eines Inkasso-Anbieters bei der DVAG, Austauschformat Haweiko-Arge bei Brunata."
+- "**Applikationssicherheit:** OAuth2-Service bei der DVAG, Spring Security und Keycloak bei Brunata und der Telekom, eigener OIDC-Server mit RS256-JWTs je Mandant."
+- "**Tests und CI als Standard:** JUnit, Mockito und TDD in allen Java-Projekten, Build und Deployment mit Maven, Jenkins und GitLab CI."
+- "**Betrieb:** Docker und Kubernetes (Rancher) bei der Telekom, Volkswagen und der DVAG."
+include_projects:
+- 2
+- 3
+- 6
+- 11
+- 13
+- 14
+- 15
+- 18
+- 20
+- 21
+- 22
+- 24
+- 1
+emphasize_skills:
+- Java
+- Spring Boot
+- REST
+- SOAP
+- Oracle
+- Maven
+- Jenkins
+- Docker
+- Kubernetes
+- Git
+rate: 80 €/h
+rate_note: netto

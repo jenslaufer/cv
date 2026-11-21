@@ -85,3 +85,15 @@ def test_word_export_renders_links_as_prose(tmp_path, lang):
 def test_word_export_hides_the_rate_on_request(tmp_path):
     line = _facts_line(tmp_path, "en", {"rate": "400 €/day", "hide_rate": True})
     assert "400" not in line and "€" not in line, line
+
+
+def test_docx_carries_the_work_location_override(tmp_path):
+    """The Word file goes out by mail; it must say what the page says."""
+    from gen import exporters, parse
+    d = parse.parse()
+    prof = {"einsatzort": "remote, montags Köln", "remote_pct": "80 %"}
+    out = exporters.to_docx(d, tmp_path / "cv.docx", profile=prof)
+    import docx
+    text = "\n".join(p.text for p in docx.Document(str(out)).paragraphs)
+    assert "remote, montags Köln" in text and "80 %" in text
+    assert d["konditionen"]["Einsatzort"] not in text

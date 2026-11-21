@@ -16,7 +16,7 @@ from pathlib import Path
 
 from .labels import DEFAULT_LANG, labels as _labels
 from .render import (_fill, _project_window, career_years,
-                     plain as _plain, rate_fact as _rate_fact)
+                     _pct, _where, plain as _plain, rate_fact as _rate_fact)
 
 CHROMIUM_CANDIDATES = ["chromium", "chromium-browser", "google-chrome", "chrome"]
 
@@ -94,8 +94,8 @@ def to_docx(data: dict, path: str | Path, profile: dict | None = None,
     kond = data["konditionen"]
     facts = [
         f"{L['fact_available']} {kond.get('Verfügbarkeit','')}",
-        kond.get("Einsatzort", ""),
-        f"{L['fact_remote']} {data['remote_pct']}",
+        _where(kond, profile or {}),
+        f"{L['fact_remote']} {_pct(data, profile or {}, 'remote_pct')}",
     ]
     rate = _rate_fact(kond, L, profile)
     if rate["v"] and not (profile or {}).get("hide_rate"):

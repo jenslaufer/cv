@@ -1,0 +1,45 @@
+# Tailoring profile — hand-written for QualiStack, AI Engineer (AI Agents, Databricks & Azure), Köln, 21.11.2026.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# Not claimed (no evidence in data/): Databricks, RAG, LangGraph/LangChain, Terraform, Azure in a project.
+# Re-render after editing:  python3 -m gen tailor --profile <this file> --pdf
+
+slug: qualistack-ai-engineer-agents-databricks
+lang: de
+title: Jens Laufer — AI Engineer, LLM-Agenten im produktiven Betrieb
+headline: AI Engineer — LLM-Agenten mit Tool Calling (MCP), Freigabe-Gates, Observability und Prüfwerkzeugen, in Python, FastAPI, Docker und GitLab CI
+stack_line: Python · FastAPI · LLM-Agenten (Claude) · MCP / Tool Calling · Agent-Verifikation · Observability · Docker · Kubernetes · GitLab CI · scikit-learn · Keras · PostgreSQL · Vue 3
+pitch: >-
+  Ich baue LLM-Agenten, die produktiv laufen, und die Technik um das Modell
+  herum: Agenten-Loop mit Abbruchbedingungen, Tool-Use über MCP, Memory,
+  Freigabe-Gates vor allem Unumkehrbaren, Observability über jeden Lauf und
+  Budget-Steuerung mit Modell-Routing. Ein Agent führt die Buchhaltung einer
+  GmbH, jede Meldung gibt ein Mensch frei. Über 40 eigene Prüfwerkzeuge messen
+  die Arbeit der Agenten an der Wirklichkeit statt an ihrem eigenen Bericht,
+  fail-closed und mit eigenen Tests. Coding-Agenten arbeiten Tickets bis zum
+  Pull Request ab, mit Quality Gate vor jedem Push. Davor Machine Learning
+  (Reinforcement Learning, Zahlungsprognose) und {career_years} Jahre
+  Backend-Entwicklung, auch in regulierten Umfeldern wie Commerzbank und DVAG.
+einsatzort: remote, montags vor Ort in Köln
+remote_pct: 80 %
+onsite_pct: 20 %
+highlights:
+- "**Agenten produktiv betreiben:** Agenten-Loop, Tool-Use über MCP, geschichtetes Memory, Wiederaufsetzen nach abgebrochenen Läufen, Budget- und Rate-Limit-Steuerung mit Modell-Routing."
+- "**Evaluation und Qualitätskontrolle:** über 40 Prüfwerkzeuge gegen Fehler des Agenten, fail-closed, mit eigenen Tests; Quality Gate (Unit-Tests, Build, Review) vor jedem Push."
+- "**Guardrails und Datenschutz:** Freigabe-Gates vor allem Unumkehrbaren, Mensch gibt jede Meldung frei; eigener OIDC-Server mit OAuth2/PKCE und strikter Mandantentrennung, DSGVO-Einwilligung."
+- "**Betrieb und CI/CD:** Agenten-Container je Repository über einen FastAPI-Control-Plane, Docker und Kubernetes, CI/CD-Pipelines in GitLab CI."
+- "**Machine Learning:** Handelsagent mit Reinforcement Learning, Prognose von Zahlungseingängen, Bildklassifizierung."
+include_projects:
+- 0
+- 26
+- 28
+- 23
+- 27
+- 24
+- 1
+- 2
+- 6
+- 7
+- 10
+- 12
+- 13
+- 22

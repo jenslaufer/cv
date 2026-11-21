@@ -107,15 +107,24 @@ def rate_fact(kond: dict, L: dict, profile: dict | None = None) -> dict:
             "small": small, "rate": True}
 
 
+def _where(kond: dict, profile: dict) -> str:
+    """Work location; a variant may name the on-site part one engagement needs."""
+    return profile.get("einsatzort") or kond.get("Einsatzort", "")
+
+
+def _pct(data: dict, profile: dict, key: str) -> str:
+    return profile.get(key) or data[key]
+
+
 def _facts(data: dict, L: dict, profile: dict | None = None) -> list[dict]:
     k = data["konditionen"]
     p = data["person"]
     profile = profile or {}
     facts = [
         {"k": L["fact_available"], "v": k.get("Verfügbarkeit", "")},
-        {"k": L["fact_worldwide"], "v": k.get("Einsatzort", "")},
-        {"k": L["fact_remote"], "v": data["remote_pct"],
-         "small": f"{data['onsite_pct']} {L['onsite']}"},
+        {"k": L["fact_worldwide"], "v": _where(k, profile)},
+        {"k": L["fact_remote"], "v": _pct(data, profile, "remote_pct"),
+         "small": f"{_pct(data, profile, 'onsite_pct')} {L['onsite']}"},
         rate_fact(k, L, profile),
         {"k": L["fact_based"], "v": p.get("Wohnort", ""), "small": L["country"]},
     ]
@@ -181,8 +190,8 @@ def build_context(data: dict, profile: dict | None = None,
     kond = data["konditionen"]
     footer_right = " · ".join([
         f"{L['footer_available']} {kond.get('Verfügbarkeit', '')}",
-        kond.get("Einsatzort", ""),
-        f"{data['remote_pct']} {L['footer_remote']}",
+        _where(kond, profile),
+        f"{_pct(data, profile, 'remote_pct')} {L['footer_remote']}",
     ])
 
     return {

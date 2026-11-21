@@ -136,3 +136,22 @@ def test_hide_rate_drops_the_price_from_the_page():
     assert "400 €/day" not in html
     assert "€/h" not in html and "fact rate" not in html
     assert d["konditionen"]["Verfügbarkeit"] in html
+
+
+def test_work_location_override_replaces_remote_only():
+    """A variant may state the on-site part one engagement needs.
+
+    QualiStack (19.11.2026) needs Mondays on site in Cologne, and Jens agreed.
+    A CV saying "nur remote, 0 % Vor-Ort" next to that answer contradicts him.
+    """
+    d = parse.parse()
+    prof = tailor.build_profile(JAVA_JOB, d, "java-backend")
+    prof["einsatzort"] = "remote, montags Köln"
+    prof["remote_pct"] = "80 %"
+    prof["onsite_pct"] = "20 %"
+    html = render.render(d, tailor.render_profile(prof))
+    assert "remote, montags Köln" in html
+    assert "80 %" in html and "20 % Vor-Ort" in html
+    assert d["konditionen"]["Einsatzort"] not in html
+    assert "0 % Vor-Ort" not in html.replace("20 % Vor-Ort", "")
+    assert d["konditionen"]["Verfügbarkeit"] in html

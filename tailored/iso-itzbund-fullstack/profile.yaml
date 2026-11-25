@@ -1,0 +1,52 @@
+# Tailoring profile — hand-written for ISO Recruiting, Fullstack Java / Spring Boot / React (ITZ-Bund), 25.11.2026.
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# Re-render after editing:  python3 -m gen tailor --profile <this file> --pdf
+
+slug: iso-itzbund-fullstack
+lang: de
+title: Jens Laufer — Fullstack-Entwicklung Java, Spring Boot und React
+headline: Fullstack-Entwickler — Java und Spring Boot im Backend, React und Vue im Frontend, REST- und SOAP-Schnittstellen, CI/CD
+stack_line: Java · Spring Boot · Microservices · REST / OpenAPI · SOAP / Webservices · React · Vue.js · PostgreSQL · MySQL · Oracle · MongoDB · JPA / Hibernate · JUnit / TDD · GitLab CI · Jenkins · Docker · Kubernetes · Scrum
+pitch: >-
+  Ich entwickle Fachanwendungen in Java und Spring Boot, vom Backend bis zum
+  Frontend. Bei Brunata habe ich Spring-Boot-Microservices mit
+  REST-Schnittstellen und ein React-Frontend gebaut, dazu die
+  CI/CD-Pipelines in GitLab CI. Bei der Deutschen Telekom habe ich einen
+  Prototyp mit Spring Boot und Vue.js in den Produktionsbetrieb überführt,
+  bei Condor ein Java-EE-Backend auf Spring Boot migriert. Beim Deutschen
+  Reisebüro habe ich Businessservices mit SOAP umgesetzt. Bei
+  DigitalMarketer habe ich im Scrum-Team gearbeitet. Heute automatisiere
+  ich Geschäftsprozesse mit KI-Agenten.
+  {career_years} Jahre als freiberuflicher Entwickler.
+highlights:
+- "**Fullstack mit Java und React:** Spring-Boot-Microservices und React-Frontend bei Brunata, Spring Boot mit Vue.js bei der Deutschen Telekom und DigitalMarketer."
+- "**Schnittstellen:** REST mit OpenAPI bei Brunata und DigitalMarketer, REST bei der Telekom und Volkswagen, SOAP beim Deutschen Reisebüro, Webservices auf einem ESB bei 1&1, Anbindung eines Inkasso-Anbieters bei der DVAG."
+- "**Modernisierung und CI/CD:** Java EE nach Spring Boot bei Condor, Pipelines in GitLab CI bei Brunata, der Telekom und DigitalMarketer."
+- "**Datenbanken:** PostgreSQL, MySQL, Oracle und MongoDB, Persistenz mit Spring Data und JPA."
+- "**Prozessautomatisierung:** Geschäftsprozesse wie Buchhaltung und Lead-Bearbeitung mit KI-Agenten automatisiert, mit Freigabe vor unumkehrbaren Schritten."
+include_projects:
+- 26
+- 2
+- 3
+- 4
+- 5
+- 6
+- 11
+- 13
+- 14
+- 18
+- 21
+- 22
+emphasize_skills:
+- Java
+- Spring Boot
+- React
+- REST
+- SOAP
+- PostgreSQL
+- GitLab CI
+- Docker
+- Kubernetes
+- Scrum
+rate: 70 €/h
+rate_note: netto

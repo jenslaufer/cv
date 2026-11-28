@@ -11,8 +11,8 @@ stack_line: Playwright (TypeScript) · Claude Code · Tool use & MCP · AI agent
 pitch: >-
   Claude Code is my daily working tool, not an experiment. Since 2025 I run
   coding agents that pick up a task with its acceptance criteria, work in an
-  isolated branch and must pass a quality gate — unit tests, build, end-to-end
-  tests, review — before they may open a merge request. I have written more
+  isolated branch and must pass a quality gate — unit tests, build and
+  review — before they may open a merge request. I have written more
   than 40 checks that test an agent's work against the real system instead of
   its own report, and each check fails closed. Playwright end-to-end tests run
   against my shipped browser extensions and were part of my last two client

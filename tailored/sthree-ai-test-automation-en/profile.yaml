@@ -1,0 +1,48 @@
+# Tailoring profile — SThree "Senior AI Test Automation Engineer" (freelancermap, 2026-11-27).
+# Facts come from data/*.csv; this only selects/orders/re-frames.
+# Not claimed: TestRail, Cypress, PHP/Laravel/Pest, visual regression.
+# Re-render after editing:  python3 -m gen tailor --profile <this file> --pdf
+
+slug: sthree-ai-test-automation-en
+lang: en
+title: Jens Laufer — AI Test Automation Engineer (Playwright, Claude Code, MCP)
+headline: AI test automation — Playwright suites in CI, and Claude Code agents that test in the browser
+stack_line: Playwright (TypeScript) · Claude Code · Tool use & MCP · AI agents with quality gates · GitLab CI · Jira · REST APIs · Vue 3 · Python · Java / Spring Boot · TDD
+pitch: >-
+  Claude Code is my daily working tool, not an experiment. Since 2025 I run
+  coding agents that pick up a task with its acceptance criteria, work in an
+  isolated branch and must pass a quality gate — unit tests, build, end-to-end
+  tests, review — before they may open a merge request. I have written more
+  than 40 checks that test an agent's work against the real system instead of
+  its own report, and each check fails closed. Playwright end-to-end tests run
+  against my shipped browser extensions and were part of my last two client
+  projects (Vue.js and Spring Boot, both with GitLab CI). Freelance since 1997,
+  so I am used to joining a team and leaving a setup the team can run on its
+  own.
+highlights:
+- "**Agents that test, gated before they ship (since 10/2025):** coding agents work tickets from acceptance criteria and run the **quality gate** (unit tests, build, review) before any push; merging stays with a human. **759 tasks** run this way so far."
+- "**Claude Code and MCP every day:** tool use over **MCP**, agent loop with stop conditions, approval gates, observability over every run, budget control with model routing."
+- "**Checks against reality:** more than 40 purpose-built checks with their own tests — a test run that never started fails instead of passing silently; unknown is never reported as healthy."
+- "**Playwright end-to-end:** suites against the built package of Chrome/Firefox extensions (TypeScript), with a regression diff against the shipped version; Playwright e2e in the Vue.js property platform and the Brunata Spring Boot project."
+- "**CI/CD:** built and maintained **GitLab CI** pipelines for build, test and deployment in Docker (verkaufe.immobilien, Brunata); test-driven development throughout (JUnit, Mockito, Selenium earlier)."
+- "**Front-end and API side:** Vue 3 / Vue.js and TypeScript, REST APIs in Python and Java with OpenAPI — enough to set up test data through the API instead of the UI."
+include_projects:
+- 0
+- 27
+- 28
+- 25
+- 24
+- 1
+- 2
+- 6
+- 13
+- 20
+emphasize_skills:
+- Playwright
+- Claude Code
+- Tool Use / MCP
+- GitLab CI
+- Jira
+- TypeScript
+- Vue 3
+- REST
